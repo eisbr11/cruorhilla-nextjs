@@ -14,7 +14,9 @@
             "jsx": true
         },
         "ecmaVersion": 12,
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": "./tsconfig.json",
+        "tsconfigRootDir": "./"
     },
     "plugins": [
         "react",
@@ -23,10 +25,19 @@
     "settings": {
         "react": {
             "version": "detect"
+        },
+        "import/resolver": {
+            "node": {
+                "moduleDirectory": ["node_modules", "src/"]
+            },
+            "typescript": {}
         }
     },
     "rules": {
         "react/react-in-jsx-scope": "off",
-        "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }]
+        "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }],
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": "warn",
+        "import/no-unresolved": 1
     }
 }
