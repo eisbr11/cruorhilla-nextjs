@@ -3,6 +3,7 @@ import { StoryData } from 'storyblok-js-client';
 
 import Head from '@components/head';
 import Nav from '@components/nav';
+import useStyles from './layout.styles';
 
 const Layout = ({
   children,
@@ -10,15 +11,19 @@ const Layout = ({
 }: {
   children: React.ReactNode,
   settings?: StoryData,
-}) => (
-  <div>
-    <Head />
-    <Nav settings={settings} />
-    <div>
-      {children}
+}) => {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.container}>
+      <Head />
+      <Nav settings={settings} />
+      <div>
+        {children}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Layout;
 

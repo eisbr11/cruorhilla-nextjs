@@ -5,10 +5,37 @@ import Document, {
   Main,
   NextScript,
 } from 'next/document';
+import { SheetsRegistry, JssProvider, createGenerateId } from 'react-jss';
 
 import StoryblokService from '@utils/storyblok-service';
 
-export default class MyDocument extends Document {
+export default class JssDocument extends Document {
+  static async getInitialProps(ctx) {
+    const registry = new SheetsRegistry();
+    const generateId = createGenerateId();
+    const originalRenderPage = ctx.renderPage;
+    ctx.renderPage = () => originalRenderPage({
+      enhanceApp: (App) => (props) => (
+        <JssProvider registry={registry} generateId={generateId}>
+          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+          <App {...props} />
+        </JssProvider>
+      ),
+    });
+
+    const initialProps = await Document.getInitialProps(ctx);
+
+    return {
+      ...initialProps,
+      styles: (
+        <>
+          {initialProps.styles}
+          <style id="server-side-styles">{registry.toString()}</style>
+        </>
+      ),
+    };
+  }
+
   render() {
     /* eslint-disable react/no-danger */
     return (

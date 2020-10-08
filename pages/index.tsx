@@ -2,8 +2,8 @@ import { GetStaticProps } from 'next';
 import { StoryblokResult } from 'storyblok-js-client';
 
 import StoryblokService from '@utils/storyblok-service';
-import Layout from '@components/layout';
 import Page from '@components/bloks/Page';
+import Layout from '@components/layout';
 
 export default function Home({
   page,
