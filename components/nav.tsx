@@ -6,7 +6,7 @@ import NavItem from './nav-item';
 const Nav = ({ settings }: {settings: StoryData}) => (
   <nav>
     <ul>
-      {settings && settings.content.main_navi.map((navitem) => (
+      {settings.content && settings.content.main_navi.map((navitem) => (
         // eslint-disable-next-line no-underscore-dangle
         <li key={navitem._uid}>
           <NavItem name={navitem.name} noLink={navitem.no_link} url={navitem.link.cached_url} />
