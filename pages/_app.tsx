@@ -1,8 +1,28 @@
 import '../styles/globals.css';
 
-import { AppProps } from 'next/app';
+import App, { AppProps } from 'next/app';
 
 // eslint-disable-next-line react/jsx-props-no-spreading
-const MyApp = ({ Component, pageProps }: AppProps) => <Component {...pageProps} />;
+// const MyApp = ({ Component, pageProps }: AppProps) => <Component {...pageProps} />;
+
+class MyApp extends App {
+  static async getInitialProps({ Component, ctx }) {
+    let pageProps = {};
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx);
+    }
+    return {
+      pageProps,
+    };
+  }
+
+  render() {
+    const { Component, pageProps }: AppProps = this.props;
+    return (
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      <Component {...pageProps} />
+    );
+  }
+}
 
 export default MyApp;

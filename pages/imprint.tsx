@@ -5,7 +5,7 @@ import StoryblokService from '@utils/storyblok-service';
 import Layout from '@components/layout';
 import Page from '@components/bloks/Page';
 
-export default function Home({
+export default function Imprint({
   page,
   settings,
 }: {
@@ -22,7 +22,7 @@ export default function Home({
 
 export const getStaticProps: GetStaticProps = async () => {
   const [page, settings] = await Promise.all([
-    StoryblokService.get('cdn/stories/home', {}),
+    StoryblokService.get('cdn/stories/imprint', {}),
     StoryblokService.get('cdn/stories/settings', {}),
   ]);
 

@@ -1,15 +1,35 @@
 import React from 'react';
+import { StoryData } from 'storyblok-js-client';
 
-// eslint-disable-next-line no-unused-vars
-const Nav = ({ settings }: {settings: {}}) => (
-  <header className="top-header util__flex util__container">
-    <nav className="top-header__col">
-      Navigation
-    </nav>
-    <nav className="top-header__col top-header__second-navi">
-      Languagues
-    </nav>
-  </header>
+import NavItem from './nav-item';
+
+const Nav = ({ settings }: {settings: StoryData}) => (
+  <nav>
+    <ul>
+      {settings && settings.content.main_navi.map((navitem) => (
+        // eslint-disable-next-line no-underscore-dangle
+        <li key={navitem._uid}>
+          <NavItem name={navitem.name} noLink={navitem.no_link} url={navitem.link.cached_url} />
+          {navitem.sub_navi && navitem.sub_navi.length > 0 ? (
+            <ul>
+              {navitem.sub_navi.map((subitem) => (
+                // eslint-disable-next-line no-underscore-dangle
+                <li key={subitem._uid}>
+                  <NavItem
+                    url={subitem.link.cached_url}
+                    name={subitem.name}
+                    noLink={subitem.no_link}
+                  />
+                </li>
+              ))}
+            </ul>
+          ) : (
+            null
+          )}
+        </li>
+      ))}
+    </ul>
+  </nav>
 );
 
 export default Nav;

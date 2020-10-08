@@ -38,6 +38,17 @@
         "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }],
         "no-use-before-define": "off",
         "@typescript-eslint/no-use-before-define": "warn",
-        "import/no-unresolved": 1
+        "import/no-unresolved": 1,
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "jsx-a11y/anchor-is-valid": "off"
     }
 }

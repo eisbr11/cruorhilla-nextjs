@@ -1,14 +1,15 @@
 import React from 'react';
+import { StoryData } from 'storyblok-js-client';
 
-import Head from '@/components/head';
-import Nav from '@/components/nav';
+import Head from '@components/head';
+import Nav from '@components/nav';
 
 const Layout = ({
   children,
-  settings = {},
+  settings,
 }: {
   children: React.ReactNode,
-  settings?: {},
+  settings?: StoryData,
 }) => (
   <div>
     <Head />
