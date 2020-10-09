@@ -1,9 +1,9 @@
-import '../styles/globals.css';
-
+import React from 'react';
 import App, { AppProps } from 'next/app';
 
-// eslint-disable-next-line react/jsx-props-no-spreading
-// const MyApp = ({ Component, pageProps }: AppProps) => <Component {...pageProps} />;
+import { ThemeProvider } from 'react-jss';
+import getTheme from '@themes/index';
+import '../styles/globals.css';
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -27,8 +27,10 @@ class MyApp extends App {
   render() {
     const { Component, pageProps }: AppProps = this.props;
     return (
-      // eslint-disable-next-line react/jsx-props-no-spreading
-      <Component {...pageProps} />
+      <ThemeProvider theme={getTheme('angstblitz')}>
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+        <Component {...pageProps} />
+      </ThemeProvider>
     );
   }
 }
