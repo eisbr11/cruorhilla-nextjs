@@ -5,34 +5,25 @@ import Document, {
   Main,
   NextScript,
 } from 'next/document';
-import { SheetsRegistry, JssProvider, createGenerateId } from 'react-jss';
+import { ServerStyleSheets } from '@material-ui/core/styles';
 
 import StoryblokService from '@utils/storyblok-service';
 
-export default class JssDocument extends Document {
+export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
-    const registry = new SheetsRegistry();
-    const generateId = createGenerateId();
+    const sheets = new ServerStyleSheets();
     const originalRenderPage = ctx.renderPage;
     ctx.renderPage = () => originalRenderPage({
-      enhanceApp: (App) => (props) => (
-        <JssProvider registry={registry} generateId={generateId}>
-          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-          <App {...props} />
-        </JssProvider>
-      ),
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
     });
 
     const initialProps = await Document.getInitialProps(ctx);
 
     return {
       ...initialProps,
-      styles: (
-        <>
-          {initialProps.styles}
-          <style id="server-side-styles">{registry.toString()}</style>
-        </>
-      ),
+      // Styles fragment is rendered after the app and page rendering finish.
+      styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()],
     };
   }
 

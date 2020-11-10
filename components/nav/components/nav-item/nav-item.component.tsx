@@ -21,7 +21,7 @@ const NavItemComponent = ({
           <a className={classes.link}>{name}</a>
         </Link>
       ) : (
-        <span className={`${classes.link} + ${classes.onlyOpenLink}`}>
+        <span className={`${classes.link} ${classes.onlyOpenLink}`}>
           {name}
         </span>
       )}

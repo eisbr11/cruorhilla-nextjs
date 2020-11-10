@@ -3,10 +3,12 @@ import { SbEditableContent } from 'storyblok-react';
 import Feature from './Feature';
 import Grid from './Grid';
 import Placeholder from './Placeholder';
+import Teaser from './Teaser';
 
 const Components = {
   feature: Feature,
   grid: Grid,
+  teaser: Teaser,
 };
 
 const Component = ({ blok }: {blok: SbEditableContent}) => {

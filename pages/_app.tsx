@@ -1,9 +1,11 @@
 import React from 'react';
 import App, { AppProps } from 'next/app';
+import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
-import { ThemeProvider } from 'react-jss';
 import getTheme from '@themes/index';
 import '../styles/globals.css';
+import Head from 'next/head';
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -17,20 +19,26 @@ class MyApp extends App {
   }
 
   componentDidMount() {
-    const style = document.getElementById('server-side-styles');
-
-    if (style) {
-      style.parentNode.removeChild(style);
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles) {
+      jssStyles.parentElement.removeChild(jssStyles);
     }
   }
 
   render() {
     const { Component, pageProps }: AppProps = this.props;
     return (
-      <ThemeProvider theme={getTheme('angstblitz')}>
-        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <>
+        <Head>
+          <title>My page</title>
+          <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+        </Head>
+        <ThemeProvider theme={getTheme('baellebad')}>
+          <CssBaseline />
+          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </>
     );
   }
 }

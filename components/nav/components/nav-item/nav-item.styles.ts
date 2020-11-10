@@ -1,9 +1,9 @@
-import { createUseStyles } from 'react-jss';
+import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = createUseStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   link: {
     color: 'white',
-    padding: '5px',
+    padding: theme.spacing(1),
   },
   onlyOpenLink: {
     color: '#fdfd03',

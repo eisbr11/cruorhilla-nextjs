@@ -1,12 +1,11 @@
-import { createUseStyles } from 'react-jss';
-import ITheme from '@themes/theme.interface';
+import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = createUseStyles((theme: ITheme) => ({
+const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
     flexDirection: 'column',
     minHeight: '100vh',
-    background: theme.colorPrimary,
+    background: theme.palette.primary.dark,
   },
 }));
 

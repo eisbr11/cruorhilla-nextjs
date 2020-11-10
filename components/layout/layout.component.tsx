@@ -1,6 +1,5 @@
 import React from 'react';
 import { StoryData } from 'storyblok-js-client';
-import { useTheme } from 'react-jss';
 
 import Head from '@components/head';
 import Nav from '@components/nav';
@@ -13,8 +12,7 @@ const Layout = ({
   children: React.ReactNode,
   settings?: StoryData,
 }) => {
-  const theme = useTheme();
-  const classes = useStyles({ theme });
+  const classes = useStyles();
 
   return (
     <div className={classes.container}>

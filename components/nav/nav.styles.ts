@@ -1,19 +1,19 @@
-import { createUseStyles } from 'react-jss';
+import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = createUseStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   nav: {
     position: 'sticky',
     top: 0,
     right: 0,
     left: 0,
-    backgroundColor: '#FF00FF',
+    backgroundColor: theme.palette.primary.main,
   },
   container: {
     border: '1px solid red',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: [0, 16],
+    padding: theme.spacing(0, 1),
   },
   logo: {
     fontSize: 30,
@@ -29,6 +29,9 @@ const useStyles = createUseStyles(() => ({
   },
   listItem: {
     padding: 10,
+    ':hover': {
+      color: theme.palette
+    }
   },
   sublist: {
     listStyle: 'none',
