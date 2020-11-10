@@ -1,4 +1,6 @@
-const theme = {
+import ITheme from './theme.interface';
+
+const theme: ITheme = {
   colorPrimary: 'red',
 };
 

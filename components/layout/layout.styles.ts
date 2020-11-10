@@ -1,10 +1,11 @@
 import { createUseStyles } from 'react-jss';
+import ITheme from '@themes/theme.interface';
 
-const useStyles = createUseStyles((theme) => ({
+const useStyles = createUseStyles((theme: ITheme) => ({
   container: {
-    flex: 1,
-    width: '300px',
-    margin: 'auto',
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100vh',
     background: theme.colorPrimary,
   },
 }));
