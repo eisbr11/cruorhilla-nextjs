@@ -7,16 +7,17 @@ const useStyles = makeStyles((theme) => ({
     right: 0,
     left: 0,
     backgroundColor: theme.palette.primary.main,
+    padding: theme.spacing(1, 0),
+    border: '1px solid red',
   },
   container: {
-    border: '1px solid red',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: theme.spacing(0, 1),
   },
-  logo: {
-    fontSize: 30,
+  logoLink: {
+    width: 50,
   },
   list: {
     listStyle: 'none',
@@ -30,12 +31,8 @@ const useStyles = makeStyles((theme) => ({
   listItem: {
     padding: 10,
     ':hover': {
-      color: theme.palette
-    }
-  },
-  sublist: {
-    listStyle: 'none',
-    display: 'none',
+      color: theme.palette,
+    },
   },
 }));
 

@@ -10,7 +10,7 @@ const NavItemComponent = ({
 }: {
   url: string,
   name: string,
-  noLink: boolean
+  noLink: boolean,
 }) => {
   const classes = useStyles();
 
