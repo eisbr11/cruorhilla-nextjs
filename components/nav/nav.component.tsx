@@ -22,15 +22,19 @@ const NavComponent = ({ settings }: {settings: StoryData}) => {
           {settings.content && settings.content.main_navi.map((navitem) => (
             // eslint-disable-next-line no-underscore-dangle
             <li className={classes.listItem} key={navitem._uid}>
-              <NavItem name={navitem.name} noLink={navitem.no_link} url={navitem.link.cached_url} />
-              {navitem.sub_navi && navitem.sub_navi.length > 0 ? (
-                <SubNav
-                  subNavi={navitem.sub_navi}
-                  open
-                />
-              ) : (
-                null
-              )}
+              <div>
+                {navitem.sub_navi && navitem.sub_navi.length > 0 ? (
+                  <SubNav
+                    label={navitem.name}
+                    subNavi={navitem.sub_navi}
+                  />
+                ) : (
+                  <NavItem
+                    name={navitem.name}
+                    url={navitem.link.cached_url}
+                  />
+                )}
+              </div>
             </li>
           ))}
         </ul>

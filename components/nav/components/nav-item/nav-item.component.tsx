@@ -4,29 +4,35 @@ import Link from 'next/link';
 import useStyles from './nav-item.styles';
 
 const NavItemComponent = ({
-  url,
   name,
-  noLink,
+  url,
+  hasSubnavi,
+  openEvent,
 }: {
-  url: string,
   name: string,
-  noLink: boolean,
+  url?: string,
+  hasSubnavi?: boolean,
+  openEvent?: any,
 }) => {
   const classes = useStyles();
 
   return (
     <>
-      {!noLink ? (
+      {!hasSubnavi ? (
         <Link href={url}>
           <a className={classes.link}>{name}</a>
         </Link>
       ) : (
-        <span className={`${classes.link} ${classes.onlyOpenLink}`}>
-          {name}
-        </span>
+        <a href="#" className={`${classes.link} ${classes.onlyOpenLink}`} onClick={openEvent}>{name}</a>
       )}
     </>
   );
 };
 
 export default NavItemComponent;
+
+NavItemComponent.defaultProps = {
+  url: '#',
+  hasSubnavi: false,
+  openEvent: () => {},
+};

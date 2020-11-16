@@ -6,18 +6,14 @@ const useStyles = makeStyles(() => ({
     left: 0,
     top: '100%',
     width: '100%',
-
+    background: '#00F',
   },
   list: {
     listStyle: 'none',
     overflow: 'hidden',
-    background: '#000',
     display: 'flex',
     justifyContent: 'flex-end',
     padding: 0,
-  },
-  opened: {
-    background: '#F0F',
   },
 }));
 
