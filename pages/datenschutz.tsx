@@ -5,7 +5,7 @@ import StoryblokService from '@utils/storyblok-service';
 import Layout from '@components/layout';
 import Page from '@components/bloks/Page';
 
-export default function Imprint({
+export default function DatenschutzPage({
   page,
   settings,
 }: {

@@ -5,7 +5,7 @@ import StoryblokService from '@utils/storyblok-service';
 import Layout from '@components/layout';
 import Page from '@components/bloks/Page';
 
-export default function VideosPage({
+export default function Diskografie({
   page,
   settings,
 }: {
@@ -22,7 +22,7 @@ export default function VideosPage({
 
 export const getStaticProps: GetStaticProps = async () => {
   const [page, settings] = await Promise.all([
-    StoryblokService.get('cdn/stories/videos', {}),
+    StoryblokService.get('cdn/stories/diskografie', {}),
     StoryblokService.get('cdn/stories/settings', {}),
   ]);
 
