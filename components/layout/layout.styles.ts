@@ -7,6 +7,9 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '100vh',
     background: theme.palette.primary.dark,
   },
+  content: {
+    flex: 1,
+  },
 }));
 
 export default useStyles;
