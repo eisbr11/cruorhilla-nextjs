@@ -40,3 +40,15 @@ STORYBLOK_DEV_MODE=true/false
 STORYBLOK_PREVIEW_TOKEN=xxx
 STORYBLOK_API_KEY=xxx
 ```
+
+## Tech Stack for this project
+
+* Yarn
+* React
+* Next.js
+* Storyblok
+* Typescript
+* ESLint
+* MaterialUI
+* axios
+* dot.env
