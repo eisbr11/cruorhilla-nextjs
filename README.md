@@ -20,3 +20,13 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## env File
+
+You need to add environment information to connect to storyblok the api. For this you can copy the _.env.local.example_ and create you own _.env.local_ like this:
+
+```
+STORYBLOK_DEV_MODE=true/false
+STORYBLOK_PREVIEW_TOKEN=xxx
+STORYBLOK_API_KEY=xxx
+```
