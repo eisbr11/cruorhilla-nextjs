@@ -1,4 +1,4 @@
-import Storyblok, { StoryParams } from 'storyblok-js-client';
+import Storyblok, { StoriesParams, StoryParams } from 'storyblok-js-client';
 
 import Config from '@lib/Config';
 
@@ -41,6 +41,42 @@ class StoryblokService {
     }
 
     return this.client.get(slug, params);
+  }
+
+  getRecords(slug: string, _params: StoriesParams) {
+    const params = _params || {};
+
+    if (this.getQuery('_storyblok') || this.devMode || (typeof window !== 'undefined' && window.storyblok)) {
+      params.version = 'draft';
+    }
+
+    if (typeof window !== 'undefined' && typeof window.StoryblokCacheVersion !== 'undefined') {
+      params.cv = window.StoryblokCacheVersion;
+    }
+
+    params.filter_query = {
+      component: {
+        in: 'record',
+      },
+    };
+
+    params.sort_by = 'content.releaseDate:desc';
+
+    return this.client.get(slug, params);
+  }
+
+  getRecord(slug: string, recordSlug: string, _params: StoryParams) {
+    const params = _params || {};
+
+    if (this.getQuery('_storyblok') || this.devMode || (typeof window !== 'undefined' && window.storyblok)) {
+      params.version = 'draft';
+    }
+
+    if (typeof window !== 'undefined' && typeof window.StoryblokCacheVersion !== 'undefined') {
+      params.cv = window.StoryblokCacheVersion;
+    }
+
+    return this.client.get(slug + recordSlug, params);
   }
 
   setQuery(query) {
