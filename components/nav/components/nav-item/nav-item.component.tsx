@@ -8,22 +8,29 @@ const NavItemComponent = ({
   url,
   hasSubnavi,
   openEvent,
+  isSubNavItem,
 }: {
   name: string,
   url?: string,
   hasSubnavi?: boolean,
   openEvent?: any,
+  isSubNavItem?: boolean,
 }) => {
   const classes = useStyles();
+
+  let linkClasses = classes.link;
+  if (isSubNavItem) {
+    linkClasses += ` ${classes.subNavLink}`;
+  }
 
   return (
     <>
       {!hasSubnavi ? (
         <Link href={url}>
-          <a className={classes.link}>{name}</a>
+          <a className={linkClasses}>{name}</a>
         </Link>
       ) : (
-        <a href="#" className={`${classes.link} ${classes.onlyOpenLink}`} onClick={openEvent}>{name}</a>
+        <a href="#" className={linkClasses} onClick={openEvent}>{name}</a>
       )}
     </>
   );
@@ -35,4 +42,5 @@ NavItemComponent.defaultProps = {
   url: '#',
   hasSubnavi: false,
   openEvent: () => {},
+  isSubNavItem: false,
 };

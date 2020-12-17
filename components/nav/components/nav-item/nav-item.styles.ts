@@ -2,11 +2,11 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   link: {
-    color: 'white',
+    color: theme.palette.primary.contrastText,
     padding: theme.spacing(1),
   },
-  onlyOpenLink: {
-    color: '#fdfd03',
+  subNavLink: {
+    color: theme.palette.secondary.contrastText,
   },
 }));
 

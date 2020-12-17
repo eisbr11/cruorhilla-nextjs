@@ -1,5 +1,6 @@
 import { createMuiTheme, Theme } from '@material-ui/core/styles';
 import { red } from '@material-ui/core/colors';
+import commonThemeSettings from '@themes/commonThemeSettings';
 
 // Create a theme instance.
 const theme:Theme = createMuiTheme({
@@ -17,6 +18,6 @@ const theme:Theme = createMuiTheme({
       default: '#fff',
     },
   },
-});
+}, commonThemeSettings);
 
 export default theme;

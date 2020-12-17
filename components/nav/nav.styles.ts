@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     backgroundColor: theme.palette.primary.main,
     padding: theme.spacing(1, 0),
-    border: '1px solid red',
+    zIndex: 1,
   },
   container: {
     display: 'flex',
@@ -30,9 +30,6 @@ const useStyles = makeStyles((theme) => ({
   },
   listItem: {
     padding: 10,
-    ':hover': {
-      color: theme.palette,
-    },
   },
 }));
 

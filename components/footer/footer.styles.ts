@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     fontSize: theme.typography.fontSize.toFixed(14),
+    color: theme.palette.common.white,
   },
 }));
 

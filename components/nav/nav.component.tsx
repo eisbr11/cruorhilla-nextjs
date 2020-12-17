@@ -1,6 +1,7 @@
 import React from 'react';
 import { StoryData } from 'storyblok-js-client';
 import Link from 'next/link';
+import { AppBar } from '@material-ui/core';
 
 import { LogoNoText } from '@components/logo';
 import NavItem from './components/nav-item';
@@ -11,7 +12,7 @@ const NavComponent = ({ settings }: {settings: StoryData}) => {
   const classes = useStyles();
 
   return (
-    <nav className={classes.nav}>
+    <AppBar className={classes.nav}>
       <div className={classes.container}>
         <Link href="/">
           <a className={classes.logoLink}>
@@ -39,7 +40,7 @@ const NavComponent = ({ settings }: {settings: StoryData}) => {
           ))}
         </ul>
       </div>
-    </nav>
+    </AppBar>
   );
 };
 

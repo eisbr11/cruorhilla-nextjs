@@ -44,6 +44,7 @@ const SubNav = ({
                 // eslint-disable-next-line no-underscore-dangle
                 <li key={subitem._uid}>
                   <NavItem
+                    isSubNavItem
                     url={subitem.link.cached_url}
                     name={subitem.name}
                   />

@@ -1,12 +1,12 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   container: {
     position: 'absolute',
     left: 0,
     top: '100%',
     width: '100%',
-    background: '#00F',
+    background: theme.palette.secondary.main,
   },
   list: {
     listStyle: 'none',
