@@ -34,6 +34,8 @@ const useStyles = makeStyles((theme) => ({
     },
     list: {
       flexDirection: 'column',
+      justifyContent: 'center',
+      flex: 1,
     },
     listItem: {
       padding: theme.spacing(1, 0),
