@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ClickAwayListener, Grow } from '@material-ui/core';
+import { ButtonBase, ClickAwayListener, Grow } from '@material-ui/core';
+import ArrowBackRoundedIcon from '@material-ui/icons/ArrowBackRounded';
 
 import NavItem from '@components/nav/components/nav-item';
 import useStyles from './sub-nav.style';
@@ -38,11 +39,14 @@ const SubNav = ({
         unmountOnExit
       >
         <div className={classes.container}>
+          <ButtonBase className={classes.backButton} onClick={handleClickAway}>
+            <ArrowBackRoundedIcon fontSize="large" />
+          </ButtonBase>
           <ClickAwayListener onClickAway={handleClickAway}>
             <ul className={classes.list}>
               {subNavi.map((subitem) => (
                 // eslint-disable-next-line no-underscore-dangle
-                <li key={subitem._uid}>
+                <li className={classes.listItem} key={subitem._uid}>
                   <NavItem
                     isSubNavItem
                     url={subitem.link.cached_url}

@@ -11,6 +11,7 @@ const theme:Theme = createMuiTheme({
       main: '#9144df',
     },
   },
-}, commonThemeSettings);
+  ...commonThemeSettings,
+});
 
 export default theme;

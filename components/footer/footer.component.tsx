@@ -8,7 +8,7 @@ const FooterComponent = ({ settings }: {settings: StoryData}) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.container}>
+    <footer className={classes.container}>
       <ul className={classes.list}>
         {settings.content && settings.content.footer_navi.map((navitem) => (
           // eslint-disable-next-line no-underscore-dangle
@@ -19,7 +19,7 @@ const FooterComponent = ({ settings }: {settings: StoryData}) => {
           </li>
         ))}
       </ul>
-    </div>
+    </footer>
   );
 };
 

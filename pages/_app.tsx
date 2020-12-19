@@ -33,7 +33,7 @@ class MyApp extends App {
           <title>My page</title>
           <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         </Head>
-        <ThemeProvider theme={getTheme('weihnacshten')}>
+        <ThemeProvider theme={getTheme('baellebad')}>
           <CssBaseline />
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
           <Component {...pageProps} />

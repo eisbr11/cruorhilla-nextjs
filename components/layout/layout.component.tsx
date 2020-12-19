@@ -19,9 +19,9 @@ const Layout = ({
     <div className={classes.container}>
       <Head />
       <Nav settings={settings} />
-      <div className={classes.content}>
+      <main className={classes.content}>
         {children}
-      </div>
+      </main>
       <Footer settings={settings} />
     </div>
   );

@@ -14,6 +14,7 @@ const theme:Theme = createMuiTheme({
   typography: {
     fontSize: 20,
   },
-}, commonThemeSettings);
+  ...commonThemeSettings,
+});
 
 export default theme;
