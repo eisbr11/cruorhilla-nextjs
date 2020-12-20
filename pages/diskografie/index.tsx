@@ -15,7 +15,7 @@ const Diskografie = ({
   settings: StoryblokResult,
   records: StoryblokResult,
 }) => (
-  <Layout settings={settings.data.story}>
+  <Layout settings={settings.data.story} content={page.data.story.content}>
     <Page body={page.data.story.content.body} />
     <RecordGrid records={records.data.stories} />
   </Layout>

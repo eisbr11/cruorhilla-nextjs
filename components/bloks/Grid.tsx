@@ -8,7 +8,7 @@ const Grid = ({
   blok: SbEditableContent,
 }) => (
   <SbEditable content={blok}>
-    <div className="util__flex">
+    <div>
       {/* eslint-disable-next-line no-underscore-dangle */}
       {blok.columns.map((blokChild) => <Component blok={blokChild} key={blokChild._uid} />)}
     </div>

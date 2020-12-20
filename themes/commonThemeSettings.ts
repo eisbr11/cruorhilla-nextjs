@@ -13,6 +13,7 @@ const commonThemeSettings = {
     },
   },
   typography: {
+    fontFamily: 'Raleway, Arial',
     fontSize: 20,
   },
 };

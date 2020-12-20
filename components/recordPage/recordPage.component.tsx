@@ -1,4 +1,5 @@
 import { Container, Grid, Typography } from '@material-ui/core';
+import Head from 'next/head';
 
 import MarkdownViewer from '@components/markdown';
 import CoverImage from './components/coverImage';
@@ -14,9 +15,12 @@ const RecordPage = ({
   const classes = useStyles();
   return (
     <Container className={classes.container} maxWidth={false}>
+      <Head>
+        <title>{`Cruor Hilla - ${record.name}`}</title>
+      </Head>
       <Grid container justify="space-between" alignItems="flex-start" spacing={3}>
         <Grid item xs={12}>
-          <Typography color="textPrimary" variant="h1" className={classes.title}>{record.name}</Typography>
+          <Typography color="textPrimary" variant="h2" component="h1" className={classes.title}>{record.name}</Typography>
         </Grid>
         <Grid className={classes.imageReleaseWrap} container item spacing={2} xs={12} md={6} lg={5}>
           <Grid item xs={12} sm={6} md={12}>

@@ -5,7 +5,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 import getTheme from '@themes/index';
 import '../styles/globals.css';
-import Head from 'next/head';
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -29,10 +28,6 @@ class MyApp extends App {
     const { Component, pageProps }: AppProps = this.props;
     return (
       <>
-        <Head>
-          <title>My page</title>
-          <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-        </Head>
         <ThemeProvider theme={getTheme('baellebad')}>
           <CssBaseline />
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}

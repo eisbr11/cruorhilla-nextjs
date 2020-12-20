@@ -13,7 +13,7 @@ export default function Live({
   settings: StoryblokResult
 }) {
   return (
-    <Layout settings={settings.data.story}>
+    <Layout settings={settings.data.story} content={page.data.story.content}>
       {/* We will define these settings later on */}
       <Page body={page.data.story.content.body} />
     </Layout>
