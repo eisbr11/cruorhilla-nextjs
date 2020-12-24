@@ -1,7 +1,7 @@
 import { Container, Grid, Typography } from '@material-ui/core';
 import Head from 'next/head';
 
-import MarkdownViewer from '@components/markdown';
+import { MarkdownViewer } from '@components/markdown';
 import CoverImage from './components/coverImage';
 import Tracklist from './components/tracklist';
 import ReleaseInfo from './components/releaseInfo';
