@@ -6,6 +6,7 @@ import Placeholder from './Placeholder';
 import Teaser from './Teaser';
 import Social from './Social';
 import Container from './Container';
+import Richtext from './Richtext';
 
 const Components = {
   feature: Feature,
@@ -13,6 +14,7 @@ const Components = {
   teaser: Teaser,
   social_blok: Social,
   container: Container,
+  richtext: Richtext,
 };
 
 const Component = ({ blok }: {blok: SbEditableContent}) => {
