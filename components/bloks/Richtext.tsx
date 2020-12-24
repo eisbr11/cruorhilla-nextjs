@@ -1,6 +1,6 @@
 import SbEditable, { SbEditableContent } from 'storyblok-react';
-import { Typography } from '@material-ui/core';
-import MarkedViewer from '@components/markdown';
+
+import { TypographyMarkdownViewer } from '@components/markdown';
 
 const Richtext = ({
   blok,
@@ -8,9 +8,7 @@ const Richtext = ({
   blok: SbEditableContent,
 }) => (
   <SbEditable content={blok}>
-    <Typography align={blok.textAlign}>
-      <MarkedViewer content={blok.content} />
-    </Typography>
+    <TypographyMarkdownViewer typographyProps={{ align: blok.textAlign }} content={blok.content} />
   </SbEditable>
 );
 

@@ -1,3 +1,4 @@
 import MarkdownViewer from './markdown.component';
+import TypographyMarkdownViewer from './typographyMarkdown.component';
 
-export default MarkdownViewer;
+export { MarkdownViewer, TypographyMarkdownViewer };
