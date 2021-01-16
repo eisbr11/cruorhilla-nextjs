@@ -28,7 +28,7 @@ class MyApp extends App {
     const { Component, pageProps }: AppProps = this.props;
     return (
       <>
-        <ThemeProvider theme={getTheme('baellebad')}>
+        <ThemeProvider theme={getTheme('angstblitz')}>
           <CssBaseline />
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
           <Component {...pageProps} />
