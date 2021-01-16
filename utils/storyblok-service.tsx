@@ -1,6 +1,7 @@
 import Storyblok, { StoriesParams, StoryParams } from 'storyblok-js-client';
 
 import Config from '@lib/Config';
+import moment from 'moment';
 
 class StoryblokService {
   private readonly devMode: boolean;
@@ -93,6 +94,9 @@ class StoryblokService {
     params.filter_query = {
       component: {
         in: 'gig',
+      },
+      datum: {
+        gt_date: moment().subtract(1, 'days').format(),
       },
     };
 

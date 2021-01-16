@@ -1,4 +1,5 @@
 import { Container } from '@material-ui/core';
+import GigItem from './components/gigItem';
 
 const GigList = ({
   gigs,
@@ -7,10 +8,7 @@ const GigList = ({
 }) => (
   <Container maxWidth="lg">
     {gigs.map((gig) => (
-      <div key={gig.id}>
-        {gig.content.name}
-        {gig.content.datum}
-      </div>
+      <GigItem gig={gig} key={gig.id} />
     ))}
   </Container>
 );
