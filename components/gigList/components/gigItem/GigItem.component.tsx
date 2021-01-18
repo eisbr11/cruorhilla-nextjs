@@ -60,7 +60,8 @@ const GigItem = ({
       </Grid>
       <Grid item xs={12} sm={2}>
         <Typography align="right">
-          {gig.content.price}
+          <span className={classes.priceLabel}>Preis: </span>
+          <span className={classes.priceValue}>{gig.content.price}</span>
         </Typography>
       </Grid>
     </Grid>
