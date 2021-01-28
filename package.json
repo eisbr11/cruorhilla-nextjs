@@ -10,28 +10,28 @@
     "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --fix"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.2",
+    "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
-    "axios": "^0.20.0",
-    "marked": "^1.2.7",
+    "axios": "^0.21.1",
+    "marked": "^1.2.8",
     "moment": "^2.29.1",
-    "next": "^10.0.3",
+    "next": "^10.0.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "storyblok-js-client": "^3.3.0",
-    "storyblok-react": "^0.1.1"
+    "storyblok-js-client": "^3.3.1",
+    "storyblok-react": "^0.1.2"
   },
   "devDependencies": {
-    "@types/node": "^14.14.14",
+    "@types/node": "^14.14.22",
     "@types/react": "^17.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.10.0",
-    "@typescript-eslint/parser": "^4.10.0",
-    "eslint": "^7.16.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "eslint": "^7.18.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-import-resolver-typescript": "^2.3.0",
     "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "typescript": "^4.1.3"
   }
