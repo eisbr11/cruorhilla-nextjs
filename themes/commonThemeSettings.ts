@@ -1,7 +1,10 @@
+import raleway from './fonts/raleway.fontface';
+
 const commonThemeSettings = {
   overrides: {
     MuiCssBaseline: {
       '@global': {
+        '@font-face': [raleway.fw200, raleway.regular, raleway.fw800],
         html: {
           WebkitFontSmoothing: 'auto',
         },
@@ -13,7 +16,7 @@ const commonThemeSettings = {
     },
   },
   typography: {
-    fontFamily: 'Raleway, Arial',
+    fontFamily: ['Raleway', 'Arial'],
     fontSize: 20,
   },
 };
