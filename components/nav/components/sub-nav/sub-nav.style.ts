@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
       justifyContent: 'center',
       flexDirection: 'column',
+      zIndex: 5,
     },
     list: {
       flexDirection: 'column',

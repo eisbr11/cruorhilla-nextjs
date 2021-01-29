@@ -27,10 +27,16 @@ const NavItemComponent = ({
     <>
       {!hasSubnavi ? (
         <Link href={url}>
-          <a className={linkClasses}>{name}</a>
+          <a className={linkClasses}>
+            <span className={classes.linkName}>{name}</span>
+          </a>
         </Link>
       ) : (
-        <a href="#" className={linkClasses} onClick={openEvent}>{name}</a>
+        <a href="#" className={linkClasses} onClick={openEvent}>
+          <span className={classes.linkName}>
+            {name}
+          </span>
+        </a>
       )}
     </>
   );
