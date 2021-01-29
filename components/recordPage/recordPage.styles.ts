@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
   },
   imageReleaseWrap: {
     paddingRight: theme.spacing(4),
+    marginBottom: theme.spacing(2),
   },
 }));
 

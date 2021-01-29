@@ -22,7 +22,7 @@ const RecordPage = ({
         <Grid item xs={12}>
           <Typography color="textPrimary" variant="h2" component="h1" className={classes.title}>{record.name}</Typography>
         </Grid>
-        <Grid className={classes.imageReleaseWrap} container item spacing={2} xs={12} md={6} lg={5}>
+        <Grid className={classes.imageReleaseWrap} container item xs={12} md={6} lg={5}>
           <Grid item xs={12} sm={6} md={12}>
             <CoverImage coverImage={record.coverImage} />
           </Grid>
@@ -32,10 +32,10 @@ const RecordPage = ({
         </Grid>
         <Grid item xs={12} md={6}>
           <Tracklist tracklist={record.tracklist} />
-          <div>
+          <Typography component="div" variant="body1">
             <MarkdownViewer content={record.description} />
             <MarkdownViewer content={record.credits} />
-          </div>
+          </Typography>
         </Grid>
       </Grid>
     </Container>
