@@ -1,14 +1,11 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   logo: {
     width: '100%',
     verticalAlign: 'middle',
     transition: 'color 300ms ease',
-
-    '&:hover': {
-      color: theme.palette.secondary.main,
-    },
+    color: 'inherit',
   },
 }));
 

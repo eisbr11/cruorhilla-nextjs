@@ -2,14 +2,27 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   link: {
-    color: theme.palette.primary.contrastText,
+    color: 'inherit',
     padding: theme.spacing(2, 1),
     fontWeight: theme.typography.fontWeightBold,
     display: 'inline-block',
-    transition: 'color 300ms ease',
 
-    '&:hover': {
-      color: theme.palette.secondary.main,
+    '& $linkName::before': {
+      content: '""',
+      position: 'absolute',
+      width: '100%',
+      height: 2,
+      bottom: -3,
+      borderRadius: 4,
+      left: 0,
+      backgroundColor: theme.palette.primary.contrastText,
+      transition: 'all 400ms ease',
+      transform: 'scaleX(0)',
+    },
+
+    '&:hover $linkName::before': {
+      transform: 'scaleX(0.8)',
+      transition: 'all 400ms cubic-bezier(0.38, 0.35, 0.21, 1.52)',
     },
   },
   linkName: {
@@ -23,23 +36,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'inline-block',
 
     '& $linkName::before': {
-      content: '""',
-      position: 'absolute',
-      width: '100%',
-      height: 2,
-      bottom: -3,
-      left: 0,
       backgroundColor: theme.palette.secondary.contrastText,
-      transition: 'all 300ms ease',
-      transform: 'scaleX(0)',
-    },
-
-    '&:hover $linkName::before': {
-      transform: 'scaleX(0.8)',
-    },
-
-    '&:hover': {
-      color: theme.palette.secondary.contrastText,
     },
   },
 }));
