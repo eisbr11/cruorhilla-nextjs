@@ -2,17 +2,16 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   nav: {
-    padding: theme.spacing(1, 0),
     zIndex: 1,
   },
   container: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: theme.spacing(0, 2),
   },
   logoLink: {
     width: 50,
+    padding: theme.spacing(1, 0),
   },
   list: {
     listStyle: 'none',
@@ -24,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
   },
   listItem: {
-    padding: 10,
+    padding: theme.spacing(0, 1),
   },
   [theme.breakpoints.down('xs')]: {
     navMenu: {

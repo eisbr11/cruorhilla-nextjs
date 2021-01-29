@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'flex-end',
     flexDirection: 'row',
-    padding: 0,
+    padding: theme.spacing(0),
   },
   backButton: {
     position: 'absolute',

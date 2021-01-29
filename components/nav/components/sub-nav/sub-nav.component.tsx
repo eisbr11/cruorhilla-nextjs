@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import { ButtonBase, ClickAwayListener, Grow } from '@material-ui/core';
+import {
+  ButtonBase,
+  ClickAwayListener,
+  Container,
+  Grow,
+} from '@material-ui/core';
 import ArrowBackRoundedIcon from '@material-ui/icons/ArrowBackRounded';
 
 import NavItem from '@components/nav/components/nav-item';
@@ -38,7 +43,7 @@ const SubNav = ({
         mountOnEnter
         unmountOnExit
       >
-        <div className={classes.container}>
+        <Container maxWidth={false} className={classes.container}>
           <ButtonBase className={classes.backButton} onClick={handleClickAway}>
             <ArrowBackRoundedIcon fontSize="large" />
           </ButtonBase>
@@ -56,7 +61,7 @@ const SubNav = ({
               ))}
             </ul>
           </ClickAwayListener>
-        </div>
+        </Container>
       </Grow>
     </>
   );

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StoryData } from 'storyblok-js-client';
 import Link from 'next/link';
-import { AppBar } from '@material-ui/core';
+import { AppBar, Container } from '@material-ui/core';
 
 import { LogoNoText } from '@components/logo';
 import ThreeLinesButton from '@components/nav/components/threeLinesButton';
@@ -15,7 +15,7 @@ const NavComponent = ({ settings }: {settings: StoryData}) => {
 
   return (
     <AppBar position="sticky" className={classes.nav}>
-      <div className={classes.container}>
+      <Container maxWidth={false} className={classes.container}>
         <Link href="/">
           <a className={classes.logoLink}>
             <LogoNoText />
@@ -44,7 +44,7 @@ const NavComponent = ({ settings }: {settings: StoryData}) => {
             ))}
           </ul>
         </div>
-      </div>
+      </Container>
     </AppBar>
   );
 };
