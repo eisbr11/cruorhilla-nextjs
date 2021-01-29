@@ -1,6 +1,7 @@
+import { ThemeOptions } from '@material-ui/core';
 import raleway from './fonts/raleway.fontface';
 
-const commonThemeSettings = {
+const commonThemeSettings:ThemeOptions = {
   overrides: {
     MuiCssBaseline: {
       '@global': {
@@ -16,7 +17,7 @@ const commonThemeSettings = {
     },
   },
   typography: {
-    fontFamily: ['Raleway', 'Arial'],
+    fontFamily: 'Raleway',
     fontSize: 20,
   },
 };
