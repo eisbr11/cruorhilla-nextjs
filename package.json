@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-on-netlify",
+    // "postbuild": "next-on-netlify",
     "start": "next start",
     "lint": "eslint '*/**/*.{js,ts,tsx}'",
     "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --fix"
