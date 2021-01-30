@@ -14,7 +14,7 @@ class StoryblokService {
 
   constructor() {
     this.devMode = true; // Always loads draft
-    this.token = Config.storyblok_preview_token;
+    this.token = Config.storyblok_api_key;
     this.client = new Storyblok({
       accessToken: this.token,
       cache: {

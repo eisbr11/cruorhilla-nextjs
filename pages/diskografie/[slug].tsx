@@ -39,6 +39,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: allRecords.data.stories?.map((record) => `/diskografie/${record.slug}`),
-    fallback: true,
+    fallback: false,
   };
 };

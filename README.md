@@ -37,7 +37,6 @@ You need to add environment information to connect to storyblok the api. For thi
 
 ```dotenv
 STORYBLOK_DEV_MODE=true/false
-STORYBLOK_PREVIEW_TOKEN=xxx
 STORYBLOK_API_KEY=xxx
 ```
 
