@@ -1,10 +1,8 @@
 import React from 'react';
 import App, { AppProps } from 'next/app';
-import { ThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
 
-import getTheme from '@themes/index';
 import '../styles/globals.css';
+import ThemeContextProvider from '@context/themeContextProvider.component';
 
 class MyApp extends App {
   componentDidMount() {
@@ -17,13 +15,10 @@ class MyApp extends App {
   render() {
     const { Component, pageProps }: AppProps = this.props;
     return (
-      <>
-        <ThemeProvider theme={getTheme('angstblitz')}>
-          <CssBaseline />
-          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-          <Component {...pageProps} />
-        </ThemeProvider>
-      </>
+      <ThemeContextProvider>
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+        <Component {...pageProps} />
+      </ThemeContextProvider>
     );
   }
 }
