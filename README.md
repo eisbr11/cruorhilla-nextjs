@@ -1,5 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8334b48b-c1cf-4a56-82b4-cdb68defb499/deploy-status)](https://app.netlify.com/sites/awesome-hamilton-2da033/deploys)
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 # Cruor Hilla Next.js page
