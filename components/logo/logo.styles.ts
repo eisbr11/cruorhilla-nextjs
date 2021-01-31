@@ -4,7 +4,6 @@ const useStyles = makeStyles(() => ({
   logo: {
     width: '100%',
     verticalAlign: 'middle',
-    transition: 'color 300ms ease',
     color: 'inherit',
   },
 }));
