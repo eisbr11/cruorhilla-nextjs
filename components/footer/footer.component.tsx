@@ -3,6 +3,7 @@ import { StoryData } from 'storyblok-js-client';
 import Link from 'next/link';
 
 import useStyles from '@components/footer/footer.styles';
+import SwitchThemeSelect from '@components/switchThemeSelect/switchThemeSelect.component';
 
 const FooterComponent = ({ settings }: {settings: StoryData}) => {
   const classes = useStyles();
@@ -19,6 +20,7 @@ const FooterComponent = ({ settings }: {settings: StoryData}) => {
           </li>
         ))}
       </ul>
+      <SwitchThemeSelect />
     </footer>
   );
 };

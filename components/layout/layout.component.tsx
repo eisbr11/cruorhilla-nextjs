@@ -5,7 +5,7 @@ import { StoryData } from 'storyblok-js-client';
 
 import { useTheme } from '@context/theme.context';
 import getTheme from '@themes/index';
-import LayoutContent from './components/LayoutContent.component';
+import LayoutContent from './components/LayoutContent/LayoutContent.component';
 
 const Layout = ({
   children,

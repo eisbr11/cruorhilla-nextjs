@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flex: 1,
+    zIndex: 2,
   },
 }));
 

@@ -4,7 +4,8 @@ import { StoryData } from 'storyblok-js-client';
 import Head from '@components/head';
 import Nav from '@components/nav';
 import Footer from '@components/footer';
-import SwitchThemeSelect from '@components/switchThemeSelect/switchThemeSelect.component';
+import { Theme, useTheme } from '@context/theme.context';
+import AngstblitzSky from './components/AngstblitzSky.component';
 import useStyles from './LayoutContent.styles';
 
 const LayoutContent = ({
@@ -20,15 +21,20 @@ const LayoutContent = ({
   },
 }) => {
   const classes = useStyles();
+  const { theme } = useTheme();
 
   return (
     <div className={classes.container}>
       <Head title={content.title} description={content.description} />
       <Nav settings={settings} />
+      {(theme === Theme.angstblitz) ? (
+        <AngstblitzSky />
+      ) : (
+        null
+      )}
       <main className={classes.content}>
         {children}
       </main>
-      <SwitchThemeSelect />
       <Footer settings={settings} />
     </div>
   );
