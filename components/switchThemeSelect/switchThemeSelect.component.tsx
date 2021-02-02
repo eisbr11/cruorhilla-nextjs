@@ -24,7 +24,7 @@ const SwitchThemeSelect = () => {
         label="Theme Switch"
       >
         {Object.keys(Theme).map((value) => (
-          <MenuItem value={value}>{value}</MenuItem>
+          <MenuItem key={value} value={value}>{value}</MenuItem>
         ))}
       </Select>
     </FormControl>
