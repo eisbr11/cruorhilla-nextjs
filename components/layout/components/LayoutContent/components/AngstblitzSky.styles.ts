@@ -12,6 +12,7 @@ const useStyles = makeStyles(() => ({
     zIndex: 1,
     perspective: 340,
     overflow: 'hidden',
+    opacity: 0.8,
   },
   stars: {
     position: 'absolute',
