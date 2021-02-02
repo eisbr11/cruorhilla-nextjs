@@ -1,13 +1,15 @@
 import { SbEditableContent } from 'storyblok-react';
 
 import Feature from './Feature';
-import Grid from './Grid';
 import Placeholder from './Placeholder';
 import Teaser from './Teaser';
 import Social from './Social';
-import Container from './Container';
 import Richtext from './Richtext';
 import Headline from './Headline';
+// eslint-disable-next-line import/no-cycle
+import Grid from './Grid';
+// eslint-disable-next-line import/no-cycle
+import Container from './Container';
 
 const Components = {
   feature: Feature,

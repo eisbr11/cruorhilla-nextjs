@@ -1,6 +1,7 @@
 import { Container as MaterialContainer } from '@material-ui/core';
 import { SbEditableContent } from 'storyblok-react';
 
+// eslint-disable-next-line import/no-cycle
 import Component from '@components/bloks/index';
 
 const Container = ({

@@ -10,7 +10,7 @@ export enum Theme {
 export type ThemeContextType = {
   theme: Theme;
   setTheme: (Theme: Theme) => void;
-}
+};
 
 export const ThemeContext = createContext<ThemeContextType>({
   theme: Theme.angstblitz,
