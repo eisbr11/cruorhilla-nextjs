@@ -6,7 +6,7 @@ import {
   Select,
 } from '@material-ui/core';
 
-import { Theme, useTheme } from '@context/theme.context';
+import { Theme, useTheme, getThemeName } from '@context/theme.context';
 
 const SwitchThemeSelect = () => {
   const { theme, setTheme } = useTheme();
@@ -24,7 +24,7 @@ const SwitchThemeSelect = () => {
         label="Theme Switch"
       >
         {Object.keys(Theme).map((value) => (
-          <MenuItem key={value} value={value}>{value}</MenuItem>
+          <MenuItem key={value} value={value}>{getThemeName(value)}</MenuItem>
         ))}
       </Select>
     </FormControl>

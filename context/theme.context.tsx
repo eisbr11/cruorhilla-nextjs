@@ -7,6 +7,15 @@ export enum Theme {
   baellebad = 'baellebad',
 }
 
+const keyToName = {
+  angstblitz: 'Angst Blitz',
+  weihnachten: 'Weihnachten Vergessen',
+  default: 'Standard',
+  baellebad: 'Bällebad',
+};
+
+export const getThemeName = (themeKey: string) => keyToName[themeKey];
+
 export type ThemeContextType = {
   theme: Theme;
   setTheme: (Theme: Theme) => void;

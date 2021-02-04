@@ -5,6 +5,7 @@ import Head from '@components/head';
 import Nav from '@components/nav';
 import Footer from '@components/footer';
 import { Theme, useTheme } from '@context/theme.context';
+import SettingsComponent from '@components/settings';
 import AngstblitzSky from './components/AngstblitzSky.component';
 import useStyles from './LayoutContent.styles';
 
@@ -35,6 +36,7 @@ const LayoutContent = ({
       <main className={classes.content}>
         {children}
       </main>
+      <SettingsComponent />
       <Footer settings={settings} />
     </div>
   );
