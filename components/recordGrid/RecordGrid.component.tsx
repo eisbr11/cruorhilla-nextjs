@@ -1,7 +1,7 @@
 import { Container, Grid } from '@material-ui/core';
 import RecordGridItem from '@components/recordGrid/components/RecordGridItem';
 
-const RecordGrid = ({ records }: {records: any}) => (
+const RecordGridComponent = ({ records }: {records: any}) => (
   <Container maxWidth="lg">
     <Grid container spacing={3}>
       {records.map((record) => (
@@ -18,4 +18,4 @@ const RecordGrid = ({ records }: {records: any}) => (
   </Container>
 );
 
-export default RecordGrid;
+export default RecordGridComponent;

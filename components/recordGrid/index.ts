@@ -1,3 +1,3 @@
-import RecordGrid from './RecordGrid';
+import RecordGridComponent from './RecordGrid.component';
 
-export default RecordGrid;
+export default RecordGridComponent;

@@ -1,5 +1,6 @@
 import React from 'react';
-import { ThemeContext, Theme } from '@context/theme.context';
+
+import { ThemeContext, Theme } from './theme.context';
 
 const ThemeContextProvider = ({
   children,
