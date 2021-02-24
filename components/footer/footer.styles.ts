@@ -6,6 +6,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     background: theme.palette.common.black,
     zIndex: 2,
+    position: 'relative',
   },
   list: {
     flex: 1,

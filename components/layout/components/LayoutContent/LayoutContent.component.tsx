@@ -7,7 +7,21 @@ import Footer from '@components/footer';
 import { Theme, useTheme } from '@context/theme.context';
 import SettingsComponent from '@components/settings';
 import AngstblitzSky from './components/AngstblitzSky.component';
+import BaellebadBg from './components/BaellebadBg.component';
 import useStyles from './LayoutContent.styles';
+
+const renderBackground = (theme: string): React.ReactNode | null => {
+  switch (theme) {
+    case Theme.angstblitz:
+      return (<AngstblitzSky />);
+      break;
+    case Theme.baellebad:
+      return (<BaellebadBg />);
+    default:
+      return null;
+      break;
+  }
+};
 
 const LayoutContent = ({
   children,
@@ -28,11 +42,7 @@ const LayoutContent = ({
     <div className={classes.container}>
       <Head title={content.title} description={content.description} />
       <Nav settings={settings} />
-      {(theme === Theme.angstblitz) ? (
-        <AngstblitzSky />
-      ) : (
-        null
-      )}
+      {renderBackground(theme)}
       <main className={classes.content}>
         {children}
       </main>
