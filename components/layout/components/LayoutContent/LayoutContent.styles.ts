@@ -5,6 +5,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     minHeight: '100vh',
+    overflow: 'hidden',
     background: theme.palette.primary.dark,
   },
   content: {
