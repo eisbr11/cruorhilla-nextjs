@@ -1,10 +1,11 @@
 import React from 'react';
+import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import { StoryData } from 'storyblok-js-client';
 
-import Head from '@components/head';
-import Nav from '@components/nav';
-import Footer from '@components/footer';
-import useStyles from './layout.styles';
+import { useTheme } from '@context/theme.context';
+import getTheme from '@themes/index';
+import LayoutContent from './components/LayoutContent/LayoutContent.component';
 
 const Layout = ({
   children,
@@ -18,17 +19,15 @@ const Layout = ({
     description: string,
   }
 }) => {
-  const classes = useStyles();
+  const { theme } = useTheme();
 
   return (
-    <div className={classes.container}>
-      <Head title={content.title} description={content.description} />
-      <Nav settings={settings} />
-      <main className={classes.content}>
+    <ThemeProvider theme={getTheme(theme)}>
+      <CssBaseline />
+      <LayoutContent settings={settings} content={content}>
         {children}
-      </main>
-      <Footer settings={settings} />
-    </div>
+      </LayoutContent>
+    </ThemeProvider>
   );
 };
 

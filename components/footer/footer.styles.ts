@@ -5,6 +5,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     background: theme.palette.common.black,
+    zIndex: 2,
+    position: 'relative',
   },
   list: {
     flex: 1,
@@ -12,11 +14,12 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     display: 'flex',
     justifyContent: 'center',
+    flexWrap: 'wrap',
     margin: 0,
-    padding: 10,
+    padding: theme.spacing(2.5, 10),
   },
   listItem: {
-    padding: 10,
+    padding: theme.spacing(1, 2),
   },
   link: {
     fontSize: theme.typography.fontSize.toFixed(14),

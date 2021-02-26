@@ -3,7 +3,7 @@ import { StoryblokResult } from 'storyblok-js-client';
 
 import StoryblokService from '@utils/storyblok-service';
 import Layout from '@components/layout';
-import RecordGrid from '@components/recordGrid';
+import RecordGridComponent from '@components/recordGrid';
 import Page from '@components/bloks/Page';
 
 const Diskografie = ({
@@ -17,7 +17,7 @@ const Diskografie = ({
 }) => (
   <Layout settings={settings.data.story} content={page.data.story.content}>
     <Page body={page.data.story.content.body} />
-    <RecordGrid records={records.data.stories} />
+    <RecordGridComponent records={records.data.stories} />
   </Layout>
 );
 

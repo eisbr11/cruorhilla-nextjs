@@ -16,7 +16,9 @@ const ReleaseInfo = ({
       <Typography align="right" color="textSecondary">{moment(releaseDate).format('DD.MM.YYYY')}</Typography>
     </Grid>
     <Grid>
-      <Typography align="right" color="textPrimary">Format</Typography>
+      <Typography align="right" color="textPrimary">
+        {'Format '}
+      </Typography>
       <Typography align="right" color="textSecondary">{recordTypeString(formatType)}</Typography>
     </Grid>
   </>

@@ -1,5 +1,6 @@
 import SbEditable, { SbEditableContent } from 'storyblok-react';
 
+// eslint-disable-next-line import/no-cycle
 import Component from './index';
 
 const Grid = ({
