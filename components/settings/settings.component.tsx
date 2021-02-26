@@ -3,13 +3,11 @@ import {
   Backdrop,
   Fade,
   Modal,
-  Paper,
-  Typography,
 } from '@material-ui/core';
 
-import SwitchThemeSelect from '@components/switchThemeSelect/switchThemeSelect.component';
 import useStyles from '@components/settings/settings.styles';
 import SettingsButton from './components/SettingsButton';
+import SettingsModalContent from './components/SettingsModalContent';
 
 const SettingsComponent = () => {
   const classes = useStyles();
@@ -39,11 +37,7 @@ const SettingsComponent = () => {
         className={classes.modal}
       >
         <Fade in={open}>
-          <Paper className={classes.contentWrap}>
-            <Typography variant="h5" component="span" id="transition-modal-title">Transition modal</Typography>
-            <Typography variant="body1" id="transition-modal-description">Ist dir das Design zu eintönig? Dann stell doch ein anderes ein.</Typography>
-            <SwitchThemeSelect />
-          </Paper>
+          <SettingsModalContent />
         </Fade>
       </Modal>
     </>
