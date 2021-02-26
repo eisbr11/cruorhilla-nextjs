@@ -1,5 +1,6 @@
 import { SbEditableContent } from 'storyblok-react';
 
+import ContentLink from '@components/bloks/ContentLink';
 import Feature from './Feature';
 import Placeholder from './Placeholder';
 import Teaser from './Teaser';
@@ -19,6 +20,7 @@ const Components = {
   container: Container,
   richtext: Richtext,
   headline: Headline,
+  content_link: ContentLink,
 };
 
 const Component = ({ blok }: {blok: SbEditableContent}) => {
