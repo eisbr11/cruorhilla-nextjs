@@ -33,11 +33,14 @@ const SettingsComponent = () => {
         BackdropComponent={Backdrop}
         BackdropProps={{
           timeout: 500,
+          className: classes.backdrop,
         }}
         className={classes.modal}
       >
         <Fade in={open}>
-          <SettingsModalContent />
+          <div className={classes.modalInner}>
+            <SettingsModalContent />
+          </div>
         </Fade>
       </Modal>
     </>
