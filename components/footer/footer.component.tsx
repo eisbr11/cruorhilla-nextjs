@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import useStyles from '@components/footer/footer.styles';
 
-const FooterComponent = ({ settings }: {settings: StoryData}) => {
+const FooterComponent = ({ settings }: { settings: StoryData }) => {
   const classes = useStyles();
 
   return (

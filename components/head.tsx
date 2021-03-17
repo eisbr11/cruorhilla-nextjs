@@ -2,7 +2,7 @@ import NextHead from 'next/head';
 
 const defaultDescription = 'Die Webseite der Band Cruor Hilla. Hier findest du alle Neuigkeiten über Konzerte, Musik und noch weitere Infos über die PunkRock Band aus Berlin.';
 
-const Head = ({ title, description }: {title?: string, description?: string}) => (
+const Head = ({ title, description }: { title?: string, description?: string }) => (
   <NextHead>
     <meta charSet="UTF-8" />
     <title>{title || 'Cruor Hilla'}</title>

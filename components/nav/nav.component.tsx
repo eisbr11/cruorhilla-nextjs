@@ -9,7 +9,7 @@ import NavItem from './components/nav-item';
 import SubNav from './components/sub-nav';
 import useStyles from './nav.styles';
 
-const NavComponent = ({ settings }: {settings: StoryData}) => {
+const NavComponent = ({ settings }: { settings: StoryData }) => {
   const classes = useStyles();
   const [active, setActive] = useState(false);
 

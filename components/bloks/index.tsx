@@ -23,7 +23,7 @@ const Components = {
   content_link: ContentLink,
 };
 
-const Component = ({ blok }: {blok: SbEditableContent}) => {
+const Component = ({ blok }: { blok: SbEditableContent }) => {
   if (typeof Components[blok.component] !== 'undefined') {
     const BlokComponent = Components[blok.component];
     return <BlokComponent blok={blok} />;

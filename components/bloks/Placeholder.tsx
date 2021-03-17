@@ -1,4 +1,4 @@
-const Placeholder = ({ componentName }: {componentName: string}) => (
+const Placeholder = ({ componentName }: { componentName: string }) => (
   <div>
     {`The component ${componentName} has not been created yet.`}
   </div>

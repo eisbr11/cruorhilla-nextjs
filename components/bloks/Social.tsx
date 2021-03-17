@@ -5,7 +5,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import { BandcampIcon, SpotifyIcon } from '@components/customIcons';
 
-const Social = ({ blok }: {blok: SbEditableContent}) => (
+const Social = ({ blok }: { blok: SbEditableContent }) => (
   <SbEditable content={blok}>
     <Grid container spacing={2} justify="center">
       <Grid item>
