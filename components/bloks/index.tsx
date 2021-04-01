@@ -8,19 +8,21 @@ import Social from './Social';
 import Richtext from './Richtext';
 import Headline from './Headline';
 // eslint-disable-next-line import/no-cycle
-import Grid from './Grid';
-// eslint-disable-next-line import/no-cycle
 import Container from './Container';
+// eslint-disable-next-line import/no-cycle
+import VideoGrid from './VideoGrid';
+import Video from './Video';
 
 const Components = {
   feature: Feature,
-  grid: Grid,
   teaser: Teaser,
   social_blok: Social,
   container: Container,
   richtext: Richtext,
   headline: Headline,
   content_link: ContentLink,
+  video: Video,
+  video_grid: VideoGrid,
 };
 
 const Component = ({ blok }: { blok: SbEditableContent }) => {
