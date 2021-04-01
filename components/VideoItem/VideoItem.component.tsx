@@ -29,7 +29,7 @@ const VideoItem = ({
           className={classes.youtubeEmbed}
         />
       </div>
-      <Typography color="secondary" variant="h5" align="center">
+      <Typography color="textPrimary" variant="h5" align="center">
         {title}
       </Typography>
     </div>
