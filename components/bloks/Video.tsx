@@ -8,7 +8,7 @@ const VideoGrid = ({
 }: {
   blok: SbEditableContent,
 }) => (
-  <Grid item md={6} xs={12}>
+  <Grid item md={blok.full_width ? 12 : 6} xs={12}>
     <VideoItem title={blok.title} ytId={blok.youtube_id} />
   </Grid>
 );
