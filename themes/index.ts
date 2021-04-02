@@ -1,3 +1,5 @@
+import { responsiveFontSizes } from '@material-ui/core/styles';
+
 import angstBlitzTheme from './angstblitz.theme';
 import baelleBadTheme from './baellebad.theme';
 import weihnachtenTheme from './weihnachten.theme';
@@ -6,13 +8,13 @@ import defaultTheme from './default.theme';
 const getTheme = (themeString: string) => {
   switch (themeString) {
     case 'angstblitz':
-      return angstBlitzTheme;
+      return responsiveFontSizes(angstBlitzTheme);
     case 'baellebad':
-      return baelleBadTheme;
+      return responsiveFontSizes(baelleBadTheme);
     case 'weihnachten':
-      return weihnachtenTheme;
+      return responsiveFontSizes(weihnachtenTheme);
     default:
-      return defaultTheme;
+      return responsiveFontSizes(defaultTheme);
   }
 };
 
