@@ -13,6 +13,9 @@ const commonThemeSettings:ThemeOptions = {
           marginTop: 0,
           marginBottom: '1.5rem',
         },
+        iframe: {
+          maxWidth: '100%',
+        },
       },
     },
   },

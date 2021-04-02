@@ -12,10 +12,14 @@ import Container from './Container';
 // eslint-disable-next-line import/no-cycle
 import VideoGrid from './VideoGrid';
 import Video from './Video';
+import DownloadLink from './DownloadLink';
+import IFrameEmbed from './IFrameEmbed';
 
 const Components = {
   feature: Feature,
   teaser: Teaser,
+  download_link: DownloadLink,
+  iframe_embed: IFrameEmbed,
   social_blok: Social,
   container: Container,
   richtext: Richtext,

@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   title: {
     textTransform: 'uppercase',
+    wordBreak: 'break-word',
   },
   container: {
     overflow: 'hidden',
