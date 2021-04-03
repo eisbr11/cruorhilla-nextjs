@@ -1,4 +1,4 @@
-import useStyles from '@components/logo/logo.styles';
+import useStyles from './Logo.styles';
 
 const LogoWithText = () => {
   const classes = useStyles();

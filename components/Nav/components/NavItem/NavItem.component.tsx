@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import useStyles from './nav-item.styles';
+import useStyles from './NavItem.styles';
 
 const NavItemComponent = ({
   name,

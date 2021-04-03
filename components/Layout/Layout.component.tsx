@@ -5,9 +5,9 @@ import { StoryData } from 'storyblok-js-client';
 
 import { useTheme } from '@context/theme.context';
 import getTheme from '@themes/index';
-import LayoutContent from './components/LayoutContent/LayoutContent.component';
+import LayoutContent from './components/LayoutContent';
 
-const Layout = ({
+const LayoutComponent = ({
   children,
   settings,
   content,
@@ -31,9 +31,9 @@ const Layout = ({
   );
 };
 
-export default Layout;
+export default LayoutComponent;
 
-Layout.defaultProps = {
+LayoutComponent.defaultProps = {
   settings: {},
   content: {
     title: '',

@@ -3,7 +3,7 @@ import { StoryblokResult } from 'storyblok-js-client';
 
 import StoryblokService from '@utils/storyblok-service';
 import Page from '@components/bloks/Page';
-import Layout from '@components/layout';
+import Layout from '@components/Layout';
 
 export default function Home({
   page,

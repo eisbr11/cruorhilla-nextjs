@@ -2,7 +2,7 @@ import React from 'react';
 import { StoryData } from 'storyblok-js-client';
 import Link from 'next/link';
 
-import useStyles from '@components/footer/footer.styles';
+import useStyles from './Footer.styles';
 
 const FooterComponent = ({ settings }: { settings: StoryData }) => {
   const classes = useStyles();

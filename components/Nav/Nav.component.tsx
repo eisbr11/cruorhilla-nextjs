@@ -3,11 +3,11 @@ import { StoryData } from 'storyblok-js-client';
 import Link from 'next/link';
 import { AppBar, Container } from '@material-ui/core';
 
-import { LogoNoText } from '@components/logo';
-import ThreeLinesButton from '@components/nav/components/threeLinesButton';
-import NavItem from './components/nav-item';
-import SubNav from './components/sub-nav';
-import useStyles from './nav.styles';
+import { LogoNoText } from '@components/Logo';
+import ThreeLinesButton from './components/ThreeLinesButton';
+import NavItem from './components/NavItem';
+import SubNav from './components/SubNav';
+import useStyles from './Nav.styles';
 
 const NavComponent = ({ settings }: { settings: StoryData }) => {
   const classes = useStyles();

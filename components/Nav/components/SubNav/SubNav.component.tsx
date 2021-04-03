@@ -7,8 +7,8 @@ import {
 } from '@material-ui/core';
 import ArrowBackRoundedIcon from '@material-ui/icons/ArrowBackRounded';
 
-import NavItem from '@components/nav/components/nav-item';
-import useStyles from './sub-nav.style';
+import NavItem from '@components/Nav/components/NavItem';
+import useStyles from './SubNav.style';
 
 const SubNav = ({
   label,

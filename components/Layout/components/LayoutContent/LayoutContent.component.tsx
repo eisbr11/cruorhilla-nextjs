@@ -2,12 +2,11 @@ import React from 'react';
 import { StoryData } from 'storyblok-js-client';
 
 import Head from '@components/head';
-import Nav from '@components/nav';
-import Footer from '@components/footer';
+import Nav from '@components/Nav';
+import Footer from '@components/Footer';
 import { Theme, useTheme } from '@context/theme.context';
 import SettingsComponent from '@components/settings';
-import AngstblitzSky from './components/AngstblitzSky.component';
-import BaellebadBg from './components/BaellebadBg.component';
+import { AngstblitzSky, BaellebadBg } from './components/CustomBackgrounds';
 import useStyles from './LayoutContent.styles';
 
 const renderBackground = (theme: string): React.ReactNode | null => {

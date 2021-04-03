@@ -2,9 +2,9 @@ import { GetStaticProps } from 'next';
 import { StoryblokResult } from 'storyblok-js-client';
 
 import StoryblokService from '@utils/storyblok-service';
-import Layout from '@components/layout';
+import Layout from '@components/Layout';
 import Page from '@components/bloks/Page';
-import GigList from '@components/gigList';
+import GigList from '@components/GigList';
 
 export default function Live({
   page,

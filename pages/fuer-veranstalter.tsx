@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next';
 
-import Layout from '@components/layout';
+import Layout from '@components/Layout';
 import StoryblokService from '@utils/storyblok-service';
 import { StoryblokResult } from 'storyblok-js-client';
 import Page from '@components/bloks/Page';
