@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import useStyles from './coverImage.styles';
+import useStyles from './CoverImage.styles';
 
 const CoverImage = ({
   coverImage,

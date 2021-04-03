@@ -1,4 +1,4 @@
-import useStyles from '@components/recordPage/components/tracklist/tracklist.styles';
+import useStyles from './Tracklist.styles';
 
 const Tracklist = ({
   tracklist,

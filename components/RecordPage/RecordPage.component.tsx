@@ -1,11 +1,11 @@
 import { Container, Grid, Typography } from '@material-ui/core';
 import Head from 'next/head';
 
-import { MarkdownViewer } from '@components/markdown';
-import CoverImage from './components/coverImage';
-import Tracklist from './components/tracklist';
-import ReleaseInfo from './components/releaseInfo';
-import useStyles from './recordPage.styles';
+import { MarkdownViewer } from '@components/Markdown';
+import CoverImage from './components/CoverImage';
+import Tracklist from './components/Tracklist';
+import ReleaseInfo from './components/ReleaseInfo';
+import useStyles from './RecordPage.styles';
 
 const RecordPage = ({
   record,

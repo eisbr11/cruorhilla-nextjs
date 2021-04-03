@@ -1,6 +1,6 @@
 import SbEditable, { SbEditableContent } from 'storyblok-react';
 
-import { TypographyMarkdownViewer } from '@components/markdown';
+import { TypographyMarkdownViewer } from '@components/Markdown';
 
 const Richtext = ({
   blok,
