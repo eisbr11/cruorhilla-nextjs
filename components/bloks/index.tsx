@@ -14,6 +14,7 @@ import VideoGrid from './VideoGrid';
 import Video from './Video';
 import DownloadLink from './DownloadLink';
 import IFrameEmbed from './IFrameEmbed';
+// eslint-disable-next-line import/no-cycle
 import Article from './Article';
 
 const Components = {
