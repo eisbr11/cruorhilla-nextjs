@@ -14,8 +14,10 @@ import VideoGrid from './VideoGrid';
 import Video from './Video';
 import DownloadLink from './DownloadLink';
 import IFrameEmbed from './IFrameEmbed';
+import Article from './Article';
 
 const Components = {
+  article: Article,
   feature: Feature,
   teaser: Teaser,
   download_link: DownloadLink,
