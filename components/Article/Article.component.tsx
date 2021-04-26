@@ -1,5 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
+import clsx from 'clsx';
+import { useInView } from 'react-intersection-observer';
 
 import useStyles from './Article.styles';
 
@@ -13,9 +15,20 @@ const ArticleComponent = ({
     alt: string,
   }
 }) => {
+  const { ref, inView } = useInView({
+    rootMargin: '0px',
+    threshold: 0.1,
+    triggerOnce: true,
+  });
+
   const classes = useStyles();
   return (
-    <article className={classes.container}>
+    <article
+      className={clsx(classes.container, {
+        [classes.containerVisible]: inView,
+      })}
+      ref={ref}
+    >
       <div className={classes.imageWrapper}>
         <Image
           src={image.filename}
@@ -26,7 +39,7 @@ const ArticleComponent = ({
           objectPosition="center"
         />
       </div>
-      <div>
+      <div className={classes.contentWrapper}>
         {content}
       </div>
     </article>
