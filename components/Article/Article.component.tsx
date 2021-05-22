@@ -1,19 +1,21 @@
 import React from 'react';
-import Image from 'next/image';
 import clsx from 'clsx';
 import { useInView } from 'react-intersection-observer';
 
+import ArticleImage from './components/ArticleImage';
 import useStyles from './Article.styles';
 
 const ArticleComponent = ({
   content,
   image,
+  design,
 }: {
   content: React.ReactNode,
   image: {
     filename: string,
     alt: string,
   }
+  design: 'imageRight'|'imageLeft',
 }) => {
   const { ref, inView } = useInView({
     rootMargin: '0px',
@@ -29,19 +31,21 @@ const ArticleComponent = ({
       })}
       ref={ref}
     >
-      <div className={classes.imageWrapper}>
-        <Image
-          src={image.filename}
-          alt={image.alt}
-          className={classes.image}
-          layout="fill"
-          objectFit="contain"
-          objectPosition="center"
-        />
-      </div>
-      <div className={classes.contentWrapper}>
-        {content}
-      </div>
+      {(design === 'imageLeft') ? (
+        <>
+          <ArticleImage image={image} />
+          <div className={classes.contentWrapper}>
+            {content}
+          </div>
+        </>
+      ) : (
+        <>
+          <div className={classes.contentWrapper}>
+            {content}
+          </div>
+          <ArticleImage image={image} />
+        </>
+      )}
     </article>
   );
 };

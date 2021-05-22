@@ -10,6 +10,7 @@ const Article = ({ blok }: { blok: SbEditableContent }) => (
     <ArticleComponent
       content={blok.content.map((blokChild) => <Component blok={blokChild} key={blokChild._uid} />)}
       image={blok.image}
+      design={blok.design}
     />
     {/* eslint-enable no-underscore-dangle */}
   </>
