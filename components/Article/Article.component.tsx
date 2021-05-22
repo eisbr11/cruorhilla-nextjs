@@ -28,24 +28,14 @@ const ArticleComponent = ({
     <article
       className={clsx(classes.container, {
         [classes.containerVisible]: inView,
+        [classes.imageRight]: design === 'imageRight',
       })}
       ref={ref}
     >
-      {(design === 'imageLeft') ? (
-        <>
-          <ArticleImage image={image} />
-          <div className={classes.contentWrapper}>
-            {content}
-          </div>
-        </>
-      ) : (
-        <>
-          <div className={classes.contentWrapper}>
-            {content}
-          </div>
-          <ArticleImage image={image} />
-        </>
-      )}
+      <ArticleImage image={image} />
+      <div className={classes.contentWrapper}>
+        {content}
+      </div>
     </article>
   );
 };

@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   image: {
-    transform: 'rotate(20deg)',
+    transform: 'rotate(2deg)',
   },
   imageWrapper: {
     height: '50vh',

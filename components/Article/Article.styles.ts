@@ -13,11 +13,16 @@ const useStyles = makeStyles((theme) => ({
 
     [theme.breakpoints.up('sm')]: {
       display: 'flex',
-      rowDirection: 'row',
+      flexDirection: 'row',
+    },
+  },
+  imageRight: {
+    [theme.breakpoints.up('sm')]: {
+      display: 'flex',
+      flexDirection: 'row-reverse',
     },
   },
   containerVisible: {
-
     transform: 'translate3d(0px, 0px, 0px)',
     opacity: 1,
   },
