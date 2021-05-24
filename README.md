@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 # Cruor Hilla Next.js page
 
-This is the repository for the new 2020 Cruor Hilla website which will eventually be found here:
+This is the repository for the new 2021 Cruor Hilla website which will eventually be found here:
 [www.cruorhilla.de](http://www.cruorhilla.de)  
 
 ## Getting Started

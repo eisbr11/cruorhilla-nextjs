@@ -33,8 +33,8 @@ const RecordGridItem = ({
               src={coverImage.filename}
               alt={coverImage.alt}
               layout="responsive"
-              width={600}
-              height={600}
+              width={1}
+              height={1}
             />
           </div>
           <Grid className={classes.infoContainer} container>
