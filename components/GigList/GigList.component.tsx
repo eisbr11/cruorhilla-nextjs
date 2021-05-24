@@ -1,7 +1,7 @@
 import { Container } from '@material-ui/core';
 
-import GigItem from './components/gigItem';
-import NoConcertsInfo from './components/noConcertsInfo';
+import GigItem from './components/GigItem';
+import NoConcertsInfo from './components/NoConcertsInfo';
 import useStyles from './GigList.styles';
 
 const GigList = ({

@@ -5,9 +5,9 @@ import {
   Modal,
 } from '@material-ui/core';
 
-import useStyles from '@components/settings/settings.styles';
 import SettingsButton from './components/SettingsButton';
 import SettingsModalContent from './components/SettingsModalContent';
+import useStyles from './Settings.styles';
 
 const SettingsComponent = () => {
   const classes = useStyles();
