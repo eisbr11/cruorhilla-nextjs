@@ -12,27 +12,27 @@ const SocialMediaLinks = () => {
   return (
     <Grid className={classes.container} container spacing={2} justify="center">
       <Grid item>
-        <IconButton href={Config.social_media.youtube} color="default">
+        <IconButton target="_blank" href={Config.social_media.youtube} color="default">
           <YouTubeIcon fontSize="large" />
         </IconButton>
       </Grid>
       <Grid item>
-        <IconButton href={Config.social_media.fb} color="default">
+        <IconButton target="_blank" href={Config.social_media.fb} color="default">
           <FacebookIcon fontSize="large" />
         </IconButton>
       </Grid>
       <Grid item>
-        <IconButton href={Config.social_media.spotify} color="default">
+        <IconButton target="_blank" href={Config.social_media.spotify} color="default">
           <SpotifyIcon fontSize="large" />
         </IconButton>
       </Grid>
       <Grid item>
-        <IconButton href={Config.social_media.bandcamp} color="default">
+        <IconButton target="_blank" href={Config.social_media.bandcamp} color="default">
           <BandcampIcon fontSize="large" />
         </IconButton>
       </Grid>
       <Grid item>
-        <IconButton href={Config.social_media.instagram} color="default">
+        <IconButton target="_blank" href={Config.social_media.instagram} color="default">
           <InstagramIcon fontSize="large" />
         </IconButton>
       </Grid>
