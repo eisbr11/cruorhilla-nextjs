@@ -17,10 +17,9 @@ const ArticleImage = ({
       <Image
         src={image.filename}
         alt={image.alt}
-        className={classes.image}
         layout="fill"
         objectFit="contain"
-        objectPosition="center"
+        objectPosition="top"
       />
     </div>
   );

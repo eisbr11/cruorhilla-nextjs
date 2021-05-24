@@ -32,7 +32,14 @@ const ArticleComponent = ({
       })}
       ref={ref}
     >
-      <ArticleImage image={image} />
+      <div
+        className={clsx(classes.articleImageWrapper, {
+          [classes.articleImageWrapperLeft]: design === 'imageLeft',
+          [classes.articleImageWrapperRight]: design === 'imageRight',
+        })}
+      >
+        <ArticleImage image={image} />
+      </div>
       <div className={classes.contentWrapper}>
         {content}
       </div>
