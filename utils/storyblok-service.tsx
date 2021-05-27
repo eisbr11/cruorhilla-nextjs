@@ -13,7 +13,9 @@ class StoryblokService {
   private query: {};
 
   constructor() {
-    this.devMode = true; // Always loads draft
+    if (Config.storyblok_dev_mode) {
+      this.devMode = true; // Always loads draft
+    }
     this.token = Config.storyblok_api_key;
     this.client = new Storyblok({
       accessToken: this.token,
