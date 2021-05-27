@@ -83,7 +83,7 @@ const ListenLinkDisplay = ({
         >
           {bandcampLink.length > 0 && (
             <li>
-              <MenuItem component={Button as any} target="_blank" href={bandcampLink}>
+              <MenuItem aria-label="Bandcamp" rel="noreferrer" component={Button as any} target="_blank" href={bandcampLink}>
                 <ListItemIcon>
                   <BandcampIcon />
                 </ListItemIcon>
@@ -95,7 +95,7 @@ const ListenLinkDisplay = ({
           )}
           {spotifyLink.length > 0 && (
             <li>
-              <MenuItem component={Button as any} target="_blank" href={spotifyLink}>
+              <MenuItem aria-label="Spotify" rel="noreferrer" component={Button as any} target="_blank" href={spotifyLink}>
                 <ListItemIcon>
                   <SpotifyIcon />
                 </ListItemIcon>
@@ -107,7 +107,7 @@ const ListenLinkDisplay = ({
           )}
           {tidalLink.length > 0 && (
             <li>
-              <MenuItem component={Button as any} target="_blank" href={tidalLink}>
+              <MenuItem aria-label="Tidal" rel="noreferrer" component={Button as any} target="_blank" href={tidalLink}>
                 <ListItemIcon>
                   <TidalIcon />
                 </ListItemIcon>
@@ -119,7 +119,7 @@ const ListenLinkDisplay = ({
           )}
           {deezerLink.length > 0 && (
             <li>
-              <MenuItem component={Button as any} target="_blank" href={deezerLink}>
+              <MenuItem aria-label="Deezer" rel="noreferrer" component={Button as any} target="_blank" href={deezerLink}>
                 <ListItemIcon>
                   <DeezerIcon />
                 </ListItemIcon>
@@ -131,7 +131,7 @@ const ListenLinkDisplay = ({
           )}
           {youtubeMusicLink.length > 0 && (
             <li>
-              <MenuItem component={Button as any} target="_blank" href={youtubeMusicLink}>
+              <MenuItem aria-label="Youtube Music" rel="noreferrer" component={Button as any} target="_blank" href={youtubeMusicLink}>
                 <ListItemIcon>
                   <YouTube />
                 </ListItemIcon>

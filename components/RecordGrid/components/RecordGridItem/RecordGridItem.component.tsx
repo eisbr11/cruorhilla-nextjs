@@ -26,7 +26,7 @@ const RecordGridItem = ({
   return (
     <Grid item xs={12} sm={6} md={4} lg={3}>
       <Link href={recordHref}>
-        <a className={classes.link}>
+        <a aria-label={`Zur Detailseite von ${name}`} className={classes.link}>
           <div className={classes.imageContainer}>
             <Image
               className={classes.image}
