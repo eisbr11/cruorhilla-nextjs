@@ -30,7 +30,7 @@ export default class MyDocument extends Document {
   render() {
     /* eslint-disable react/no-danger */
     return (
-      <Html>
+      <Html lang="de">
         <Head>
           <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;800&display=swap" rel="stylesheet" />
           <script
