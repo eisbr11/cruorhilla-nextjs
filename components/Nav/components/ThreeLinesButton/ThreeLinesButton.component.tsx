@@ -10,7 +10,7 @@ const ThreeLinesButton = ({
   const classes = useStyles();
   return (
     <div className={classes.container}>
-      <button onClick={clickHandler} className={classes.button} type="button">
+      <button aria-label="open navigation" onClick={clickHandler} className={classes.button} type="button">
         <span className={`${classes.lines} ${active && classes.linesActive}`} />
       </button>
     </div>
