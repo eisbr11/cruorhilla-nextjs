@@ -53,6 +53,7 @@ const ListenLinkDisplay = ({
           color="secondary"
           size="medium"
           variant="contained"
+          aria-label="Jetzt hören via"
           aria-controls="listening-menu"
           aria-haspopup="true"
           onClick={handleClick}

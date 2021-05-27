@@ -15,6 +15,7 @@ const DownloadLink = ({
   return (
     <div className={classes.wrapper}>
       <Button
+        aria-label={title}
         endIcon={<GetAppIcon />}
         size="large"
         variant="contained"

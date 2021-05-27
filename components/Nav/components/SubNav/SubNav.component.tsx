@@ -44,7 +44,7 @@ const SubNav = ({
         unmountOnExit
       >
         <Container maxWidth={false} className={classes.container}>
-          <ButtonBase className={classes.backButton} onClick={handleClickAway}>
+          <ButtonBase aria-label="Go Back" className={classes.backButton} onClick={handleClickAway}>
             <ArrowBackRoundedIcon fontSize="large" />
           </ButtonBase>
           <ClickAwayListener onClickAway={handleClickAway}>
