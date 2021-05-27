@@ -18,6 +18,8 @@ const RecordPage = ({
     <Container className={classes.container} maxWidth={false}>
       <Head>
         <title>{`Cruor Hilla - ${record.name}`}</title>
+        <meta property="og:title" key="title" content={`Cruor Hilla - ${record.name}`} />
+        <meta property="og:image" key="image" content={record.coverImage.filename} />
       </Head>
       <Grid container justify="space-between" alignItems="flex-start" spacing={3}>
         <Grid item xs={12}>
