@@ -5,7 +5,7 @@ import Head from '@components/head';
 import Nav from '@components/Nav';
 import Footer from '@components/Footer';
 import { Theme, useTheme } from '@context/theme.context';
-import SettingsComponent from '@components/settings';
+import SettingsComponent from '@components/Settings';
 import { AngstblitzSky, BaellebadBg } from './components/CustomBackgrounds';
 import useStyles from './LayoutContent.styles';
 

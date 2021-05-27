@@ -1,5 +1,5 @@
 import { Typography } from '@material-ui/core';
-import useStyles from './noConcertsInfo.styles';
+import useStyles from './NoConcertsInfo.styles';
 
 const NoConcertsInfo = () => {
   const classes = useStyles();
