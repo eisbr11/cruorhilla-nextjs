@@ -32,6 +32,7 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;800&display=swap" rel="stylesheet" />
           <script
             dangerouslySetInnerHTML={{ __html: `var StoryblokCacheVersion = '${StoryblokService.getCacheVersion()}';` }}
           />
