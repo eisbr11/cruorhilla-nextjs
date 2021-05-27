@@ -2,7 +2,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    paddingTop: theme.spacing(2),
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(8),
     transitionDuration: '600ms',
     transitionTimingFunction: 'cubic-bezier(0.24, 0, 0.64, 1)',
     transitionDelay: '0ms',
@@ -42,10 +43,16 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       paddingRight: theme.spacing(4),
     },
+    [theme.breakpoints.up('md')]: {
+      paddingRight: theme.spacing(8),
+    },
   },
   articleImageWrapperRight: {
     [theme.breakpoints.up('sm')]: {
       paddingLeft: theme.spacing(4),
+    },
+    [theme.breakpoints.up('md')]: {
+      paddingLeft: theme.spacing(8),
     },
   },
 }));
