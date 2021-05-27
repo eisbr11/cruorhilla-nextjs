@@ -22,6 +22,9 @@ const commonThemeSettings:ThemeOptions = {
   typography: {
     fontFamily: 'Raleway',
     fontSize: 20,
+    h3: {
+      fontWeight: 200,
+    },
   },
 };
 
