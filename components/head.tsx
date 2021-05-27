@@ -16,7 +16,7 @@ const Head = ({ title, description }: { title?: string, description?: string }) 
     <meta name="msapplication-TileColor" content="#603cba" />
     <meta name="theme-color" content="#333333" />
     <meta property="og:title" key="title" content={title || 'Cruor Hilla'} />
-    <meta property="og:image" key="image" content="/social_media_logo.jpg" />
+    <meta property="og:image" key="image" content="/social_media_logo.png" />
     <meta property="og:description" key="description" content={description || defaultDescription} />
   </NextHead>
 );
