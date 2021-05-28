@@ -17,7 +17,7 @@ const NavComponent = ({ settings }: { settings: StoryData }) => {
     <AppBar position="sticky" className={classes.nav}>
       <Container maxWidth={false} className={classes.container}>
         <Link href="/">
-          <a aria-label="Zurück zur Startseite" className={classes.logoLink}>
+          <a aria-label="Zur Startseite" className={classes.logoLink}>
             <LogoNoText />
           </a>
         </Link>
