@@ -20,6 +20,12 @@ const RecordPage = ({
         <title>{`Cruor Hilla - ${record.name}`}</title>
         <meta property="og:title" key="title" content={`Cruor Hilla - ${record.name}`} />
         <meta property="og:image" key="image" content={record.coverImage.filename} />
+        {record.metaDescription && record.metaDescription.length > 0 && (
+          <>
+            <meta name="description" content={record.metaDescription} />
+            <meta property="og:description" key="description" content={record.metaDescription} />
+          </>
+        )}
       </Head>
       <Grid container justify="space-between" alignItems="flex-start" spacing={3}>
         <Grid item xs={12}>
