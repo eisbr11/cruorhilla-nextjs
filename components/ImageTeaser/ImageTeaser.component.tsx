@@ -24,6 +24,8 @@ const ImageTeaser = ({
         layout="fill"
         objectFit="cover"
         objectPosition="center 20%"
+        priority
+        quality={60}
       />
       <Typography variant="h1" color="secondary" className={classes.headline}>{headline}</Typography>
     </div>
