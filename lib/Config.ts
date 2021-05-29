@@ -8,6 +8,7 @@ const Config = {
     bandcamp: 'https://cruorhilla.bandcamp.com/',
     spotify: 'https://open.spotify.com/artist/3GcjUVyLkmpbXwCPixo5kr?si=Gca0BYemSqG_GiSz-M_JYw',
   },
+  theme_ls_key: 'cruorhilla-theme',
 };
 
 export default Config;
