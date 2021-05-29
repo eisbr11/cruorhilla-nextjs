@@ -14,7 +14,15 @@ const PhysicalLink = ({
     const classes = useStyles();
     return (
       <div className={classes.container}>
-        <Button rel="noreferrer" endIcon={<AlbumIcon />} size="large" variant="outlined" href={href} target="_blank">
+        <Button
+          color="default"
+          rel="noreferrer"
+          endIcon={<AlbumIcon />}
+          size="large"
+          variant="outlined"
+          href={href}
+          target="_blank"
+        >
           {text}
         </Button>
       </div>
