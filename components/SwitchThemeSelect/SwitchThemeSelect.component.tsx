@@ -5,8 +5,10 @@ import {
   MenuItem,
   Select,
 } from '@material-ui/core';
+import { set as lsSet } from 'local-storage';
 
 import { Theme, useTheme, getThemeName } from '@context/theme.context';
+import Config from '@lib/Config';
 import useStyles from './SwitchThemeSelect.styles';
 
 const SwitchThemeSelect = () => {
@@ -14,6 +16,7 @@ const SwitchThemeSelect = () => {
 
   const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     setTheme(event.target.value as Theme);
+    lsSet(Config.theme_ls_key, event.target.value as string);
   };
 
   const classes = useStyles();
