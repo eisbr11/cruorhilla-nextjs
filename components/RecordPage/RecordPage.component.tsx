@@ -2,6 +2,7 @@ import { Container, Grid, Typography } from '@material-ui/core';
 import Head from 'next/head';
 
 import { MarkdownViewer } from '@components/Markdown';
+import PhysicalLink from '@components/RecordPage/components/PhysicalLink';
 import CoverImage from './components/CoverImage';
 import Tracklist from './components/Tracklist';
 import ReleaseInfo from './components/ReleaseInfo';
@@ -45,6 +46,7 @@ const RecordPage = ({
                 deezerLink={record.deezerLink.cached_url}
                 youtubeMusicLink={record.youtubeMusicLink.cached_url}
               />
+              <PhysicalLink href={record.physicalLink.cached_url} text={record.physicalText} />
             </Grid>
           </Grid>
         </Grid>
