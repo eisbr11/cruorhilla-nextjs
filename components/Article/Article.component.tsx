@@ -15,7 +15,7 @@ const ArticleComponent = ({
     filename: string,
     alt: string,
   }
-  design: 'imageRight'|'imageLeft',
+  design: 'imageRight' | 'imageLeft',
 }) => {
   const { ref, inView } = useInView({
     rootMargin: '0px',
