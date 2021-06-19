@@ -10,8 +10,9 @@ const PhysicalLink = ({
   href: string,
   text: string,
 }) => {
+  const classes = useStyles();
+
   if (href.length > 0 && text.length > 0) {
-    const classes = useStyles();
     return (
       <div className={classes.container}>
         <Button
