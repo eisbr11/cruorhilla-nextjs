@@ -1,7 +1,10 @@
 import moment from 'moment';
+import 'moment/locale/de';
 import { Grid, Typography } from '@material-ui/core';
 
 import useStyles from './GigItem.component.styles';
+
+moment.locale('de');
 
 const GigItem = ({
   gig,
@@ -22,7 +25,7 @@ const GigItem = ({
           </Grid>
           <Grid item>
             <Typography variant="caption">
-              {moment(gig.content.datum).locale('de').format('dddd')}
+              {moment(gig.content.datum).format('dddd')}
             </Typography>
           </Grid>
           <Grid item>

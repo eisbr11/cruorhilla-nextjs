@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
+import { shimmer, toBase64 } from '@utils/imagePlaceholder';
 import useStyles from './ArticleImage.styles';
 
 const ArticleImage = ({
@@ -20,6 +21,8 @@ const ArticleImage = ({
         layout="fill"
         objectFit="contain"
         objectPosition="top"
+        placeholder="blur"
+        blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(300, 300))}`}
       />
     </div>
   );
