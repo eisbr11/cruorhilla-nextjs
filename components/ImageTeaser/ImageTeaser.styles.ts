@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
   },
   image: {
-    filter: 'grayscale(0.70)',
+    filter: 'grayscale(0.70)!important',
   },
   headline: {
     position: 'absolute',

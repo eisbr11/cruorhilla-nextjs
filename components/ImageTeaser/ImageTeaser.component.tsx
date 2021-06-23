@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Typography } from '@material-ui/core';
 
+import { shimmer, toBase64 } from '@utils/imagePlaceholder';
 import useStyles from './ImageTeaser.styles';
 
 const ImageTeaser = ({
@@ -24,8 +25,9 @@ const ImageTeaser = ({
         layout="fill"
         objectFit="cover"
         objectPosition="center 20%"
-        priority
         quality={60}
+        placeholder="blur"
+        blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(300, 300))}`}
       />
       <Typography variant="h1" color="secondary" className={classes.headline}>{headline}</Typography>
     </div>

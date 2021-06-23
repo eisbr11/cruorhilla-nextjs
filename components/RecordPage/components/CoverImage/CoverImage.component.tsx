@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import { shimmer, toBase64 } from '@utils/imagePlaceholder';
 import useStyles from './CoverImage.styles';
 
 const CoverImage = ({
@@ -20,6 +21,8 @@ const CoverImage = ({
         alt={coverImage.alt}
         width={600}
         height={600}
+        placeholder="blur"
+        blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(600, 600))}`}
       />
     </div>
   );

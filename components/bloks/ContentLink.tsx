@@ -4,7 +4,7 @@ import { Button, Typography } from '@material-ui/core';
 
 const ContentLink = ({ blok }: { blok: SbEditableContent }) => (
   <Typography paragraph align={blok.align}>
-    <Link href={blok.link.cached_url}>
+    <Link href={blok.link.cached_url} passHref>
       <Button aria-label={blok.text} variant={blok.variant} color={blok.color}>{blok.text}</Button>
     </Link>
   </Typography>

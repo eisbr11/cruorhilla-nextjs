@@ -1,7 +1,10 @@
 import { Grid, Typography } from '@material-ui/core';
 import moment from 'moment';
+import 'moment/locale/de';
 
 import recordTypeString from '@utils/recordTypeString';
+
+moment.locale('de');
 
 const ReleaseInfo = ({
   releaseDate,
