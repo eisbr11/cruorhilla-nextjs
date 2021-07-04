@@ -6,7 +6,7 @@ import Nav from '@components/Nav';
 import Footer from '@components/Footer';
 import { Theme, useTheme } from '@context/theme.context';
 import SettingsComponent from '@components/Settings';
-import { AngstblitzSky, BaellebadBg } from './components/CustomBackgrounds';
+import { AngstblitzSky, BaellebadBg, WartenAufDenKaterSky } from './components/CustomBackgrounds';
 import useStyles from './LayoutContent.styles';
 
 const renderBackground = (theme: string): React.ReactNode | null => {
@@ -16,6 +16,9 @@ const renderBackground = (theme: string): React.ReactNode | null => {
       break;
     case Theme.baellebad:
       return (<BaellebadBg />);
+      break;
+    case Theme.kater:
+      return (<WartenAufDenKaterSky />);
     default:
       return null;
       break;

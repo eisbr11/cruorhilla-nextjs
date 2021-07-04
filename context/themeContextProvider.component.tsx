@@ -9,7 +9,7 @@ const ThemeContextProvider = ({
 }: {
   children: React.ReactNode,
 }) => {
-  const defaultTheme = Theme.angstblitz;
+  const defaultTheme = Theme.kater;
   const [theme, setTheme] = React.useState(defaultTheme);
 
   useEffect(() => {

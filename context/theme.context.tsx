@@ -1,6 +1,7 @@
 import { createContext, useContext } from 'react';
 
 export enum Theme {
+  kater = 'kater',
   angstblitz = 'angstblitz',
   baellebad = 'baellebad',
   weihnachten = 'weihnachten',
@@ -8,6 +9,7 @@ export enum Theme {
 }
 
 const keyToName = {
+  kater: 'Warten auf den Kater',
   angstblitz: 'Angst Blitz',
   weihnachten: 'Weihnachten Vergessen',
   default: 'Blau',
