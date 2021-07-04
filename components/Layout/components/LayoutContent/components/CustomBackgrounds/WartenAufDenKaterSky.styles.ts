@@ -6,7 +6,7 @@ const animationTime = '8s';
 
 const useStyles = makeStyles(() => ({
   container: {
-    background: 'linear-gradient(7deg, #b52966, #852f6e, #4a1a4a, #340e30);',
+    background: 'linear-gradient(8deg, #ac2e6c, #8c2764, #2f0231, #250a22)',
     width: '100vw',
     display: 'block',
     height: '100vh',
