@@ -8,7 +8,7 @@ const SettingsModalContent = () => {
   const classes = useStyles();
   return (
     <Paper className={classes.contentWrap}>
-      <Typography variant="h5" gutterBottom id="transition-modal-title">Transition modal</Typography>
+      <Typography variant="h5" gutterBottom id="transition-modal-title">Einstellungen</Typography>
       <Typography variant="body1" className={classes.description} id="transition-modal-description">Ist dir das Design zu eintönig? Dann stell doch ein anderes ein.</Typography>
       <SwitchThemeSelect />
     </Paper>

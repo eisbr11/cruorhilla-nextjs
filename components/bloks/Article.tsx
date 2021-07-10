@@ -2,7 +2,7 @@ import { SbEditableContent } from 'storyblok-react';
 
 // eslint-disable-next-line import/no-cycle
 import Component from '@components/bloks/index';
-import ArticleComponent from '@components/Article';
+import { ArticleComponent } from '@components/Article';
 
 const Article = ({ blok }: { blok: SbEditableContent }) => (
   <>
