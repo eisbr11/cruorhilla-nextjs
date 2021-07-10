@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
   contentWrapper: {
     flex: 1,
+    position: 'relative',
     [theme.breakpoints.up('sm')]: {
       flexBasis: '50%',
     },

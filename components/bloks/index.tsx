@@ -1,6 +1,6 @@
 import { SbEditableContent } from 'storyblok-react';
 
-import ContentLink from '@components/bloks/ContentLink';
+import ContentLink from './ContentLink';
 import Feature from './Feature';
 import Placeholder from './Placeholder';
 import Teaser from './Teaser';
@@ -16,9 +16,13 @@ import DownloadLink from './DownloadLink';
 import IFrameEmbed from './IFrameEmbed';
 // eslint-disable-next-line import/no-cycle
 import Article from './Article';
+// eslint-disable-next-line import/no-cycle
+import ArticleDoubleContent from './ArticleDoubleContent';
+import YoutubeEmbed from './YoutubeEmbed';
 
 const Components = {
   article: Article,
+  article_double_content: ArticleDoubleContent,
   feature: Feature,
   teaser: Teaser,
   download_link: DownloadLink,
@@ -30,6 +34,7 @@ const Components = {
   content_link: ContentLink,
   video: Video,
   video_grid: VideoGrid,
+  youtube_embed: YoutubeEmbed,
 };
 
 const Component = ({ blok }: { blok: SbEditableContent }) => {
