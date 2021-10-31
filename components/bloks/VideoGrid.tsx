@@ -1,14 +1,11 @@
-import SbEditable, { SbEditableContent } from 'storyblok-react';
+import SbEditable from 'storyblok-react';
 
+import { IBlokComponentProps } from '@interfaces/blok.interface';
 import StyledVideoGrid from '@components/VideoGrid';
 // eslint-disable-next-line import/no-cycle
 import Component from '@components/bloks/index';
 
-const VideoGrid = ({
-  blok,
-}: {
-  blok: SbEditableContent,
-}) => (
+const VideoGrid = ({ blok }: IBlokComponentProps) => (
   <SbEditable content={blok}>
     {/* eslint-disable-next-line no-underscore-dangle */}
     {blok.topContent.map((blokChild) => <Component blok={blokChild} key={blokChild._uid} />)}

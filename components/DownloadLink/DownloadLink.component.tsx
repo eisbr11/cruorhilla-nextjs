@@ -3,13 +3,12 @@ import GetAppIcon from '@mui/icons-material/GetApp';
 
 import useStyles from './DownloadLink.styles';
 
-const DownloadLink = ({
-  title,
-  source,
-}: {
-  title: string,
-  source: string,
-}) => {
+interface IDownloadLinkProps {
+  title: string;
+  source: string;
+}
+
+const DownloadLink = ({ title, source }: IDownloadLinkProps) => {
   const classes = useStyles();
 
   return (

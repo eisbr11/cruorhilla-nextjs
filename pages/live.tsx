@@ -1,20 +1,21 @@
 import { GetStaticProps } from 'next';
 import { StoryblokResult } from 'storyblok-js-client';
 
+import { IStoryblokPageProps } from '@interfaces/blok.interface';
 import StoryblokService from '@utils/storyblok-service';
 import Layout from '@components/Layout';
 import Page from '@components/bloks/Page';
 import GigList from '@components/GigList';
 
-export default function Live({
+interface ILivePageProps extends IStoryblokPageProps{
+  gigs: StoryblokResult;
+}
+
+export default function LivePage({
   page,
   settings,
   gigs,
-}: {
-  page: StoryblokResult,
-  settings: StoryblokResult,
-  gigs: StoryblokResult,
-}) {
+}: ILivePageProps) {
   return (
     <Layout settings={settings.data.story} content={page.data.story.content}>
       {/* We will define these settings later on */}

@@ -9,11 +9,11 @@ import ReleaseInfo from './components/ReleaseInfo';
 import ListenLinkDisplay from './components/ListenLinkDisplay';
 import useStyles from './RecordPage.styles';
 
-const RecordPage = ({
-  record,
-}: {
-  record: any,
-}) => {
+interface IRecordPageProps {
+  record: any;
+}
+
+const RecordPage = ({ record }: IRecordPageProps) => {
   const classes = useStyles();
   return (
     <Container className={classes.container} maxWidth={false}>

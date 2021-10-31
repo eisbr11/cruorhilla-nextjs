@@ -13,30 +13,25 @@ const renderBackground = (theme: string): React.ReactNode | null => {
   switch (theme) {
     case Theme.angstblitz:
       return (<AngstblitzSky />);
-      break;
     case Theme.baellebad:
       return (<BaellebadBg />);
-      break;
     case Theme.kater:
       return (<WartenAufDenKaterSky />);
     default:
       return null;
-      break;
   }
 };
 
-const LayoutContent = ({
-  children,
-  settings,
-  content,
-}: {
-  children: React.ReactNode,
-  settings?: StoryData,
+interface ILayoutContentProps {
+  children: React.ReactNode;
+  settings?: StoryData;
   content?: {
-    title: string,
-    description: string,
-  },
-}) => {
+    title: string;
+    description: string;
+  };
+}
+
+const LayoutContent = ({ children, settings, content }: ILayoutContentProps) => {
   const classes = useStyles();
   const { theme } = useTheme();
 

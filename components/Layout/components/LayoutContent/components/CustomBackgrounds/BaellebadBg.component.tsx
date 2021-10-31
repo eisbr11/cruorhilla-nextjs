@@ -1,12 +1,11 @@
 import useStyles from './BaellebadBg.styles';
 
-const BackgroundSvg = ({
-  gClass,
-  className,
-}: {
-  gClass: string,
-  className: string,
-}) => (
+interface IBackgroundSvgProps {
+  gClass: string;
+  className: string;
+}
+
+const BackgroundSvg = ({ gClass, className }: IBackgroundSvgProps) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" className={className}>
     <g className={gClass}>

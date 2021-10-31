@@ -4,7 +4,7 @@ import { red } from '@mui/material/colors';
 import commonThemeSettings from './commonThemeSettings';
 
 // Create a theme instance.
-const theme:Theme = createTheme({
+const theme: Theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {

@@ -4,11 +4,11 @@ import GigItem from './components/GigItem';
 import NoConcertsInfo from './components/NoConcertsInfo';
 import useStyles from './GigList.styles';
 
-const GigList = ({
-  gigs,
-}: {
-  gigs: any,
-}) => {
+interface IGigListProps {
+  gigs: any;
+}
+
+const GigList = ({ gigs }: IGigListProps) => {
   const classes = useStyles();
 
   return (

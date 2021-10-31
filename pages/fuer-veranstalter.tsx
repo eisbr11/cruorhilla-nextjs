@@ -2,22 +2,19 @@ import { GetStaticProps } from 'next';
 
 import Layout from '@components/Layout';
 import StoryblokService from '@utils/storyblok-service';
-import { StoryblokResult } from 'storyblok-js-client';
 import Page from '@components/bloks/Page';
+import { IStoryblokPageProps } from '@interfaces/blok.interface';
 
-const fuerVeranstalter = ({
+const FuerVeranstalterPage = ({
   page,
   settings,
-}: {
-  page: StoryblokResult,
-  settings: StoryblokResult
-}) => (
+}: IStoryblokPageProps) => (
   <Layout settings={settings.data.story} content={page.data.story.content}>
     <Page body={page.data.story.content.body} />
   </Layout>
 );
 
-export default fuerVeranstalter;
+export default FuerVeranstalterPage;
 
 export const getStaticProps: GetStaticProps = async () => {
   const [page, settings] = await Promise.all([

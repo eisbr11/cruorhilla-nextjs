@@ -6,11 +6,11 @@ import useStyles from './GigItem.component.styles';
 
 moment.locale('de');
 
-const GigItem = ({
-  gig,
-}: {
-  gig: any,
-}) => {
+interface IGigItemProps {
+  gig: any;
+}
+
+const GigItem = ({ gig }: IGigItemProps) => {
   const classes = useStyles();
   return (
     <Grid itemScope itemType="http://schema.org/MusicEvent" className={classes.itemWrapper} container alignItems="center">

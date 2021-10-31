@@ -2,13 +2,15 @@ import Link from 'next/link';
 import { Button, Container, Typography } from '@mui/material';
 import useStyles from './CustomErrorContent.styles';
 
+interface ICustomErrorContentComponentProps {
+  errorCode: string;
+  errorMessage: string;
+}
+
 const CustomErrorContentComponent = ({
   errorCode,
   errorMessage,
-}: {
-  errorCode: string,
-  errorMessage: string
-}) => {
+}: ICustomErrorContentComponentProps) => {
   const classes = useStyles();
   return (
     <Container className={classes.container} maxWidth="lg">
@@ -17,7 +19,7 @@ const CustomErrorContentComponent = ({
       <Typography mb={3} align="center" variant="body1">
         {'Aber die anderen Seiten funktionieren bestimmt noch alle!'}
       </Typography>
-      <Link href="/">
+      <Link href="/" passHref>
         <Button
           size="large"
           variant="contained"

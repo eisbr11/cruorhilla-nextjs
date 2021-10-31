@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import clsx from 'clsx';
 import { useInView } from 'react-intersection-observer';
 import useStyles from './Article.styles';
 
+interface IArticleDoubleComponentProps {
+  contentLeft: ReactNode;
+  contentRight: ReactNode;
+}
+
 const ArticleDoubleComponent = ({
   contentLeft,
   contentRight,
-}: {
-  contentLeft: React.ReactNode,
-  contentRight: React.ReactNode,
-}) => {
+}: IArticleDoubleComponentProps) => {
   const { ref, inView } = useInView({
     rootMargin: '0px',
     threshold: 0.1,

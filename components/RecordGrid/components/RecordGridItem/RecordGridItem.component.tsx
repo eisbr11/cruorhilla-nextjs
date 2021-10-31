@@ -7,8 +7,17 @@ import Image from 'next/image';
 import recordTypeString from '@utils/recordTypeString';
 import { shimmer, toBase64 } from '@utils/imagePlaceholder';
 import useStyles from './RecordGridItem.styles';
+import { IImage } from '@interfaces/image.interface';
 
 moment.locale('de');
+
+interface IRecordGridItemProps {
+  name: string;
+  recordHref: string;
+  coverImage: IImage;
+  releaseDate: string;
+  formatType: string;
+}
 
 const RecordGridItem = ({
   name,
@@ -16,16 +25,7 @@ const RecordGridItem = ({
   coverImage,
   releaseDate,
   formatType,
-}: {
-  name: string,
-  recordHref: string,
-  coverImage: {
-    filename: string,
-    alt: string,
-  },
-  releaseDate: string,
-  formatType: string,
-}) => {
+}: IRecordGridItemProps) => {
   const classes = useStyles();
   return (
     <Grid item xs={12} sm={6} md={4} lg={3}>

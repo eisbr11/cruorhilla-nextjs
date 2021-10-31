@@ -3,15 +3,15 @@ import Image from 'next/image';
 
 import { shimmer, toBase64 } from '@utils/imagePlaceholder';
 import useStyles from './ArticleImage.styles';
+import { IImage } from '@interfaces/image.interface';
+
+interface IArticleImageProps {
+  image: IImage;
+}
 
 const ArticleImage = ({
   image,
-}: {
-  image: {
-    filename: string,
-    alt: string,
-  }
-}) => {
+}: IArticleImageProps) => {
   const classes = useStyles();
   return (
     <div className={classes.imageWrapper}>

@@ -3,13 +3,12 @@ import AlbumIcon from '@mui/icons-material/Album';
 
 import useStyles from './PhysicalLink.styles';
 
-const PhysicalLink = ({
-  href,
-  text,
-}: {
-  href: string,
-  text: string,
-}) => {
+interface IPhysicalLinkProps {
+  href: string;
+  text: string;
+}
+
+const PhysicalLink = ({ href, text }: IPhysicalLinkProps ) => {
   const classes = useStyles();
 
   if (href.length > 0 && text.length > 0) {

@@ -6,13 +6,15 @@ import recordTypeString from '@utils/recordTypeString';
 
 moment.locale('de');
 
+interface IReleaseInfoProps {
+  releaseDate: string;
+  formatType: string;
+}
+
 const ReleaseInfo = ({
   releaseDate,
   formatType,
-}: {
-  releaseDate: string,
-  formatType: string,
-}) => (
+}: IReleaseInfoProps) => (
   <>
     <Grid item xs={12}>
       <Typography align="right" color="textPrimary">Release</Typography>

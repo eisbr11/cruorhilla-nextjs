@@ -5,10 +5,10 @@ import StoryblokService from '@utils/storyblok-service';
 import Layout from '@components/Layout';
 import Page from '@components/bloks/Page';
 
-export default function DasSpielPage({
+export default function FreundePage({
   page,
   settings,
-}: IStoryblokPageProps ) {
+}: IStoryblokPageProps) {
   return (
     <Layout settings={settings.data.story} content={page.data.story.content}>
       {/* We will define these settings later on */}
@@ -19,7 +19,7 @@ export default function DasSpielPage({
 
 export const getStaticProps: GetStaticProps = async () => {
   const [page, settings] = await Promise.all([
-    StoryblokService.get('cdn/stories/das-spiel', {}),
+    StoryblokService.get('cdn/stories/freunde', {}),
     StoryblokService.get('cdn/stories/settings', {}),
   ]);
 

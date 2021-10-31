@@ -1,10 +1,9 @@
-import { SbEditableContent } from 'storyblok-react';
-
+import { IBlokComponentProps } from '@interfaces/blok.interface';
 // eslint-disable-next-line import/no-cycle
 import Component from '@components/bloks';
 import { ArticleDoubleComponent } from '@components/Article';
 
-const ArticleDoubleContent = ({ blok }: { blok: SbEditableContent }) => (
+const ArticleDoubleContent = ({ blok }: IBlokComponentProps) => (
   <>
     <ArticleDoubleComponent
       contentLeft={blok.content_left.map(

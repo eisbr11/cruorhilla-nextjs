@@ -16,19 +16,21 @@ import clsx from 'clsx';
 import useStyles from './ListenLinkDisplay.styles';
 import ListItemContent from '../ListItemContent/ListItemContent.component';
 
+interface IListenLinkDisplayProps {
+  bandcampLink: string;
+  spotifyLink: string;
+  tidalLink: string;
+  deezerLink: string;
+  youtubeMusicLink: string;
+}
+
 const ListenLinkDisplay = ({
   bandcampLink,
   spotifyLink,
   tidalLink,
   deezerLink,
   youtubeMusicLink,
-}: {
-  bandcampLink,
-  spotifyLink,
-  tidalLink,
-  deezerLink,
-  youtubeMusicLink,
-}) => {
+}: IListenLinkDisplayProps ) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {

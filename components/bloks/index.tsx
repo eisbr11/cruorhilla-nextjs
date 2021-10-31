@@ -1,7 +1,6 @@
-import { SbEditableContent } from 'storyblok-react';
-
 import ContentLink from './ContentLink';
 import Feature from './Feature';
+import Friend from './Friend';
 import Placeholder from './Placeholder';
 import Teaser from './Teaser';
 import Social from './Social';
@@ -19,11 +18,13 @@ import Article from './Article';
 // eslint-disable-next-line import/no-cycle
 import ArticleDoubleContent from './ArticleDoubleContent';
 import YoutubeEmbed from './YoutubeEmbed';
+import { IBlokComponentProps } from '@interfaces/blok.interface';
 
 const Components = {
   article: Article,
   article_double_content: ArticleDoubleContent,
   feature: Feature,
+  friend: Friend,
   teaser: Teaser,
   download_link: DownloadLink,
   iframe_embed: IFrameEmbed,
@@ -37,7 +38,7 @@ const Components = {
   youtube_embed: YoutubeEmbed,
 };
 
-const Component = ({ blok }: { blok: SbEditableContent }) => {
+const Component = ({ blok }: IBlokComponentProps) => {
   if (typeof Components[blok.component] !== 'undefined') {
     const BlokComponent = Components[blok.component];
     return <BlokComponent blok={blok} />;

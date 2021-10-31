@@ -12,18 +12,20 @@ declare module '@mui/styles/defaultTheme' {
   interface DefaultTheme extends Theme {}
 }
 
+interface ILayoutComponentProps {
+  children: React.ReactNode;
+  settings?: StoryData;
+  content?: {
+    title: string;
+    description: string;
+  }
+}
+
 const LayoutComponent = ({
   children,
   settings,
   content,
-}: {
-  children: React.ReactNode,
-  settings?: StoryData,
-  content?: {
-    title: string,
-    description: string,
-  }
-}) => {
+}: ILayoutComponentProps) => {
   const { theme } = useTheme();
 
   return (
