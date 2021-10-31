@@ -2,6 +2,11 @@ import { ThemeOptions } from '@mui/material';
 
 const commonThemeSettings: ThemeOptions = {
   components: {
+    MuiAppBar: {
+      defaultProps: {
+        enableColorOnDark: true,
+      },
+    },
     MuiCssBaseline: {
       styleOverrides: {
         html: {

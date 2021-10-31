@@ -14,7 +14,7 @@ const NavComponent = ({ settings }: { settings: StoryData }) => {
   const [active, setActive] = useState(false);
 
   return (
-    <AppBar enableColorOnDark position="sticky" className={classes.nav}>
+    <AppBar position="sticky" className={classes.nav}>
       <Container maxWidth={false} className={classes.container}>
         <Link href="/">
           <a aria-label="Zur Startseite" className={classes.logoLink}>
