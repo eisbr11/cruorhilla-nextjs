@@ -1,12 +1,10 @@
 import React from 'react';
 import {
   Button,
-  ListItemIcon,
-  ListItemText,
   Menu,
   MenuItem,
-} from '@material-ui/core';
-import { ExpandMore, YouTube } from '@material-ui/icons';
+} from '@mui/material';
+import { ExpandMore, YouTube } from '@mui/icons-material';
 
 import {
   BandcampIcon,
@@ -16,6 +14,15 @@ import {
 } from '@components/customIcons';
 import clsx from 'clsx';
 import useStyles from './ListenLinkDisplay.styles';
+import ListItemContent from '../ListItemContent/ListItemContent.component';
+
+interface IListenLinkDisplayProps {
+  bandcampLink: string;
+  spotifyLink: string;
+  tidalLink: string;
+  deezerLink: string;
+  youtubeMusicLink: string;
+}
 
 const ListenLinkDisplay = ({
   bandcampLink,
@@ -23,13 +30,7 @@ const ListenLinkDisplay = ({
   tidalLink,
   deezerLink,
   youtubeMusicLink,
-}: {
-  bandcampLink,
-  spotifyLink,
-  tidalLink,
-  deezerLink,
-  youtubeMusicLink,
-}) => {
+}: IListenLinkDisplayProps ) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -68,7 +69,6 @@ const ListenLinkDisplay = ({
         <Menu
           id="listening-menu"
           anchorEl={anchorEl}
-          getContentAnchorEl={null}
           keepMounted
           open={Boolean(anchorEl)}
           onClose={handleClose}
@@ -84,60 +84,35 @@ const ListenLinkDisplay = ({
           {bandcampLink.length > 0 && (
             <li>
               <MenuItem aria-label="Bandcamp" rel="noreferrer" component={Button as any} target="_blank" href={bandcampLink}>
-                <ListItemIcon>
-                  <BandcampIcon />
-                </ListItemIcon>
-                <ListItemText>
-                  Bandcamp
-                </ListItemText>
+                <ListItemContent icon={<BandcampIcon />} text="Bandcamp" />
               </MenuItem>
             </li>
           )}
           {spotifyLink.length > 0 && (
             <li>
               <MenuItem aria-label="Spotify" rel="noreferrer" component={Button as any} target="_blank" href={spotifyLink}>
-                <ListItemIcon>
-                  <SpotifyIcon />
-                </ListItemIcon>
-                <ListItemText>
-                  Spotify
-                </ListItemText>
+                <ListItemContent icon={<SpotifyIcon />} text="Spotify" />
               </MenuItem>
             </li>
           )}
           {tidalLink.length > 0 && (
             <li>
               <MenuItem aria-label="Tidal" rel="noreferrer" component={Button as any} target="_blank" href={tidalLink}>
-                <ListItemIcon>
-                  <TidalIcon />
-                </ListItemIcon>
-                <ListItemText>
-                  Tidal
-                </ListItemText>
+                <ListItemContent icon={<TidalIcon />} text="Tidal" />
               </MenuItem>
             </li>
           )}
           {deezerLink.length > 0 && (
             <li>
               <MenuItem aria-label="Deezer" rel="noreferrer" component={Button as any} target="_blank" href={deezerLink}>
-                <ListItemIcon>
-                  <DeezerIcon />
-                </ListItemIcon>
-                <ListItemText>
-                  Deezer
-                </ListItemText>
+                <ListItemContent icon={<DeezerIcon />} text="Deezer" />
               </MenuItem>
             </li>
           )}
           {youtubeMusicLink.length > 0 && (
             <li>
               <MenuItem aria-label="Youtube Music" rel="noreferrer" component={Button as any} target="_blank" href={youtubeMusicLink}>
-                <ListItemIcon>
-                  <YouTube />
-                </ListItemIcon>
-                <ListItemText>
-                  Youtube Music
-                </ListItemText>
+                <ListItemContent icon={<YouTube />} text="Youtube Music" />
               </MenuItem>
             </li>
           )}

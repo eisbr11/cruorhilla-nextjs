@@ -1,20 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 
+import { IImage } from '@interfaces/image.interface';
 import { shimmer, toBase64 } from '@utils/imagePlaceholder';
 import useStyles from './ImageTeaser.styles';
 
-const ImageTeaser = ({
-  headline,
-  image,
-}: {
-  headline: string,
-  image: {
-    filename: string,
-    alt: string,
-  }
-}) => {
+interface IImageTeaserProps {
+  headline: string;
+  image: IImage;
+}
+
+const ImageTeaser = ({ headline, image }: IImageTeaserProps) => {
   const classes = useStyles();
   return (
     <div className={classes.wrapper}>

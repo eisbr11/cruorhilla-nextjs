@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  Backdrop,
-  Fade,
-  Modal,
-} from '@material-ui/core';
+import { Fade, Modal } from '@mui/material';
 
 import SettingsButton from './components/SettingsButton';
 import SettingsModalContent from './components/SettingsModalContent';
@@ -30,7 +26,6 @@ const SettingsComponent = () => {
         open={open}
         onClose={handleClose}
         closeAfterTransition
-        BackdropComponent={Backdrop}
         BackdropProps={{
           timeout: 500,
           className: classes.backdrop,

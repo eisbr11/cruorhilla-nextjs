@@ -1,33 +1,42 @@
 import React from 'react';
-import { ThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider, Theme, StyledEngineProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 import { StoryData } from 'storyblok-js-client';
 
 import { useTheme } from '@context/theme.context';
 import getTheme from '@themes/index';
 import LayoutContent from './components/LayoutContent';
 
+declare module '@mui/styles/defaultTheme' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface DefaultTheme extends Theme {}
+}
+
+interface ILayoutComponentProps {
+  children: React.ReactNode;
+  settings?: StoryData;
+  content?: {
+    title: string;
+    description: string;
+  }
+}
+
 const LayoutComponent = ({
   children,
   settings,
   content,
-}: {
-  children: React.ReactNode,
-  settings?: StoryData,
-  content?: {
-    title: string,
-    description: string,
-  }
-}) => {
+}: ILayoutComponentProps) => {
   const { theme } = useTheme();
 
   return (
-    <ThemeProvider theme={getTheme(theme)}>
-      <CssBaseline />
-      <LayoutContent settings={settings} content={content}>
-        {children}
-      </LayoutContent>
-    </ThemeProvider>
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={getTheme(theme)}>
+        <CssBaseline />
+        <LayoutContent settings={settings} content={content}>
+          {children}
+        </LayoutContent>
+      </ThemeProvider>
+    </StyledEngineProvider>
   );
 };
 

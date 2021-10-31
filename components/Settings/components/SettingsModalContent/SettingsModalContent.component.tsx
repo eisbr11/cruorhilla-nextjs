@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paper, Typography } from '@material-ui/core';
+import { Paper, Typography } from '@mui/material';
 
 import SwitchThemeSelect from '@components/SwitchThemeSelect';
 import useStyles from './SettingsModalContent.styles';

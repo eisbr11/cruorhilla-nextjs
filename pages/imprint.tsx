@@ -1,17 +1,11 @@
 import { GetStaticProps } from 'next';
-import { StoryblokResult } from 'storyblok-js-client';
 
+import { IStoryblokPageProps } from '@interfaces/blok.interface';
 import StoryblokService from '@utils/storyblok-service';
 import Layout from '@components/Layout';
 import Page from '@components/bloks/Page';
 
-export default function Imprint({
-  page,
-  settings,
-}: {
-  page: StoryblokResult,
-  settings: StoryblokResult
-}) {
+export default function ImprintPage({ page, settings }: IStoryblokPageProps) {
   return (
     <Layout settings={settings.data.story} content={page.data.story.content}>
       {/* We will define these settings later on */}

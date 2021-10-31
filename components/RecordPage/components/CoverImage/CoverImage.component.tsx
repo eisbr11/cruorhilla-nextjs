@@ -2,16 +2,15 @@ import Image from 'next/image';
 
 import { shimmer, toBase64 } from '@utils/imagePlaceholder';
 import useStyles from './CoverImage.styles';
+import { IImage } from '@interfaces/image.interface';
+
+interface ICoverImageProps {
+  coverImage: IImage;
+}
 
 const CoverImage = ({
   coverImage,
-}: {
-  coverImage: {
-    filename: string,
-    alt: string,
-    id: number,
-  },
-}) => {
+}: ICoverImageProps) => {
   const classes = useStyles();
   return (
     <div className={classes.container}>

@@ -1,15 +1,14 @@
 import YouTube, { Options } from 'react-youtube';
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 
 import useStyles from './VideoItem.styles';
 
-const VideoItem = ({
-  title,
-  ytId,
-}: {
-  title: string,
-  ytId: string,
-}) => {
+interface IVideoItemProps {
+  title: string;
+  ytId: string;
+}
+
+const VideoItem = ({ title, ytId }: IVideoItemProps) => {
   const classes = useStyles();
   const youtubeOptions: Options = {
     height: '390',

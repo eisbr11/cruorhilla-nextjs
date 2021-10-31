@@ -2,21 +2,21 @@ import React from 'react';
 import clsx from 'clsx';
 import { useInView } from 'react-intersection-observer';
 
+import { IImage } from '@interfaces/image.interface';
 import ArticleImage from './components/ArticleImage';
 import useStyles from './Article.styles';
+
+interface IArticleComponentProps {
+  content: React.ReactNode;
+  image: IImage;
+  design: 'imageRight' | 'imageLeft';
+}
 
 const ArticleComponent = ({
   content,
   image,
   design,
-}: {
-  content: React.ReactNode,
-  image: {
-    filename: string,
-    alt: string,
-  }
-  design: 'imageRight' | 'imageLeft',
-}) => {
+}: IArticleComponentProps) => {
   const { ref, inView } = useInView({
     rootMargin: '0px',
     threshold: 0.1,

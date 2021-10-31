@@ -1,10 +1,9 @@
-import { SbEditableContent } from 'storyblok-react';
-
 // eslint-disable-next-line import/no-cycle
+import { IBlokComponentProps } from '@interfaces/blok.interface';
 import Component from '@components/bloks/index';
 import { ArticleComponent } from '@components/Article';
 
-const Article = ({ blok }: { blok: SbEditableContent }) => (
+const Article = ({ blok }: IBlokComponentProps) => (
   <>
     {/* eslint-disable no-underscore-dangle */}
     <ArticleComponent

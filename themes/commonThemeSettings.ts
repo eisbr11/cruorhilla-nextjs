@@ -1,9 +1,14 @@
-import { ThemeOptions } from '@material-ui/core';
+import { ThemeOptions } from '@mui/material';
 
-const commonThemeSettings:ThemeOptions = {
-  overrides: {
+const commonThemeSettings: ThemeOptions = {
+  components: {
+    MuiAppBar: {
+      defaultProps: {
+        enableColorOnDark: true,
+      },
+    },
     MuiCssBaseline: {
-      '@global': {
+      styleOverrides: {
         html: {
           WebkitFontSmoothing: 'auto',
         },

@@ -1,13 +1,9 @@
-import { SbEditableContent } from 'storyblok-react';
-import { Grid } from '@material-ui/core';
+import { Grid } from '@mui/material';
 
 import VideoItem from '@components/VideoItem';
+import { IBlokComponentProps } from '@interfaces/blok.interface';
 
-const VideoGrid = ({
-  blok,
-}: {
-  blok: SbEditableContent,
-}) => (
+const VideoGrid = ({ blok }: IBlokComponentProps) => (
   <Grid item md={blok.full_width ? 12 : 6} xs={12}>
     <VideoItem title={blok.title} ytId={blok.youtube_id} />
   </Grid>

@@ -3,14 +3,15 @@ import { StoryblokResult } from 'storyblok-js-client';
 
 import StoryblokService from '@utils/storyblok-service';
 import Layout from '@components/Layout';
+import CustomErrorContentComponent from '@components/CustomErrorContent';
 
-const Custom404 = ({
-  settings,
-}: {
-  settings: StoryblokResult
-}) => (
+interface ICustom404Props {
+  settings: StoryblokResult;
+}
+
+const Custom404 = ({ settings }: ICustom404Props) => (
   <Layout settings={settings.data.story}>
-    <h1>404 - Diese Seite konnte nicht gefunden werden</h1>
+    <CustomErrorContentComponent errorCode="404" errorMessage="Gehen Sie weiter, hier gibt es nichts zu sehen!" />
   </Layout>
 );
 

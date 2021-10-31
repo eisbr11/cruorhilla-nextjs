@@ -1,7 +1,11 @@
-import { Container, Grid } from '@material-ui/core';
+import { Container, Grid } from '@mui/material';
 import RecordGridItem from './components/RecordGridItem';
 
-const RecordGridComponent = ({ records }: { records: any }) => (
+interface IRecordGridComponentProps {
+  records: any;
+}
+
+const RecordGridComponent = ({ records }: IRecordGridComponentProps) => (
   <Container maxWidth="lg">
     <Grid container spacing={3}>
       {records.map((record) => (

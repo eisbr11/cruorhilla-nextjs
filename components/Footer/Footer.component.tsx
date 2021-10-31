@@ -4,7 +4,11 @@ import Link from 'next/link';
 
 import useStyles from './Footer.styles';
 
-const FooterComponent = ({ settings }: { settings: StoryData }) => {
+interface IFooterComponentProps {
+  settings: StoryData;
+}
+
+const FooterComponent = ({ settings }: IFooterComponentProps) => {
   const classes = useStyles();
 
   return (

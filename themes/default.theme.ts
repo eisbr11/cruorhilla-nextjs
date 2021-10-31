@@ -1,11 +1,12 @@
-import { createMuiTheme, Theme } from '@material-ui/core/styles';
-import { red } from '@material-ui/core/colors';
+import { createTheme, Theme } from '@mui/material/styles';
+import { red } from '@mui/material/colors';
+
 import commonThemeSettings from './commonThemeSettings';
 
 // Create a theme instance.
-const theme:Theme = createMuiTheme({
+const theme: Theme = createTheme({
   palette: {
-    type: 'dark',
+    mode: 'dark',
     primary: {
       main: '#556cd6',
     },

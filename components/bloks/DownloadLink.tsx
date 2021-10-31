@@ -1,7 +1,7 @@
-import { SbEditableContent } from 'storyblok-react';
 import StyledDownloadLink from '@components/DownloadLink';
+import { IBlokComponentProps } from '@interfaces/blok.interface';
 
-const DownloadLink = ({ blok }: { blok: SbEditableContent }) => (
+const DownloadLink = ({ blok }: IBlokComponentProps) => (
   <StyledDownloadLink title={blok.title} source={blok.asset.filename} />
 );
 

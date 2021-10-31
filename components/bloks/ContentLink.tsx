@@ -1,8 +1,9 @@
-import { SbEditableContent } from 'storyblok-react';
 import Link from 'next/link';
-import { Button, Typography } from '@material-ui/core';
+import { Button, Typography } from '@mui/material';
 
-const ContentLink = ({ blok }: { blok: SbEditableContent }) => (
+import { IBlokComponentProps } from '@interfaces/blok.interface';
+
+const ContentLink = ({ blok }: IBlokComponentProps) => (
   <Typography paragraph align={blok.align}>
     <Link href={blok.link.cached_url} passHref>
       <Button aria-label={blok.text} variant={blok.variant} color={blok.color}>{blok.text}</Button>

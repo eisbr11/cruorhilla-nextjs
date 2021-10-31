@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     top: theme.spacing(1),
     left: theme.spacing(1),
   },
-  [theme.breakpoints.down('xs')]: {
+  [theme.breakpoints.down('sm')]: {
     container: {
       position: 'fixed',
       top: '0',

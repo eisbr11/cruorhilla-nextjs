@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StoryData } from 'storyblok-js-client';
 import Link from 'next/link';
-import { AppBar, Container } from '@material-ui/core';
+import { AppBar, Container } from '@mui/material';
 
 import { LogoNoText } from '@components/Logo';
 import ThreeLinesButton from './components/ThreeLinesButton';
@@ -9,7 +9,9 @@ import NavItem from './components/NavItem';
 import SubNav from './components/SubNav';
 import useStyles from './Nav.styles';
 
-const NavComponent = ({ settings }: { settings: StoryData }) => {
+interface INavComponentProps { settings: StoryData; }
+
+const NavComponent = ({ settings }: INavComponentProps) => {
   const classes = useStyles();
   const [active, setActive] = useState(false);
 

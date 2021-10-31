@@ -1,4 +1,4 @@
-import { responsiveFontSizes } from '@material-ui/core/styles';
+import { responsiveFontSizes } from '@mui/material/styles';
 
 import katerTheme from './kater.theme';
 import angstBlitzTheme from './angstblitz.theme';

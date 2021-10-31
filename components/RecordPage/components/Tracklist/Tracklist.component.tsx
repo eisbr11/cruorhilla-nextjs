@@ -1,10 +1,15 @@
 import useStyles from './Tracklist.styles';
 
-const Tracklist = ({
-  tracklist,
-}: {
-  tracklist,
-}) => {
+interface ITracklistItem {
+  name: string;
+  _uid: string;
+}
+
+interface ITracklistProps {
+  tracklist: ITracklistItem[];
+}
+
+const Tracklist = ({ tracklist }: ITracklistProps) => {
   const classes = useStyles();
   if (tracklist && tracklist.length > 0) {
     return (

@@ -1,12 +1,7 @@
-import { SbEditableContent } from 'storyblok-react';
-
+import { IBlokComponentProps } from '@interfaces/blok.interface';
 import YoutubeEmbedComponent from '@components/YoutubeEmbed';
 
-const YoutubeEmbed = ({
-  blok,
-}: {
-  blok: SbEditableContent,
-}) => (
+const YoutubeEmbed = ({ blok }: IBlokComponentProps) => (
   <YoutubeEmbedComponent ytId={blok.youtube_id} />
 );
 

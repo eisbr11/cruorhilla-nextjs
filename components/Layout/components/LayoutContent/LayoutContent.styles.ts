@@ -1,11 +1,11 @@
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '100vh',
-    overflow: 'hidden',
+    height: '100vh',
+    overflow: 'auto',
     background: theme.palette.primary.dark,
   },
   content: {

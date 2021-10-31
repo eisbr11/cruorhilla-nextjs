@@ -1,13 +1,12 @@
-import SbEditable, { SbEditableContent } from 'storyblok-react';
-import { Typography } from '@material-ui/core';
+import SbEditable from 'storyblok-react';
+import { Typography } from '@mui/material';
 
+import { IBlokComponentProps } from '@interfaces/blok.interface';
 import { MarkdownViewer } from '@components/Markdown';
 
 const Headline = ({
   blok,
-}: {
-  blok: SbEditableContent,
-}) => (
+}: IBlokComponentProps) => (
   <SbEditable content={blok}>
     <Typography variant={blok.variant} align={blok.textAlign}>
       <MarkdownViewer content={blok.title} />

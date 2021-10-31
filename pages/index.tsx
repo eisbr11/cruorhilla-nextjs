@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next';
-import { StoryblokResult } from 'storyblok-js-client';
 
+import { IStoryblokPageProps } from '@interfaces/blok.interface';
 import StoryblokService from '@utils/storyblok-service';
 import Page from '@components/bloks/Page';
 import Layout from '@components/Layout';
@@ -8,10 +8,7 @@ import Layout from '@components/Layout';
 export default function Home({
   page,
   settings,
-}: {
-  page: StoryblokResult,
-  settings: StoryblokResult,
-}) {
+}: IStoryblokPageProps) {
   return (
     <Layout settings={settings.data.story} content={page.data.story.content}>
       {/* We will define these settings later on */}
