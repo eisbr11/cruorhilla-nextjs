@@ -1,4 +1,4 @@
-import { Container as MaterialContainer } from '@material-ui/core';
+import { Container as MaterialContainer } from '@mui/material';
 import { SbEditableContent } from 'storyblok-react';
 
 // eslint-disable-next-line import/no-cycle

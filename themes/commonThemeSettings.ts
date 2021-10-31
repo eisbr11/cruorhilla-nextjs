@@ -1,9 +1,9 @@
-import { ThemeOptions } from '@material-ui/core';
+import { ThemeOptions } from '@mui/material';
 
-const commonThemeSettings:ThemeOptions = {
-  overrides: {
+const commonThemeSettings: ThemeOptions = {
+  components: {
     MuiCssBaseline: {
-      '@global': {
+      styleOverrides: {
         html: {
           WebkitFontSmoothing: 'auto',
         },

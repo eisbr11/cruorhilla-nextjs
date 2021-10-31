@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles((theme) => ({
   nav: {
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   listItem: {
     padding: theme.spacing(0, 1),
   },
-  [theme.breakpoints.down('xs')]: {
+  [theme.breakpoints.down('sm')]: {
     navMenu: {
       position: 'fixed',
       width: '100%',

@@ -1,5 +1,5 @@
-import { Button } from '@material-ui/core';
-import AlbumIcon from '@material-ui/icons/Album';
+import { Button } from '@mui/material';
+import AlbumIcon from '@mui/icons-material/Album';
 
 import useStyles from './PhysicalLink.styles';
 
@@ -16,7 +16,7 @@ const PhysicalLink = ({
     return (
       <div className={classes.container}>
         <Button
-          color="default"
+          color="inherit"
           rel="noreferrer"
           endIcon={<AlbumIcon />}
           size="large"

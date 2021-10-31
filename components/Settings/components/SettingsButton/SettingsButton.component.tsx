@@ -1,5 +1,5 @@
-import { Fab } from '@material-ui/core';
-import TuneIcon from '@material-ui/icons/Tune';
+import { Fab } from '@mui/material';
+import TuneIcon from '@mui/icons-material/Tune';
 
 import useStyles from './SettingsButton.styles';
 

@@ -1,4 +1,4 @@
-import { Container, Grid } from '@material-ui/core';
+import { Container, Grid } from '@mui/material';
 import RecordGridItem from './components/RecordGridItem';
 
 const RecordGridComponent = ({ records }: { records: any }) => (

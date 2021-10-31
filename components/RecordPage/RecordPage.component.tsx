@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from '@material-ui/core';
+import { Container, Grid, Typography } from '@mui/material';
 import Head from 'next/head';
 
 import { MarkdownViewer } from '@components/Markdown';
@@ -28,7 +28,7 @@ const RecordPage = ({
           </>
         )}
       </Head>
-      <Grid container justify="space-between" alignItems="flex-start" spacing={3}>
+      <Grid container justifyContent="space-between" alignItems="flex-start" spacing={3}>
         <Grid item xs={12}>
           <Typography color="textPrimary" variant="h2" component="h1" className={classes.title}>{record.name}</Typography>
         </Grid>

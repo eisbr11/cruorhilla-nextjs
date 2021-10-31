@@ -1,5 +1,5 @@
 import { SbEditableContent } from 'storyblok-react';
-import { Grid } from '@material-ui/core';
+import { Grid } from '@mui/material';
 
 import VideoItem from '@components/VideoItem';
 

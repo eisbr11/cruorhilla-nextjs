@@ -4,7 +4,8 @@ import {
   InputLabel,
   MenuItem,
   Select,
-} from '@material-ui/core';
+  SelectChangeEvent,
+} from '@mui/material';
 import { set as lsSet } from 'local-storage';
 
 import { Theme, useTheme, getThemeName } from '@context/theme.context';
@@ -14,7 +15,7 @@ import useStyles from './SwitchThemeSelect.styles';
 const SwitchThemeSelect = () => {
   const { theme, setTheme } = useTheme();
 
-  const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+  const handleChange = (event: SelectChangeEvent<Theme>) => {
     setTheme(event.target.value as Theme);
     lsSet(Config.theme_ls_key, event.target.value as string);
   };

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import useStyles from '@components/VideoGrid/VideoGrid.styles';
-import { Grid } from '@material-ui/core';
+import { Grid } from '@mui/material';
 
 const VideoGrid = ({
   children,

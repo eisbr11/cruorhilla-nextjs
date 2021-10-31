@@ -1,4 +1,4 @@
-import { Container } from '@material-ui/core';
+import { Container } from '@mui/material';
 
 import GigItem from './components/GigItem';
 import NoConcertsInfo from './components/NoConcertsInfo';

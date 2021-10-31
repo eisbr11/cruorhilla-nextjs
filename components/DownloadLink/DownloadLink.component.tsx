@@ -1,5 +1,5 @@
-import { Button } from '@material-ui/core';
-import GetAppIcon from '@material-ui/icons/GetApp';
+import { Button } from '@mui/material';
+import GetAppIcon from '@mui/icons-material/GetApp';
 
 import useStyles from './DownloadLink.styles';
 

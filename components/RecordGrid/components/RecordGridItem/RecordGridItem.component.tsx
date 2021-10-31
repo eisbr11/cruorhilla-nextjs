@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import moment from 'moment';
 import 'moment/locale/de';
-import { Grid, Typography } from '@material-ui/core';
+import { Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 
 import recordTypeString from '@utils/recordTypeString';

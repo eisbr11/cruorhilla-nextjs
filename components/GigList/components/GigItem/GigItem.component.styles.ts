@@ -1,10 +1,11 @@
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles((theme) => ({
   itemWrapper: {
-    marginBottom: theme.spacing(3),
     border: `4px solid ${theme.palette.secondary.main}`,
     borderRadius: 8,
+    padding: theme.spacing(3),
+    marginBottom: theme.spacing(2),
   },
   priceLabel: {
     fontWeight: theme.typography.fontWeightBold,

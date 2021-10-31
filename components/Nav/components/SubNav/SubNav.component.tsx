@@ -4,8 +4,8 @@ import {
   ClickAwayListener,
   Container,
   Grow,
-} from '@material-ui/core';
-import ArrowBackRoundedIcon from '@material-ui/icons/ArrowBackRounded';
+} from '@mui/material';
+import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 
 import NavItem from '@components/Nav/components/NavItem';
 import useStyles from './SubNav.style';

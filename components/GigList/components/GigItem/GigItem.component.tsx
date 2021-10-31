@@ -1,6 +1,6 @@
 import moment from 'moment';
 import 'moment/locale/de';
-import { Grid, Typography } from '@material-ui/core';
+import { Grid, Typography } from '@mui/material';
 
 import useStyles from './GigItem.component.styles';
 
@@ -13,7 +13,7 @@ const GigItem = ({
 }) => {
   const classes = useStyles();
   return (
-    <Grid itemScope itemType="http://schema.org/MusicEvent" className={classes.itemWrapper} container spacing={3} alignItems="center">
+    <Grid itemScope itemType="http://schema.org/MusicEvent" className={classes.itemWrapper} container>
       <meta itemProp="performer" content="Cruor Hilla" />
       <Grid item xs={12} sm={3} md={2}>
         <Grid container direction="column">

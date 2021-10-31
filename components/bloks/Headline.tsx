@@ -1,5 +1,5 @@
 import SbEditable, { SbEditableContent } from 'storyblok-react';
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 
 import { MarkdownViewer } from '@components/Markdown';
 

@@ -1,5 +1,5 @@
 import YouTube, { Options } from 'react-youtube';
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 
 import useStyles from './VideoItem.styles';
 

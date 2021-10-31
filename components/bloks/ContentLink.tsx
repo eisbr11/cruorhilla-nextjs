@@ -1,6 +1,6 @@
 import { SbEditableContent } from 'storyblok-react';
 import Link from 'next/link';
-import { Button, Typography } from '@material-ui/core';
+import { Button, Typography } from '@mui/material';
 
 const ContentLink = ({ blok }: { blok: SbEditableContent }) => (
   <Typography paragraph align={blok.align}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 
 import { shimmer, toBase64 } from '@utils/imagePlaceholder';
 import useStyles from './ImageTeaser.styles';

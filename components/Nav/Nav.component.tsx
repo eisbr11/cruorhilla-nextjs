@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StoryData } from 'storyblok-js-client';
 import Link from 'next/link';
-import { AppBar, Container } from '@material-ui/core';
+import { AppBar, Container } from '@mui/material';
 
 import { LogoNoText } from '@components/Logo';
 import ThreeLinesButton from './components/ThreeLinesButton';
@@ -14,7 +14,7 @@ const NavComponent = ({ settings }: { settings: StoryData }) => {
   const [active, setActive] = useState(false);
 
   return (
-    <AppBar position="sticky" className={classes.nav}>
+    <AppBar enableColorOnDark position="sticky" className={classes.nav}>
       <Container maxWidth={false} className={classes.container}>
         <Link href="/">
           <a aria-label="Zur Startseite" className={classes.logoLink}>
