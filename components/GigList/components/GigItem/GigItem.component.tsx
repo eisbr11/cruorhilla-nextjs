@@ -13,7 +13,7 @@ const GigItem = ({
 }) => {
   const classes = useStyles();
   return (
-    <Grid itemScope itemType="http://schema.org/MusicEvent" className={classes.itemWrapper} container>
+    <Grid itemScope itemType="http://schema.org/MusicEvent" className={classes.itemWrapper} container alignItems="center">
       <meta itemProp="performer" content="Cruor Hilla" />
       <Grid item xs={12} sm={3} md={2}>
         <Grid container direction="column">
