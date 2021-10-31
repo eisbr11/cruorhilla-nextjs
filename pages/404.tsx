@@ -11,7 +11,7 @@ const Custom404 = ({
   settings: StoryblokResult
 }) => (
   <Layout settings={settings.data.story}>
-    <CustomErrorContentComponent errorCode="404" errorMessage="Diese Seite konnte nicht gefunden werden" />
+    <CustomErrorContentComponent errorCode="404" errorMessage="Gehen Sie weiter, hier gibt es nichts zu sehen!" />
   </Layout>
 );
 
