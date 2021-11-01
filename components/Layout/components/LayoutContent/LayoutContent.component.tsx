@@ -33,9 +33,9 @@ interface ILayoutContentProps {
 }
 
 const variants: Variants = {
-  hidden: { opacity: 0, x: 0, y: 0, scale: 0.60 },
-  enter: { opacity: 1, x: 0, y: 0, scale: 1 },
-  exit: { opacity: 0, x: 0, y: 0, scale: 1.5 },
+  hidden: { opacity: 0, x: -300, y: 0 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: 300, y: 0 },
 };
 
 const LayoutContent = ({ children, settings, content }: ILayoutContentProps) => {
@@ -52,10 +52,11 @@ const LayoutContent = ({ children, settings, content }: ILayoutContentProps) => 
         animate="enter"
         exit="exit"
         variants={variants}
-        transition={{ type: 'spring', mass: 2, stiffness: 50  }}
+        transition={{ type: 'spring', mass: 1.5, stiffness: 65  }}
         className={classes.content}>
           {children}
       </motion.main>
+      <motion.span>j</motion.span>
       <SettingsComponent />
       <Footer settings={settings} />
     </div>
