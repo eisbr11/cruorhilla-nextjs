@@ -17,6 +17,7 @@
     "@mui/styles": "^5.0.2",
     "axios": "^0.24.0",
     "clsx": "^1.1.1",
+    "framer-motion": "^5.0.1",
     "local-storage": "^2.0.0",
     "marked": "^3.0.8",
     "moment": "^2.29.1",
