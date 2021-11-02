@@ -6,7 +6,7 @@ interface IRecordGridComponentProps {
 }
 
 const RecordGridComponent = ({ records }: IRecordGridComponentProps) => (
-  <Container maxWidth="lg">
+  <Container maxWidth="xl">
     <Grid container spacing={3}>
       {records.map((record) => (
         <RecordGridItem

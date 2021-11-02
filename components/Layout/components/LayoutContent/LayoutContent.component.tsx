@@ -52,7 +52,7 @@ const LayoutContent = ({ children, settings, content }: ILayoutContentProps) => 
         animate="enter"
         exit="exit"
         variants={variants}
-        transition={{ type: 'spring', mass: 1.2, stiffness: 70  }}
+        transition={{ type: 'ease' }}
         className={classes.content}>
           {children}
       </motion.main>
