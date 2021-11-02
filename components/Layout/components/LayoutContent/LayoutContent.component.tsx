@@ -1,5 +1,6 @@
 import React from 'react';
 import { StoryData } from 'storyblok-js-client';
+import { motion, Variants } from 'framer-motion';
 
 import Head from '@components/head';
 import Nav from '@components/Nav';
@@ -31,6 +32,12 @@ interface ILayoutContentProps {
   };
 }
 
+const variants: Variants = {
+  hidden: { opacity: 0, x: '-60vw', y: 0 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: '60vw', y: 0 },
+};
+
 const LayoutContent = ({ children, settings, content }: ILayoutContentProps) => {
   const classes = useStyles();
   const { theme } = useTheme();
@@ -40,9 +47,16 @@ const LayoutContent = ({ children, settings, content }: ILayoutContentProps) => 
       <Head title={content.title} description={content.description} />
       <Nav settings={settings} />
       {renderBackground(theme)}
-      <main className={classes.content}>
-        {children}
-      </main>
+      <motion.main
+        initial="hidden"
+        animate="enter"
+        exit="exit"
+        variants={variants}
+        transition={{ type: 'ease' }}
+        className={classes.content}>
+          {children}
+      </motion.main>
+      <motion.span>j</motion.span>
       <SettingsComponent />
       <Footer settings={settings} />
     </div>
