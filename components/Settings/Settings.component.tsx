@@ -2,6 +2,7 @@ import React from 'react';
 import { Fade, Modal } from '@mui/material';
 
 import SettingsButton from './components/SettingsButton';
+import SupportButton from './components/SupportButton';
 import SettingsModalContent from './components/SettingsModalContent';
 import useStyles from './Settings.styles';
 
@@ -19,6 +20,7 @@ const SettingsComponent = () => {
 
   return (
     <>
+      <SupportButton />
       <SettingsButton onClick={handleOpen} />
       <Modal
         aria-labelledby="transition-modal-title"
