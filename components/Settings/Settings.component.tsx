@@ -2,9 +2,9 @@ import React from 'react';
 import { Fade, Modal } from '@mui/material';
 
 import SettingsButton from './components/SettingsButton';
+import SupportButton from './components/SupportButton';
 import SettingsModalContent from './components/SettingsModalContent';
 import useStyles from './Settings.styles';
-import SupportButton from '@components/Settings/components/SupportButton/SupportButton.component';
 
 const SettingsComponent = () => {
   const classes = useStyles();
