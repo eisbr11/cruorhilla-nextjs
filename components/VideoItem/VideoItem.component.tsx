@@ -1,6 +1,8 @@
 import YouTube, { Options } from 'react-youtube';
 import { Typography } from '@mui/material';
 
+import { getYoutubeThumbnailUrl } from '@utils/youtubeThumbnail';
+import VideoFacade from '@components/VideoFacade';
 import useStyles from './VideoItem.styles';
 
 interface IVideoItemProps {
@@ -14,6 +16,7 @@ const VideoItem = ({ title, ytId }: IVideoItemProps) => {
     height: '390',
     width: '640',
     playerVars: {
+      autoplay: 1,
       showinfo: 0,
       controls: 2,
     },
@@ -22,11 +25,16 @@ const VideoItem = ({ title, ytId }: IVideoItemProps) => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.embedWrapper}>
-        <YouTube
-          videoId={ytId}
-          opts={youtubeOptions}
-          className={classes.youtubeEmbed}
-        />
+        <VideoFacade
+          thumbnailImageUrl={getYoutubeThumbnailUrl(ytId, 'sddefault')}
+          imageAlt={`${title} Youtube Thumbnail`}
+        >
+          <YouTube
+            videoId={ytId}
+            opts={youtubeOptions}
+            className={classes.youtubeEmbed}
+          />
+        </VideoFacade>
       </div>
       <Typography color="textPrimary" variant="h5" align="center">
         {title}
