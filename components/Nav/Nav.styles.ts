@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
   },
   logoLink: {
+    cursor: 'pointer',
     width: 50,
     padding: theme.spacing(1, 0),
   },

@@ -4,6 +4,7 @@ import { Fade, Modal } from '@mui/material';
 import SettingsButton from './components/SettingsButton';
 import SettingsModalContent from './components/SettingsModalContent';
 import useStyles from './Settings.styles';
+import SupportButton from '@components/Settings/components/SupportButton/SupportButton.component';
 
 const SettingsComponent = () => {
   const classes = useStyles();
@@ -19,6 +20,7 @@ const SettingsComponent = () => {
 
   return (
     <>
+      <SupportButton onClick={() => {}} />
       <SettingsButton onClick={handleOpen} />
       <Modal
         aria-labelledby="transition-modal-title"
