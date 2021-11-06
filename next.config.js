@@ -3,7 +3,7 @@ const runtimeCaching = require("next-pwa/cache");
 
 module.exports = withPWA({
   images: {
-    domains: ['a.storyblok.com'],
+    domains: ['a.storyblok.com', 'img.youtube.com'],
   },
   pwa: {
     disable: process.env.NODE_ENV === 'development',
