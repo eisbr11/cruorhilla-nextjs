@@ -20,7 +20,7 @@ const SettingsComponent = () => {
 
   return (
     <>
-      <SupportButton onClick={() => {}} />
+      <SupportButton />
       <SettingsButton onClick={handleOpen} />
       <Modal
         aria-labelledby="transition-modal-title"
