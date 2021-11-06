@@ -10,7 +10,14 @@ const SupportButton = (): JSX.Element => {
   const classes = useStyles();
   return (
     <Tooltip placement="left" title="Unterstütze uns!">
-      <Fab href={supportHref} className={classes.fab} size="medium" color="secondary" aria-label="support">
+      <Fab
+        target='_blank'
+        href={supportHref}
+        className={classes.fab}
+        size="medium"
+        color="secondary"
+        aria-label="support"
+      >
         <FavoriteIcon />
       </Fab>
     </Tooltip>
