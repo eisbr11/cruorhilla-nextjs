@@ -1,1 +1,2 @@
-npx pwa-asset-generator ./styles/logo_white.svg ./public/pwa-assets -b 'linear-gradient(76deg, #ac2e6c, #8c2764, #2f0231, #250a22)' -m ./public/manifest.json --single-quotes true --path-override '/pwa-assets'
+npx pwa-asset-generator ./styles/logo_white.svg ./public/pwa-assets -b 'linear-gradient(76deg, #ac2e6c, #8c2764, #2f0231, #250a22)' -m ./public/manifest.json --splash-only --opaque false --xhtml true --single-quotes --path-override '/pwa-assets' &&
+npx pwa-asset-generator ./styles/logo_white_notext.svg ./public/pwa-assets -b 'linear-gradient(76deg, #ac2e6c, #8c2764, #2f0231, #250a22)' -m ./public/manifest.json --icon-only --opaque false --xhtml true --single-quotes --path-override '/pwa-assets'
