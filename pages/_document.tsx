@@ -48,7 +48,10 @@ export default class MyDocument extends Document {
           <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
           <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
           <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
-          <link rel="apple-touch-icon" href="/pwa-assets/apple-icon-180.png" />
+          <link rel='apple-touch-icon' href='/pwa-assets/manifest-icon-192.png' />
+          <link rel='apple-touch-icon' sizes='256x256' href='/pwa-assets/apple-256.png' />
+          <link rel='apple-touch-icon' sizes='512x512' href='/pwa-assets/apple-512.png' />
+          <link rel='apple-touch-icon' sizes='1024x1024' href='/pwa-assets/apple-1024.png' />
           <link rel="apple-touch-startup-image" href="/pwa-assets/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
           <link rel="apple-touch-startup-image" href="/pwa-assets/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" />
           <link rel="apple-touch-startup-image" href="/pwa-assets/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" />
