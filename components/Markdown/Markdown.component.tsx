@@ -1,5 +1,5 @@
 import React, { useState, useEffect, FunctionComponent } from 'react';
-import marked, { MarkedOptions } from 'marked';
+import { marked, MarkedOptions } from 'marked';
 
 export interface MarkedProps {
   options?: MarkedOptions;
