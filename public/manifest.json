@@ -1,6 +1,7 @@
 {
   "name": "Cruor Hilla App",
   "short_name": "Cruor Hilla",
+  "categories": ["music", "entertainment"],
   "icons": [
     {
       "src": "/pwa-assets/manifest-icon-192.maskable.png",
@@ -27,9 +28,89 @@
       "purpose": "any"
     }
   ],
+  "screenshots": [
+    {
+      "src": "/pwa-assets/screenshots/screen1.png",
+      "sizes": "436x720",
+      "type": "image/png"
+    },
+    {
+      "src": "/pwa-assets/screenshots/screen2.png",
+      "sizes": "1439x2881",
+      "type": "image/png"
+    },
+    {
+      "src": "/pwa-assets/screenshots/screen3.png",
+      "sizes": "1439x2881",
+      "type": "image/png"
+    },
+    {
+      "src": "/pwa-assets/screenshots/screen4.png",
+      "sizes": "1242x2208",
+      "type": "image/png"
+    },
+    {
+      "src": "/pwa-assets/screenshots/screen5.png",
+      "sizes": "1242x2208",
+      "type": "image/png"
+    },
+    {
+      "src": "/pwa-assets/screenshots/screen6.png",
+      "sizes": "1750x2504",
+      "type": "image/png"
+    }
+  ],
   "theme_color": "#121212",
   "background_color": "#121212",
   "start_url": "/",
   "display": "standalone",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "lang": "de-DE",
+  "shortcuts" : [
+    {
+      "name": "Startseite",
+      "url": "/"
+    },
+    {
+      "name": "Live",
+      "url": "/live",
+      "description": "Liste von Konzerten von Cruor Hilla"
+    },
+    {
+      "name": "Diskografie",
+      "url": "/diskografie",
+      "description": "Alles über die Veröffentlichungen von Cruor Hilla"
+    },
+    {
+      "name": "Videos",
+      "url": "/videos"
+    },
+    {
+      "name": "Vergangene Konzerte",
+      "url": "/vergangene-konzerte"
+    },
+    {
+      "name": "Datenschutzerklärung",
+      "url": "/datenschutz"
+    },
+    {
+      "name": "Impressum",
+      "url": "/imprint"
+    },
+    {
+      "name": "Für Veranstalter",
+      "url": "/fuer-veranstalter",
+      "description": "Alle Informationen und Technik-Rider für Veranstalter"
+    },
+    {
+      "name": "Das Spiel",
+      "url": "/das-spiel",
+      "description": "Das Computerspiel von Cruor Hilla"
+    },
+    {
+      "name": "Freunde",
+      "url": "/freunde",
+      "description": "Seite mit Links zu anderen Künstlern und Freunden von Cruor Hilla"
+    }
+  ]
 }
