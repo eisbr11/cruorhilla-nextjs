@@ -7,7 +7,7 @@ import { IBlokComponentProps } from '@interfaces/blok.interface';
 const ContentLink = ({ blok }: IBlokComponentProps) => {
   return (
     <Typography paragraph align={blok.align}>
-      {blok.target === '_blank' ? (
+      {blok.target === 'external' ? (
         <Button
           href={blok.link.cached_url}
           target='_blank'

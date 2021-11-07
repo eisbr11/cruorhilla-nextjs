@@ -1,5 +1,5 @@
 import React, { useState, useEffect, FunctionComponent } from 'react';
-import marked, { MarkedOptions } from 'marked';
+import { marked, MarkedOptions } from 'marked';
 import { Typography, TypographyProps } from '@mui/material';
 
 export interface MarkedProps {
