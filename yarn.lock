@@ -1094,9 +1094,9 @@
     minimatch "^3.0.4"
 
 "@humanwhocodes/object-schema@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.0.tgz#87de7af9c231826fdd68ac7258f77c429e0e5fcf"
-  integrity sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
+  integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
 "@mui/core@5.0.0-alpha.53":
   version "5.0.0-alpha.53"
@@ -2629,10 +2629,10 @@ eslint-config-airbnb-base@^14.2.1:
     object.assign "^4.1.2"
     object.entries "^1.1.2"
 
-eslint-config-airbnb-typescript@^14.0.1:
-  version "14.0.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-typescript/-/eslint-config-airbnb-typescript-14.0.2.tgz#4dc1583b9eab671bb011dea7d4ff1fc0d88e6e09"
-  integrity sha512-oaVR63DqpRUiOOeSVxIzhD3FXbqJRH+7Lt9GCMsS9SKgrRW3XpZINN2FO4JEsnaHEGkktumd0AHE9K7KQNuXSQ==
+eslint-config-airbnb-typescript@^15.0.0:
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-typescript/-/eslint-config-airbnb-typescript-15.0.0.tgz#c88007b3cca5dd0f47125420ca5e8f6efac418fd"
+  integrity sha512-DTWGwqytbTnB8kSKtmkrGkRf3xwTs2l15shSH0w/3Img47AQwCCrIA/ON/Uj0XXBxP31LHyEItPXeuH3mqCNLA==
   dependencies:
     eslint-config-airbnb-base "^14.2.1"
 
@@ -3845,11 +3845,6 @@ locate-path@^5.0.0:
   integrity sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==
   dependencies:
     p-locate "^4.1.0"
-
-lodash.clonedeep@^4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
-  integrity sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=
 
 lodash.debounce@^4.0.8:
   version "4.0.8"
@@ -5258,12 +5253,11 @@ supports-color@^8.0.0:
     has-flag "^4.0.0"
 
 table@^6.0.9:
-  version "6.7.2"
-  resolved "https://registry.yarnpkg.com/table/-/table-6.7.2.tgz#a8d39b9f5966693ca8b0feba270a78722cbaf3b0"
-  integrity sha512-UFZK67uvyNivLeQbVtkiUs8Uuuxv24aSL4/Vil2PJVtMgU8Lx0CYkP12uCGa3kjyQzOSgV1+z9Wkb82fCGsO0g==
+  version "6.7.3"
+  resolved "https://registry.yarnpkg.com/table/-/table-6.7.3.tgz#255388439715a738391bd2ee4cbca89a4d05a9b7"
+  integrity sha512-5DkIxeA7XERBqMwJq0aHZOdMadBx4e6eDoFRuyT5VR82J0Ycg2DwM6GfA/EQAhJ+toRTaS1lIdSQCqgrmhPnlw==
   dependencies:
     ajv "^8.0.1"
-    lodash.clonedeep "^4.5.0"
     lodash.truncate "^4.4.2"
     slice-ansi "^4.0.0"
     string-width "^4.2.3"
