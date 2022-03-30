@@ -19,6 +19,7 @@ import Article from './Article';
 import ArticleDoubleContent from './ArticleDoubleContent';
 import YoutubeEmbed from './YoutubeEmbed';
 import { IBlokComponentProps } from '@interfaces/blok.interface';
+import SimpleImage from './SimpleImage';
 
 const Components = {
   article: Article,
@@ -36,6 +37,7 @@ const Components = {
   video: Video,
   video_grid: VideoGrid,
   youtube_embed: YoutubeEmbed,
+  simple_image: SimpleImage,
 };
 
 const Component = ({ blok }: IBlokComponentProps) => {
