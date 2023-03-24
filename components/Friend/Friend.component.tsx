@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Typography } from '@mui/material';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { IImage } from '@interfaces/image.interface';
@@ -34,15 +34,19 @@ const FriendComponent = ({
       <Grid item xs={12}>
         <div className={classes.imageWrapper}>
           <Link href={link} passHref legacyBehavior>
-            <a target="_blank" aria-label={`Zur Seite von ${name}`}>
+            <a target="_blank" aria-label={`Zur Seite von ${name}`} style={{ display: 'block', position: 'relative', width: '100%', height: '100%' }}>
               <Image
-                layout="fill"
-                objectFit="contain"
                 src={image.filename}
                 alt={image.alt}
                 placeholder="blur"
                 blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(600, 600))}`}
-              />
+                fill
+                sizes="(max-width: 768px) 80vw,
+                  (max-width: 1200px) 50vw,
+                  33vw"
+                style={{
+                  objectFit: 'contain',
+                }} />
             </a>
           </Link>
         </div>

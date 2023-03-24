@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import { Typography } from '@mui/material';
 
 import { IImage } from '@interfaces/image.interface';
@@ -19,13 +19,17 @@ const ImageTeaser = ({ headline, image }: IImageTeaserProps) => {
         src={image.filename}
         alt={image.alt}
         className={classes.image}
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center 20%"
         quality={60}
         placeholder="blur"
         blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(300, 300))}`}
-      />
+        fill
+        sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+        style={{
+          objectFit: 'cover',
+          objectPosition: 'center 20%',
+        }} />
       <Typography variant="h1" color="secondary" className={classes.headline}>{headline}</Typography>
     </div>
   );

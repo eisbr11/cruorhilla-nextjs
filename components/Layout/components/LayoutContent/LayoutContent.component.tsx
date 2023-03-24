@@ -56,7 +56,6 @@ const LayoutContent = ({ children, settings, content }: ILayoutContentProps) => 
         className={classes.content}>
           {children}
       </motion.main>
-      <motion.span>j</motion.span>
       <SettingsComponent />
       <Footer settings={settings} />
     </div>

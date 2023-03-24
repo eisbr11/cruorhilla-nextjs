@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     filter: '',
+    display: 'block',
   },
   link: {
     '&:hover $name': {
