@@ -1,5 +1,5 @@
 import React from 'react';
-import App, { AppProps } from 'next/app';
+import App from 'next/app';
 import Head from 'next/head';
 
 import { AnimatePresence } from 'framer-motion';
@@ -15,7 +15,7 @@ class MyApp extends App {
   }
 
   render() {
-    const { Component, pageProps, router }: AppProps = this.props;
+    const { Component, pageProps, router } = this.props;
     return (
       <ThemeContextProvider>
         <Head>

@@ -1,11 +1,9 @@
-import SbEditable from 'storyblok-react';
+import { FC } from 'react';
 import ImageTeaser from '@components/ImageTeaser';
 import { IBlokComponentProps } from '@interfaces/blok.interface';
 
-const Teaser = ({ blok }: IBlokComponentProps) => (
-  <SbEditable content={blok}>
+const Teaser: FC<IBlokComponentProps> = ({ blok }) => (
     <ImageTeaser headline={blok.headline} image={blok.image} />
-  </SbEditable>
 );
 
 export default Teaser;
