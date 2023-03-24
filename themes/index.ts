@@ -1,5 +1,6 @@
 import { responsiveFontSizes } from '@mui/material/styles';
 
+import coronaTheme from './corona.theme';
 import katerTheme from './kater.theme';
 import angstBlitzTheme from './angstblitz.theme';
 import baelleBadTheme from './baellebad.theme';
@@ -8,6 +9,8 @@ import defaultTheme from './default.theme';
 
 const getTheme = (themeString: string) => {
   switch (themeString) {
+    case 'corona':
+      return responsiveFontSizes(coronaTheme);
     case 'kater':
       return responsiveFontSizes(katerTheme);
     case 'angstblitz':
