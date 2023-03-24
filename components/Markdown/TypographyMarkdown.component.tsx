@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FunctionComponent } from 'react';
+import React, { useState, useEffect, FC } from 'react';
 import { marked, MarkedOptions } from 'marked';
 import { Typography, TypographyProps } from '@mui/material';
 
@@ -9,12 +9,12 @@ export interface MarkedProps {
   typographyProps: TypographyProps;
 }
 
-const TypographyMarkdownViewer: FunctionComponent<MarkedProps> = ({
+const TypographyMarkdownViewer: FC<MarkedProps> = ({
   options,
   overrides,
   content,
   typographyProps,
-}: MarkedProps) => {
+}) => {
   const [html, setHtml] = useState<string>();
 
   useEffect(() => {

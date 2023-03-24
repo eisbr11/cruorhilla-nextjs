@@ -26,7 +26,7 @@ const NavItemComponent = ({
   return (
     <>
       {!hasSubnavi ? (
-        <Link href={url}>
+        <Link href={url} legacyBehavior>
           <a className={linkClasses}>
             <span className={classes.linkName}>{name}</span>
           </a>
