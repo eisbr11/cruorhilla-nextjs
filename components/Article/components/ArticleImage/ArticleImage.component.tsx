@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 import { shimmer, toBase64 } from '@utils/imagePlaceholder';
 import useStyles from './ArticleImage.styles';

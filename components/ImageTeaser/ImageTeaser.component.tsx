@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { Typography } from '@mui/material';
 
 import { IImage } from '@interfaces/image.interface';

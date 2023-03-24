@@ -1,4 +1,5 @@
-import Image from 'next/image';
+import { FC } from 'react';
+import Image from 'next/legacy/image';
 
 import { shimmer, toBase64 } from '@utils/imagePlaceholder';
 import useStyles from './CoverImage.styles';
@@ -8,9 +9,9 @@ interface ICoverImageProps {
   coverImage: IImage;
 }
 
-const CoverImage = ({
+const CoverImage: FC<ICoverImageProps> = ({
   coverImage,
-}: ICoverImageProps) => {
+}) => {
   const classes = useStyles();
   return (
     <div className={classes.container}>

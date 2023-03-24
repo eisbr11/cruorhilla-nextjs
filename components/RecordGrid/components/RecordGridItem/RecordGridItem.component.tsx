@@ -3,7 +3,7 @@ import Link from 'next/link';
 import moment from 'moment';
 import 'moment/locale/de';
 import { Grid, Typography } from '@mui/material';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { motion } from 'framer-motion';
 
 import { IImage } from '@interfaces/image.interface';

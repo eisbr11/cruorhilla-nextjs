@@ -1,5 +1,5 @@
 import React from 'react';
-import NextImage from 'next/image';
+import NextImage from 'next/legacy/image';
 
 import { IImage } from '@interfaces/image.interface';
 import { shimmer, toBase64 } from '@utils/imagePlaceholder';
