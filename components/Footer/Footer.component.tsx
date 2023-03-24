@@ -17,7 +17,7 @@ const FooterComponent = ({ settings }: IFooterComponentProps) => {
         {settings.content && settings.content.footer_navi.map((navitem) => (
           // eslint-disable-next-line no-underscore-dangle
           <li key={navitem._uid} className={classes.listItem}>
-            <Link href={navitem.link.cached_url}>
+            <Link href={navitem.link.cached_url} legacyBehavior>
               <a className={classes.link}>{navitem.name}</a>
             </Link>
           </li>

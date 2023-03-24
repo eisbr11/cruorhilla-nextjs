@@ -25,7 +25,7 @@ const FriendComponent = ({
   return (
     <Grid container className={classes.container}>
       <Grid item xs={12}>
-        <Link href={link} passHref>
+        <Link href={link} passHref legacyBehavior>
           <a target="_blank" aria-label={`Zur Seite von ${name}`}>
             <Typography mb={1} variant="h3">{name}</Typography>
           </a>
@@ -33,7 +33,7 @@ const FriendComponent = ({
       </Grid>
       <Grid item xs={12}>
         <div className={classes.imageWrapper}>
-          <Link href={link} passHref>
+          <Link href={link} passHref legacyBehavior>
             <a target="_blank" aria-label={`Zur Seite von ${name}`}>
               <Image
                 layout="fill"

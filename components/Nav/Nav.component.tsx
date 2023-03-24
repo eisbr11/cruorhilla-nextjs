@@ -18,7 +18,7 @@ const NavComponent = ({ settings }: INavComponentProps) => {
   return (
     <AppBar position="sticky" className={classes.nav}>
       <Container maxWidth={false} className={classes.container}>
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <a aria-label="Zur Startseite" className={classes.logoLink}>
             <LogoNoText />
           </a>

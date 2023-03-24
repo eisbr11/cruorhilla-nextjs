@@ -32,7 +32,7 @@ const RecordGridItem = ({
   const classes = useStyles();
   return (
     <Grid item xs={12} sm={6} md={4} xl={3}>
-      <Link href={recordHref}>
+      <Link href={recordHref} legacyBehavior>
         <a
           aria-label={`Zur Detailseite von ${name}`}
           className={classes.link}

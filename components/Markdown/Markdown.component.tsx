@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FunctionComponent } from 'react';
+import React, { useState, useEffect, FC } from 'react';
 import { marked, MarkedOptions } from 'marked';
 
 export interface MarkedProps {
@@ -7,11 +7,11 @@ export interface MarkedProps {
   content: string;
 }
 
-const MarkedViewer: FunctionComponent<MarkedProps> = ({
+const MarkedViewer: FC<MarkedProps> = ({
   options,
   overrides,
   content,
-}: MarkedProps) => {
+}) => {
   const [html, setHtml] = useState<string>();
 
   useEffect(() => {
