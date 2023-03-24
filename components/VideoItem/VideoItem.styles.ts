@@ -10,13 +10,6 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     paddingBottom: '56.25%',
   },
-  youtubeEmbed: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-  },
 }));
 
 export default useStyles;

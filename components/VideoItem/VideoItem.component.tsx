@@ -1,4 +1,4 @@
-import YouTube, { Options } from 'react-youtube';
+import YouTube, { YouTubeProps } from 'react-youtube';
 import { Typography } from '@mui/material';
 
 import { getYoutubeThumbnailUrl } from '@utils/youtubeThumbnail';
@@ -12,7 +12,7 @@ interface IVideoItemProps {
 
 const VideoItem = ({ title, ytId }: IVideoItemProps) => {
   const classes = useStyles();
-  const youtubeOptions: Options = {
+  const youtubeOptions: YouTubeProps['opts'] = {
     height: '390',
     width: '640',
     playerVars: {
@@ -32,7 +32,6 @@ const VideoItem = ({ title, ytId }: IVideoItemProps) => {
           <YouTube
             videoId={ytId}
             opts={youtubeOptions}
-            className={classes.youtubeEmbed}
           />
         </VideoFacade>
       </div>

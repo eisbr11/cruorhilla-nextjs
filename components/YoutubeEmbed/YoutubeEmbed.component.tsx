@@ -1,4 +1,4 @@
-import YouTube, { Options } from 'react-youtube';
+import YouTube, { YouTubeProps } from 'react-youtube';
 
 import { getYoutubeThumbnailUrl } from '@utils/youtubeThumbnail';
 import VideoFacade from '@components/VideoFacade';
@@ -10,7 +10,7 @@ interface IYoutubeEmbedProps {
 
 const YoutubeEmbed = ({ ytId }: IYoutubeEmbedProps) => {
   const classes = useStyles();
-  const youtubeOptions: Options = {
+  const youtubeOptions: YouTubeProps['opts'] = {
     height: '390',
     width: '640',
     playerVars: {
@@ -29,7 +29,6 @@ const YoutubeEmbed = ({ ytId }: IYoutubeEmbedProps) => {
         <YouTube
           videoId={ytId}
           opts={youtubeOptions}
-          className={classes.youtubeEmbed}
         />
       </VideoFacade>
     </div>

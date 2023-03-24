@@ -16,7 +16,7 @@ const VideoFacade: FC<IVideoFacadeProps> = ({
 
   return <>
     {showVideo ? (
-      <>{children}</>
+      <div className={classes.videoWrapper}>{children}</div>
     ) : (
       <div className={classes.wrapper}>
         <Image
