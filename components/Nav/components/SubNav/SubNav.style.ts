@@ -7,22 +7,7 @@ const useStyles = makeStyles((theme) => ({
     top: '100%',
     width: '100%',
     background: theme.palette.secondary.main,
-  },
-  list: {
-    listStyle: 'none',
-    overflow: 'hidden',
-    display: 'flex',
-    justifyContent: 'flex-end',
-    flexDirection: 'row',
-    padding: theme.spacing(0),
-  },
-  backButton: {
-    position: 'absolute',
-    top: theme.spacing(1),
-    left: theme.spacing(1),
-  },
-  [theme.breakpoints.down('sm')]: {
-    container: {
+    [theme.breakpoints.down('sm')]: {
       position: 'fixed',
       top: '0',
       width: '100%',
@@ -33,18 +18,31 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: 'column',
       zIndex: 5,
     },
-    list: {
+  },
+  list: {
+    listStyle: 'none',
+    overflow: 'hidden',
+    display: 'flex',
+    justifyContent: 'flex-end',
+    flexDirection: 'row',
+    padding: theme.spacing(0),
+    [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
       justifyContent: 'center',
       flex: 1,
     },
-    listItem: {
-      padding: theme.spacing(1, 0),
+  },
+  backButton: {
+    position: 'absolute',
+    top: theme.spacing(1),
+    left: theme.spacing(1),
+    [theme.breakpoints.up('sm')]: {
+      display: 'none',
     },
   },
-  [theme.breakpoints.up('sm')]: {
-    backButton: {
-      display: 'none',
+  listItem: {
+    [theme.breakpoints.down('sm')]: {
+      padding: theme.spacing(1, 0),
     },
   },
 }));
