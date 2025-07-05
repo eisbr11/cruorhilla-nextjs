@@ -1,8 +1,9 @@
 import React from 'react';
+import Image from 'next/image';
 
 import type { IImage } from '@interfaces/image.interface';
 import { shimmer, toBase64 } from '@utils/imagePlaceholder';
-import { DivWrapper, StyledImage, TypographyHeadline } from '@components/ImageTeaser/ImageTeaser.styles';
+import { DivWrapper, TypographyHeadline } from '@components/ImageTeaser/ImageTeaser.styles';
 
 interface IImageTeaserProps {
   headline: string;
@@ -12,8 +13,9 @@ interface IImageTeaserProps {
 const ImageTeaser = ({ headline, image }: IImageTeaserProps) => {
   return (
     <DivWrapper>
-      <StyledImage
+      <Image
         src={image.filename}
+        className="image-teaser"
         alt={image.alt}
         quality={60}
         placeholder="blur"
@@ -25,7 +27,8 @@ const ImageTeaser = ({ headline, image }: IImageTeaserProps) => {
         style={{
           objectFit: 'cover',
           objectPosition: 'center 20%',
-        }} />
+        }}
+      />
       <TypographyHeadline variant="h1" color="secondary">
         {headline}
       </TypographyHeadline>

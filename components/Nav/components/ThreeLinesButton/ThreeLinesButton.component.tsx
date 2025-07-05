@@ -1,11 +1,14 @@
 import { DivContainer, StyledButton, ThreeLinesStyled } from './ThreeLinesButton.styles';
+import { FC } from 'react';
 
-const ThreeLinesButton = ({
-  active,
-  clickHandler,
-}: {
+interface IThreeLinesButtonProps {
   active?: boolean,
-  clickHandler?,
+  clickHandler?: () => void,
+}
+
+const ThreeLinesButton: FC<IThreeLinesButtonProps> = ({
+  active = false,
+  clickHandler = () => {},
 }) => {
   return (
     <DivContainer>
@@ -17,8 +20,3 @@ const ThreeLinesButton = ({
 };
 
 export default ThreeLinesButton;
-
-ThreeLinesButton.defaultProps = {
-  active: false,
-  clickHandler: () => {},
-};

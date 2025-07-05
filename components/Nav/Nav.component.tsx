@@ -14,7 +14,7 @@ import {
   UlList,
 } from './Nav.styles';
 
-interface INavComponentProps { settings: StoryData; }
+interface INavComponentProps { settings?: StoryData; }
 
 const NavComponent = ({ settings }: INavComponentProps) => {
   const [active, setActive] = useState(false);
@@ -28,7 +28,7 @@ const NavComponent = ({ settings }: INavComponentProps) => {
         <ThreeLinesButton clickHandler={() => setActive(!active)} active={active} />
         <NavMenuStyled isActive={active}>
           <UlList>
-            {settings.content && settings.content.main_navi.map((navitem) => (
+            {settings && settings.content && settings.content.main_navi.map((navitem) => (
               // eslint-disable-next-line no-underscore-dangle
               <LiListItem key={navitem._uid}>
                 <div>

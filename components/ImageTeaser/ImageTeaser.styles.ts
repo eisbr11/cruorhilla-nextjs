@@ -1,5 +1,4 @@
 import { styled, Typography } from '@mui/material';
-import Image from 'next/image';
 
 export const DivWrapper = styled('div')(({ theme }) => ({
   height: '50vh',
@@ -8,10 +7,9 @@ export const DivWrapper = styled('div')(({ theme }) => ({
   position: 'relative',
   overflow: 'hidden',
   marginBottom: theme.spacing(2),
-}));
-
-export const StyledImage = styled(Image)(() => ({
-  filter: 'grayscale(0.70)!important',
+  '& .image-teaser': {
+    filter: 'grayscale(0.70)!important',
+  },
 }));
 
 export const TypographyHeadline = styled(Typography)(({ theme }) => ({

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { StoryData } from 'storyblok-js-client';
@@ -16,11 +16,11 @@ interface ILayoutComponentProps {
   }
 }
 
-const LayoutComponent = ({
+const LayoutComponent: FC<ILayoutComponentProps> = ({
   children,
   settings,
   content,
-}: ILayoutComponentProps) => {
+}) => {
   const { theme } = useTheme();
 
   return (
@@ -36,11 +36,3 @@ const LayoutComponent = ({
 };
 
 export default LayoutComponent;
-
-LayoutComponent.defaultProps = {
-  settings: {},
-  content: {
-    title: '',
-    description: '',
-  },
-};

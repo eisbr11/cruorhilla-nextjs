@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { StoryData } from 'storyblok-js-client';
 import { Variants } from 'framer-motion';
 
@@ -38,12 +38,12 @@ const variants: Variants = {
   exit: { opacity: 0, x: '60vw', y: 0 },
 };
 
-const LayoutContent = ({ children, settings, content }: ILayoutContentProps) => {
+const LayoutContent: FC<ILayoutContentProps> = ({ children, settings, content }) => {
   const { theme } = useTheme();
 
   return (
     <DivContainer>
-      <Head title={content.title} description={content.description} />
+      <Head title={content?.title} description={content?.description} />
       <Nav settings={settings} />
       {renderBackground(theme)}
       <MotionMainStyled
@@ -53,7 +53,7 @@ const LayoutContent = ({ children, settings, content }: ILayoutContentProps) => 
         variants={variants}
         transition={{ type: 'ease' }}
       >
-          {children}
+        {children}
       </MotionMainStyled>
       <SettingsComponent />
       <Footer settings={settings} />
@@ -62,11 +62,3 @@ const LayoutContent = ({ children, settings, content }: ILayoutContentProps) => 
 };
 
 export default LayoutContent;
-
-LayoutContent.defaultProps = {
-  settings: {},
-  content: {
-    title: '',
-    description: '',
-  },
-};
