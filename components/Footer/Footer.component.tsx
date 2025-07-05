@@ -4,14 +4,15 @@ import { StoryData } from 'storyblok-js-client';
 import { AnchorLink, FooterContainer, LiListItem, UlList } from './Footer.styles';
 
 interface IFooterComponentProps {
-  settings: StoryData;
+  settings?: StoryData;
 }
 
 const FooterComponent = ({ settings }: IFooterComponentProps) => {
   return (
     <FooterContainer>
       <UlList>
-        {settings.content &&
+        {settings &&
+          settings.content &&
           settings.content.footer_navi.map((navitem) => (
             // eslint-disable-next-line no-underscore-dangle
             <LiListItem key={navitem._uid}>
