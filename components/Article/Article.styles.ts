@@ -5,7 +5,9 @@ interface IArticleContainerProps {
   isImageRight: boolean;
 }
 
-export const ArticleContainer = styled('article')<IArticleContainerProps>(({ theme, containerVisible, isImageRight }) => ({
+export const ArticleContainer = styled('article', {
+  shouldForwardProp: (prop) => prop !== 'containerVisible' && prop !== 'isImageRight',
+})<IArticleContainerProps>(({ theme, containerVisible, isImageRight }) => ({
   paddingTop: theme.spacing(4),
   paddingBottom: theme.spacing(8),
   transitionDuration: '600ms',

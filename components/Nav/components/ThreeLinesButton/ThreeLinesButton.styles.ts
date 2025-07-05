@@ -26,7 +26,9 @@ interface IThreeLinesStyledProps {
   isActive: boolean;
 }
 
-export const ThreeLinesStyled = styled('span')<IThreeLinesStyledProps>(({ theme, isActive }) => ({
+export const ThreeLinesStyled = styled('span', {
+  shouldForwardProp: (prop) => prop !== 'isActive',
+})<IThreeLinesStyledProps>(({ theme, isActive }) => ({
   position: 'absolute',
   width: '100%',
   height: 4,

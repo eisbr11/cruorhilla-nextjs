@@ -10,7 +10,9 @@ interface IExpandIconProps {
   isExpanded: boolean;
 }
 
-export const ExpandIconStyled = styled(ExpandMore)<IExpandIconProps>(({ isExpanded }) => ({
+export const ExpandIconStyled = styled(ExpandMore, {
+  shouldForwardProp: (prop) => prop !== 'isExpanded',
+})<IExpandIconProps>(({ isExpanded }) => ({
   userSelect: 'none',
   pointerEvents: 'none',
   ...isExpanded && {

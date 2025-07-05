@@ -9,7 +9,9 @@ interface ILinkStyledProps {
   isSubNav: boolean;
 }
 
-export const LinkStyled = styled(Link)<ILinkStyledProps>(({ theme, isSubNav }) => ({
+export const LinkStyled = styled(Link, {
+  shouldForwardProp: (prop) => prop !== 'isSubNav',
+})<ILinkStyledProps>(({ theme, isSubNav }) => ({
   color: 'inherit',
   padding: theme.spacing(2, 1),
   fontWeight: theme.typography.fontWeightBold,

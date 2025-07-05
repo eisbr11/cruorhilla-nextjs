@@ -44,7 +44,9 @@ interface INavMenuStyledProps {
   isActive: boolean;
 }
 
-export const NavMenuStyled = styled('div')<INavMenuStyledProps>(({ theme, isActive }) => ({
+export const NavMenuStyled = styled('div', {
+  shouldForwardProp: (prop) => prop !== 'isActive',
+})<INavMenuStyledProps>(({ theme, isActive }) => ({
   [theme.breakpoints.down('sm')]: {
     position: 'fixed',
     width: '100%',
