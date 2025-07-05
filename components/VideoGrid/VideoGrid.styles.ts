@@ -1,9 +1,6 @@
-import makeStyles from '@mui/styles/makeStyles';
+import { styled } from '@mui/material/styles';
+import { Grid } from '@mui/material';
 
-const useStyles = makeStyles((theme) => ({
-  wrapper: {
-    marginBottom: theme.spacing(2),
-  },
+export const WrapperStyled = styled(Grid)(({ theme }) => ({
+  marginBottom: theme.spacing(2),
 }));
-
-export default useStyles;

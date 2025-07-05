@@ -1,3 +1,1 @@
-import SwitchThemeSelect from './SwitchThemeSelect.component';
-
-export default SwitchThemeSelect;
+export { default } from './SwitchThemeSelect.component';

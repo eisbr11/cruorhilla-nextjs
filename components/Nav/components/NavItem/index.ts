@@ -1,3 +1,1 @@
-import NavItem from './NavItem.component';
-
-export default NavItem;
+export { default } from './NavItem.component';

@@ -1,14 +1,9 @@
 import React, { useState } from 'react';
-import {
-  ButtonBase,
-  ClickAwayListener,
-  Container,
-  Grow,
-} from '@mui/material';
+import { ClickAwayListener, Grow } from '@mui/material';
 import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 
 import NavItem from '@components/Nav/components/NavItem';
-import useStyles from './SubNav.style';
+import { ButtonBaseBackButton, LiListItem, StyledContainer, UlList } from './SubNav.style';
 
 const SubNav = ({
   label,
@@ -17,7 +12,6 @@ const SubNav = ({
   label: string,
   subNavi: any[]
 }) => {
-  const classes = useStyles();
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
@@ -32,36 +26,27 @@ const SubNav = ({
 
   return (
     <>
-      <NavItem
-        name={label}
-        hasSubnavi
-        openEvent={handleClick}
-      />
-      <Grow
-        in={open}
-        timeout={300}
-        mountOnEnter
-        unmountOnExit
-      >
-        <Container maxWidth={false} className={classes.container}>
-          <ButtonBase aria-label="Go Back" className={classes.backButton} onClick={handleClickAway}>
+      <NavItem name={label} hasSubnavi openEvent={handleClick} />
+      <Grow in={open} timeout={300} mountOnEnter unmountOnExit>
+        <StyledContainer maxWidth={false}>
+          <ButtonBaseBackButton aria-label="Go Back" onClick={handleClickAway}>
             <ArrowBackRoundedIcon fontSize="large" />
-          </ButtonBase>
+          </ButtonBaseBackButton>
           <ClickAwayListener onClickAway={handleClickAway}>
-            <ul className={classes.list}>
+            <UlList>
               {subNavi.map((subitem) => (
                 // eslint-disable-next-line no-underscore-dangle
-                <li className={classes.listItem} key={subitem._uid}>
+                <LiListItem key={subitem._uid}>
                   <NavItem
                     isSubNavItem
                     url={subitem.link.cached_url}
                     name={subitem.name}
                   />
-                </li>
+                </LiListItem>
               ))}
-            </ul>
+            </UlList>
           </ClickAwayListener>
-        </Container>
+        </StyledContainer>
       </Grow>
     </>
   );

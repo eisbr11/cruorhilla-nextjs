@@ -1,3 +1,1 @@
-import SettingsComponent from './Settings.component';
-
-export default SettingsComponent;
+export { default } from './Settings.component';

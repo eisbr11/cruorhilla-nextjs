@@ -1,7 +1,6 @@
 import { Button } from '@mui/material';
 import GetAppIcon from '@mui/icons-material/GetApp';
-
-import useStyles from './DownloadLink.styles';
+import { DivWrapper } from './DownloadLink.styles';
 
 interface IDownloadLinkProps {
   title: string;
@@ -9,10 +8,8 @@ interface IDownloadLinkProps {
 }
 
 const DownloadLink = ({ title, source }: IDownloadLinkProps) => {
-  const classes = useStyles();
-
   return (
-    <div className={classes.wrapper}>
+    <DivWrapper>
       <Button
         aria-label={title}
         endIcon={<GetAppIcon />}
@@ -25,7 +22,7 @@ const DownloadLink = ({ title, source }: IDownloadLinkProps) => {
       >
         {title}
       </Button>
-    </div>
+    </DivWrapper>
   );
 };
 

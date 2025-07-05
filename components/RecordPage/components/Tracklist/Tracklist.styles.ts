@@ -1,27 +1,26 @@
-import makeStyles from '@mui/styles/makeStyles';
+import { styled } from '@mui/material/styles';
 
-const useStyles = makeStyles((theme) => ({
-  list: {
-    listStyle: 'none',
-    padding: 0,
-    margin: theme.spacing(0, 0, 2),
-  },
-  listItem: {
-    padding: theme.spacing(0, 0, 1),
-    display: 'flex',
-    fontSize: theme.typography.body1.fontSize,
-  },
-  number: {
-    display: 'inline-block',
-    color: theme.palette.secondary.main,
-    marginRight: theme.spacing(2),
-    width: 40,
-    textAlign: 'right',
-    fontWeight: theme.typography.fontWeightBold,
-  },
-  song: {
-    display: 'inline-block',
-  },
+export const UlList = styled('ul')(({ theme }) => ({
+  listStyle: 'none',
+  padding: 0,
+  margin: theme.spacing(0, 0, 2),
 }));
 
-export default useStyles;
+export const LiListItem = styled('li')(({ theme }) => ({
+  padding: theme.spacing(0, 0, 1),
+  display: 'flex',
+  fontSize: theme.typography.body1.fontSize,
+}));
+
+export const SpanNumber = styled('span')(({ theme }) => ({
+  display: 'inline-block',
+  color: theme.palette.secondary.main,
+  marginRight: theme.spacing(2),
+  width: 40,
+  textAlign: 'right',
+  fontWeight: theme.typography.fontWeightBold,
+}));
+
+export const SpanSong = styled('span')(() => ({
+  display: 'inline-block',
+}));

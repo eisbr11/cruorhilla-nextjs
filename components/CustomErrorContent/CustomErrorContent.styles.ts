@@ -1,9 +1,6 @@
-import makeStyles from '@mui/styles/makeStyles';
+import { styled } from '@mui/material/styles';
+import { Container } from '@mui/material';
 
-const useStyles = makeStyles(() => ({
-  container: {
-    textAlign: 'center',
-  },
+export const StyledContainer = styled(Container)(() => ({
+  textAlign: 'center',
 }));
-
-export default useStyles;

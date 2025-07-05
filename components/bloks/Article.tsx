@@ -1,5 +1,4 @@
-// eslint-disable-next-line import/no-cycle
-import { IBlokComponentProps } from '@interfaces/blok.interface';
+import type { IBlokComponentProps } from '@interfaces/blok.interface';
 import Component from '@components/bloks/index';
 import { ArticleComponent } from '@components/Article';
 

@@ -4,7 +4,7 @@ import {
   Menu,
   MenuItem,
 } from '@mui/material';
-import { ExpandMore, YouTube } from '@mui/icons-material';
+import { YouTube } from '@mui/icons-material';
 
 import {
   BandcampIcon,
@@ -12,9 +12,8 @@ import {
   SpotifyIcon,
   TidalIcon,
 } from '@components/customIcons';
-import clsx from 'clsx';
-import useStyles from './ListenLinkDisplay.styles';
-import ListItemContent from '../ListItemContent/ListItemContent.component';
+import { ContainerStyled, ExpandIconStyled } from './ListenLinkDisplay.styles';
+import ListItemContent from '../ListItemContent';
 
 interface IListenLinkDisplayProps {
   bandcampLink: string;
@@ -40,7 +39,6 @@ const ListenLinkDisplay = ({
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const classes = useStyles();
   if (
     bandcampLink.length > 0
     || spotifyLink.length > 0
@@ -49,7 +47,7 @@ const ListenLinkDisplay = ({
     || youtubeMusicLink.length > 0
   ) {
     return (
-      <div className={classes.container}>
+      <ContainerStyled>
         <Button
           color="secondary"
           size="medium"
@@ -60,11 +58,7 @@ const ListenLinkDisplay = ({
           onClick={handleClick}
         >
           Jetzt hören via ...
-          <ExpandMore
-            className={clsx(classes.expandIcon, {
-              [classes.expandIconUp]: anchorEl,
-            })}
-          />
+          <ExpandIconStyled isExpanded={Boolean(anchorEl)} />
         </Button>
         <Menu
           id="listening-menu"
@@ -117,7 +111,7 @@ const ListenLinkDisplay = ({
             </li>
           )}
         </Menu>
-      </div>
+      </ContainerStyled>
     );
   }
   return null;

@@ -1,14 +1,11 @@
-import makeStyles from '@mui/styles/makeStyles';
+import { Container, styled, Typography } from '@mui/material';
 
-const useStyles = makeStyles((theme) => ({
-  title: {
-    textTransform: 'uppercase',
-    wordBreak: 'break-word',
-    padding: theme.spacing(2, 0),
-  },
-  container: {
-    overflow: 'hidden',
-  },
+export const ContainerStyled = styled(Container)(() => ({
+  overflow: 'hidden',
 }));
 
-export default useStyles;
+export const TitleStyled = styled(Typography)(({ theme }) => ({
+  textTransform: 'uppercase',
+  wordBreak: 'break-word',
+  padding: theme.spacing(2, 0),
+}));

@@ -1,14 +1,13 @@
 import { Typography } from '@mui/material';
-import useStyles from './NoConcertsInfo.styles';
+import { DivWrapper } from './NoConcertsInfo.styles';
 
 const NoConcertsInfo = () => {
-  const classes = useStyles();
   return (
-    <div className={classes.wrapper}>
+    <DivWrapper>
       <Typography align="center">
         Aktuell stehen leider keine Konzerte an.
       </Typography>
-    </div>
+    </DivWrapper>
   );
 };
 

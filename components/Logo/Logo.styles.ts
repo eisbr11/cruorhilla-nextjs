@@ -1,11 +1,7 @@
-import makeStyles from '@mui/styles/makeStyles';
+import { styled } from '@mui/material/styles';
 
-const useStyles = makeStyles(() => ({
-  logo: {
-    width: '100%',
-    verticalAlign: 'middle',
-    color: 'inherit',
-  },
+export const SvgLogo = styled('svg')(() => ({
+  width: '100%',
+  verticalAlign: 'middle',
+  color: 'inherit',
 }));
-
-export default useStyles;

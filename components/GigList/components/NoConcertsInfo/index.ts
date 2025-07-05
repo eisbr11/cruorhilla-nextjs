@@ -1,3 +1,1 @@
-import NoConcertsInfo from './NoConcertsInfo.component';
-
-export default NoConcertsInfo;
+export { default } from './NoConcertsInfo.component';

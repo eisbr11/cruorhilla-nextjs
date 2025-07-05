@@ -1,3 +1,1 @@
-import RecordPage from './RecordPage.component';
-
-export default RecordPage;
+export { default } from './RecordPage.component';

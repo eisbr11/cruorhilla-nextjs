@@ -1,19 +1,18 @@
 import React from 'react';
 import NextImage from 'next/image';
 
-import { IImage } from '@interfaces/image.interface';
+import type { IImage } from '@interfaces/image.interface';
 import { shimmer, toBase64 } from '@utils/imagePlaceholder';
-import useStyles from './Image.styles';
+import { DivContainer, DivImageWrapper } from './Image.styles';
 
 interface IImageProps {
   image: IImage;
 }
 
 const Image = ({ image }: IImageProps) => {
-  const classes = useStyles();
   return (
-    <div className={classes.container}>
-      <div className={classes.imageWrapper}>
+    <DivContainer>
+      <DivImageWrapper>
         <NextImage
           src={image.filename}
           alt={image.alt}
@@ -25,9 +24,10 @@ const Image = ({ image }: IImageProps) => {
               33vw"
           style={{
             objectFit: 'contain',
-          }} />
-      </div>
-    </div>
+          }}
+        />
+      </DivImageWrapper>
+    </DivContainer>
   );
 };
 

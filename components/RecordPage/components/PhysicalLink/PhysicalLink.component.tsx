@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
 import AlbumIcon from '@mui/icons-material/Album';
 
-import useStyles from './PhysicalLink.styles';
+import { Container } from './PhysicalLink.styles';
 
 interface IPhysicalLinkProps {
   href: string;
@@ -9,11 +9,9 @@ interface IPhysicalLinkProps {
 }
 
 const PhysicalLink = ({ href, text }: IPhysicalLinkProps ) => {
-  const classes = useStyles();
-
   if (href.length > 0 && text.length > 0) {
     return (
-      <div className={classes.container}>
+      <Container>
         <Button
           color="inherit"
           rel="noreferrer"
@@ -25,7 +23,7 @@ const PhysicalLink = ({ href, text }: IPhysicalLinkProps ) => {
         >
           {text}
         </Button>
-      </div>
+      </Container>
     );
   }
   return null;

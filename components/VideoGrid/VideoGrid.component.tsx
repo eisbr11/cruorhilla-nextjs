@@ -1,18 +1,16 @@
 import React from 'react';
 
-import useStyles from '@components/VideoGrid/VideoGrid.styles';
-import { Grid } from '@mui/material';
+import { WrapperStyled } from '@components/VideoGrid/VideoGrid.styles';
 
 interface IVideoGridProps {
   children: React.ReactNode;
 }
 
 const VideoGrid = ({ children }: IVideoGridProps) => {
-  const classes = useStyles();
   return (
-    <Grid container spacing={4} className={classes.wrapper}>
+    <WrapperStyled container spacing={4}>
       {children}
-    </Grid>
+    </WrapperStyled>
   );
 };
 

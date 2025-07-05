@@ -4,13 +4,12 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
 import { BandcampIcon, SpotifyIcon } from '@components/customIcons';
-import useStyles from '@components/SocialMediaLinks/SocialMediaLinks.styles';
 import Config from '@lib/Config';
+import { ContainerStyled } from './SocialMediaLinks.styles';
 
 const SocialMediaLinks = () => {
-  const classes = useStyles();
   return (
-    <Grid className={classes.container} container spacing={2} justifyContent="center">
+    <ContainerStyled container spacing={2} justifyContent="center">
       <Grid item>
         <IconButton
           rel="noreferrer"
@@ -71,7 +70,7 @@ const SocialMediaLinks = () => {
           <InstagramIcon fontSize="large" />
         </IconButton>
       </Grid>
-    </Grid>
+    </ContainerStyled>
   );
 };
 

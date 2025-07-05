@@ -1,10 +1,6 @@
-import makeStyles from '@mui/styles/makeStyles';
+import { styled } from '@mui/material/styles';
 
-const useStyles = makeStyles((theme) => ({
-  container: {
-    padding: theme.spacing(2, 0),
-    textAlign: 'right',
-  },
+export const Container = styled('div')(({ theme }) => ({
+  padding: theme.spacing(2, 0),
+  textAlign: 'right',
 }));
-
-export default useStyles;

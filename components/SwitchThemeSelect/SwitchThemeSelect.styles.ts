@@ -1,9 +1,6 @@
-import makeStyles from '@mui/styles/makeStyles';
+import { styled } from '@mui/material/styles';
+import { FormControl } from '@mui/material';
 
-const useStyles = makeStyles(() => ({
-  formControl: {
-    minWidth: 300,
-  },
+export const FormControlStyled = styled(FormControl)(() => ({
+  minWidth: 300,
 }));
-
-export default useStyles;

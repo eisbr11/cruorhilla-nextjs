@@ -1,9 +1,8 @@
-import useStyles from './Logo.styles';
+import { SvgLogo } from './Logo.styles';
 
 const LogoWithText = () => {
-  const classes = useStyles();
   return (
-    <svg className={classes.logo} version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1340.1 1720.1">
+    <SvgLogo version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1340.1 1720.1">
       <g id="layer1" transform="translate(535.6054,152.46442)">
         <path
           fill="currentColor"
@@ -266,14 +265,13 @@ const LogoWithText = () => {
         C703.6,263.6,705,263.1,705.3,262.5L705.3,262.5z"
         />
       </g>
-    </svg>
+    </SvgLogo>
   );
 };
 
 const LogoNoText = () => {
-  const classes = useStyles();
   return (
-    <svg className={classes.logo} version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1340.1 1389.4">
+    <SvgLogo version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1340.1 1389.4">
       <g transform="translate(535.6054,152.46442)">
         <path
           fill="currentColor"
@@ -401,7 +399,7 @@ const LogoNoText = () => {
         C703.6,263.6,705,263.1,705.3,262.5L705.3,262.5z"
         />
       </g>
-    </svg>
+    </SvgLogo>
   );
 };
 

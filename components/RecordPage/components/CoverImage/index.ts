@@ -1,3 +1,1 @@
-import CoverImage from './CoverImage.component';
-
-export default CoverImage;
+export { default } from './CoverImage.component';

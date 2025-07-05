@@ -1,52 +1,35 @@
-import React from 'react';
-import Link from 'next/link';
+import React, { FC } from 'react';
 
-import useStyles from './NavItem.styles';
+import { LinkNameStyled, LinkStyled } from './NavItem.styles';
 
-const NavItemComponent = ({
-  name,
-  url,
-  hasSubnavi,
-  openEvent,
-  isSubNavItem,
-}: {
+interface INavItemProps {
   name: string,
   url?: string,
   hasSubnavi?: boolean,
   openEvent?: any,
   isSubNavItem?: boolean,
+}
+
+const NavItemComponent: FC<INavItemProps> = ({
+  name,
+  url = '#',
+  hasSubnavi = false,
+  openEvent = () => {},
+  isSubNavItem = false,
 }) => {
-  const classes = useStyles();
-
-  let linkClasses = classes.link;
-  if (isSubNavItem) {
-    linkClasses += ` ${classes.subNavLink}`;
-  }
-
   return (
     <>
       {!hasSubnavi ? (
-        <Link href={url} legacyBehavior>
-          <a className={linkClasses}>
-            <span className={classes.linkName}>{name}</span>
-          </a>
-        </Link>
+        <LinkStyled href={url} isSubNav={isSubNavItem}>
+          <LinkNameStyled className='linkNameStyled'>{name}</LinkNameStyled>
+        </LinkStyled>
       ) : (
-        <a href="#" className={linkClasses} onClick={openEvent}>
-          <span className={classes.linkName}>
-            {name}
-          </span>
-        </a>
+        <LinkStyled isSubNav={isSubNavItem} href="#" onClick={openEvent}>
+          <LinkNameStyled className='linkNameStyled'>{name}</LinkNameStyled>
+        </LinkStyled>
       )}
     </>
   );
 };
 
 export default NavItemComponent;
-
-NavItemComponent.defaultProps = {
-  url: '#',
-  hasSubnavi: false,
-  openEvent: () => {},
-  isSubNavItem: false,
-};

@@ -1,4 +1,4 @@
-import useStyles from './ThreeLinesButton.styles';
+import { DivContainer, StyledButton, ThreeLinesStyled } from './ThreeLinesButton.styles';
 
 const ThreeLinesButton = ({
   active,
@@ -7,13 +7,12 @@ const ThreeLinesButton = ({
   active?: boolean,
   clickHandler?,
 }) => {
-  const classes = useStyles();
   return (
-    <div className={classes.container}>
-      <button aria-label="Navigation öffnen" onClick={clickHandler} className={classes.button} type="button">
-        <span className={`${classes.lines} ${active && classes.linesActive}`} />
-      </button>
-    </div>
+    <DivContainer>
+      <StyledButton aria-label="Navigation öffnen" onClick={clickHandler} type="button">
+        <ThreeLinesStyled isActive={active} />
+      </StyledButton>
+    </DivContainer>
   );
 };
 

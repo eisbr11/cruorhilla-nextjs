@@ -1,3 +1,1 @@
-import LayoutContent from './LayoutContent.component';
-
-export default LayoutContent;
+export { default } from './LayoutContent.component';

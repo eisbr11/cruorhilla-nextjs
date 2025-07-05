@@ -1,3 +1,1 @@
-import VideoItem from './VideoItem.component';
-
-export default VideoItem;
+export { default } from './VideoItem.component';

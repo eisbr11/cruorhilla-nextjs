@@ -1,3 +1,1 @@
-import Nav from './Nav.component';
-
-export default Nav;
+export { default } from './Nav.component';

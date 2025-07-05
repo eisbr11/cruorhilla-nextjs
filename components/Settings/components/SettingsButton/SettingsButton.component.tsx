@@ -1,19 +1,19 @@
-import { Fab, Tooltip } from '@mui/material';
+import { FC } from 'react';
+import { Tooltip } from '@mui/material';
 import TuneIcon from '@mui/icons-material/Tune';
 
-import useStyles from './SettingsButton.styles';
+import { FabStyled } from './SettingsButton.styles';
 
 interface ISettingsButtonProps {
   onClick: () => void;
 }
 
-const SettingsButton = ({ onClick }: ISettingsButtonProps): JSX.Element => {
-  const classes = useStyles();
+const SettingsButton: FC<ISettingsButtonProps> = ({ onClick }) => {
   return (
     <Tooltip placement="left" title="Einstellungen">
-      <Fab onClick={onClick} className={classes.fab} size="medium" color="primary" aria-label="settings">
+      <FabStyled onClick={onClick} size="medium" color="primary" aria-label="settings">
         <TuneIcon />
-      </Fab>
+      </FabStyled>
     </Tooltip>
   );
 };

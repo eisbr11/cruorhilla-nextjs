@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import Head from 'next/head';
 
 import { MarkdownViewer } from '@components/Markdown';
@@ -7,16 +7,15 @@ import CoverImage from './components/CoverImage';
 import Tracklist from './components/Tracklist';
 import ReleaseInfo from './components/ReleaseInfo';
 import ListenLinkDisplay from './components/ListenLinkDisplay';
-import useStyles from './RecordPage.styles';
+import { ContainerStyled, TitleStyled } from './RecordPage.styles';
 
 interface IRecordPageProps {
   record: any;
 }
 
 const RecordPage = ({ record }: IRecordPageProps) => {
-  const classes = useStyles();
   return (
-    <Container className={classes.container} maxWidth={false}>
+    <ContainerStyled maxWidth={false}>
       <Head>
         <title>{`Cruor Hilla - ${record.name}`}</title>
         <meta property="og:title" key="title" content={`Cruor Hilla - ${record.name}`} />
@@ -30,7 +29,7 @@ const RecordPage = ({ record }: IRecordPageProps) => {
       </Head>
       <Grid container justifyContent="space-between" alignItems="flex-start" spacing={3}>
         <Grid item xs={12}>
-          <Typography color="textPrimary" variant="h2" component="h1" className={classes.title}>{record.name}</Typography>
+          <TitleStyled color="textPrimary" variant="h2" variantMapping={{ h2: 'h1' }}>{record.name}</TitleStyled>
         </Grid>
         <Grid item xs={12} md={6} lg={5}>
           <Grid container spacing={2}>
@@ -58,7 +57,7 @@ const RecordPage = ({ record }: IRecordPageProps) => {
           </Typography>
         </Grid>
       </Grid>
-    </Container>
+    </ContainerStyled>
   );
 };
 

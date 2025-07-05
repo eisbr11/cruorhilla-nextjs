@@ -1,3 +1,1 @@
-import DownloadLink from './DownloadLink.component';
-
-export default DownloadLink;
+export { default } from './DownloadLink.component';

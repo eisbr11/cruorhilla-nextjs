@@ -3,7 +3,7 @@ import { Typography } from '@mui/material';
 
 import { getYoutubeThumbnailUrl } from '@utils/youtubeThumbnail';
 import VideoFacade from '@components/VideoFacade';
-import useStyles from './VideoItem.styles';
+import { DivEmbedWrapper, DivWrapper } from './VideoItem.styles';
 
 interface IVideoItemProps {
   title: string;
@@ -11,7 +11,6 @@ interface IVideoItemProps {
 }
 
 const VideoItem = ({ title, ytId }: IVideoItemProps) => {
-  const classes = useStyles();
   const youtubeOptions: YouTubeProps['opts'] = {
     height: '390',
     width: '640',
@@ -23,8 +22,8 @@ const VideoItem = ({ title, ytId }: IVideoItemProps) => {
   };
 
   return (
-    <div className={classes.wrapper}>
-      <div className={classes.embedWrapper}>
+    <DivWrapper>
+      <DivEmbedWrapper>
         <VideoFacade
           thumbnailImageUrl={getYoutubeThumbnailUrl(ytId, 'sddefault')}
           imageAlt={`${title} Youtube Thumbnail`}
@@ -34,11 +33,11 @@ const VideoItem = ({ title, ytId }: IVideoItemProps) => {
             opts={youtubeOptions}
           />
         </VideoFacade>
-      </div>
+      </DivEmbedWrapper>
       <Typography color="textPrimary" variant="h5" align="center">
         {title}
       </Typography>
-    </div>
+    </DivWrapper>
   );
 };
 

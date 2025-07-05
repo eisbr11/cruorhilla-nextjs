@@ -1,3 +1,1 @@
-import ArticleImage from './ArticleImage.component';
-
-export default ArticleImage;
+export { default } from './ArticleImage.component';

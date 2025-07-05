@@ -1,3 +1,1 @@
-import VideoGrid from './VideoGrid.component';
-
-export default VideoGrid;
+export { default } from './VideoGrid.component';

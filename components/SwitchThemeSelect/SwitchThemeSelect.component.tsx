@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  FormControl,
   InputLabel,
   MenuItem,
   Select,
@@ -10,7 +9,7 @@ import { set as lsSet } from 'local-storage';
 
 import { Theme, useTheme, getThemeName } from '@context/theme.context';
 import Config from '@lib/Config';
-import useStyles from './SwitchThemeSelect.styles';
+import { FormControlStyled } from './SwitchThemeSelect.styles';
 
 const SwitchThemeSelect = () => {
   const { theme, setTheme } = useTheme();
@@ -20,9 +19,8 @@ const SwitchThemeSelect = () => {
     lsSet(Config.theme_ls_key, event.target.value as string);
   };
 
-  const classes = useStyles();
   return (
-    <FormControl variant="outlined" color="secondary" className={classes.formControl}>
+    <FormControlStyled variant="outlined" color="secondary">
       <InputLabel id="select-theme-label">Thema auswählen</InputLabel>
       <Select
         value={theme}
@@ -36,7 +34,7 @@ const SwitchThemeSelect = () => {
           <MenuItem key={value} value={value}>{getThemeName(value)}</MenuItem>
         ))}
       </Select>
-    </FormControl>
+    </FormControlStyled>
   );
 };
 

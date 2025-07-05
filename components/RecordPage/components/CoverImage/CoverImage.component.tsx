@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import Image from 'next/image';
 
+import type { IImage } from '@interfaces/image.interface';
 import { shimmer, toBase64 } from '@utils/imagePlaceholder';
-import useStyles from './CoverImage.styles';
-import { IImage } from '@interfaces/image.interface';
+import { ImageContainer } from './CoverImage.styles';
 
 interface ICoverImageProps {
   coverImage: IImage;
@@ -12,9 +12,8 @@ interface ICoverImageProps {
 const CoverImage: FC<ICoverImageProps> = ({
   coverImage,
 }) => {
-  const classes = useStyles();
   return (
-    <div className={classes.container}>
+    <ImageContainer>
       <Image
         src={coverImage.filename}
         alt={coverImage.alt}
@@ -28,7 +27,7 @@ const CoverImage: FC<ICoverImageProps> = ({
           height: 'auto',
           display: 'block',
         }} />
-    </div>
+    </ImageContainer>
   );
 };
 

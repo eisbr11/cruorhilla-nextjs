@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
-import clsx from 'clsx';
 import { useInView } from 'react-intersection-observer';
-import useStyles from './Article.styles';
+import { ArticleContainer, ArticleImageWrapper, ContentWrapper } from './Article.styles';
 
 interface IArticleDoubleComponentProps {
   contentLeft: ReactNode;
@@ -18,22 +17,19 @@ const ArticleDoubleComponent = ({
     triggerOnce: true,
   });
 
-  const classes = useStyles();
-
   return (
-    <article
-      className={clsx(classes.container, {
-        [classes.containerVisible]: inView,
-      })}
+    <ArticleContainer
+      containerVisible={inView}
+      isImageRight={false} // This prop is not used in this component, but kept for consistency
       ref={ref}
     >
-      <div className={classes.contentWrapper}>
+      <ContentWrapper>
         {contentLeft}
-      </div>
-      <div className={clsx(classes.contentWrapper, classes.articleImageWrapperRight)}>
+      </ContentWrapper>
+      <ArticleImageWrapper design='imageRight'>
         {contentRight}
-      </div>
-    </article>
+      </ArticleImageWrapper>
+    </ArticleContainer>
   );
 };
 

@@ -1,10 +1,8 @@
 import React from 'react';
-import Image from 'next/image';
-import { Typography } from '@mui/material';
 
-import { IImage } from '@interfaces/image.interface';
+import type { IImage } from '@interfaces/image.interface';
 import { shimmer, toBase64 } from '@utils/imagePlaceholder';
-import useStyles from './ImageTeaser.styles';
+import { DivWrapper, StyledImage, TypographyHeadline } from '@components/ImageTeaser/ImageTeaser.styles';
 
 interface IImageTeaserProps {
   headline: string;
@@ -12,13 +10,11 @@ interface IImageTeaserProps {
 }
 
 const ImageTeaser = ({ headline, image }: IImageTeaserProps) => {
-  const classes = useStyles();
   return (
-    <div className={classes.wrapper}>
-      <Image
+    <DivWrapper>
+      <StyledImage
         src={image.filename}
         alt={image.alt}
-        className={classes.image}
         quality={60}
         placeholder="blur"
         blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(300, 300))}`}
@@ -30,8 +26,10 @@ const ImageTeaser = ({ headline, image }: IImageTeaserProps) => {
           objectFit: 'cover',
           objectPosition: 'center 20%',
         }} />
-      <Typography variant="h1" color="secondary" className={classes.headline}>{headline}</Typography>
-    </div>
+      <TypographyHeadline variant="h1" color="secondary">
+        {headline}
+      </TypographyHeadline>
+    </DivWrapper>
   );
 };
 

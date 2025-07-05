@@ -1,15 +1,12 @@
-import makeStyles from '@mui/styles/makeStyles';
+import { Paper, styled, Typography } from '@mui/material';
 
-const useStyles = makeStyles((theme) => ({
-  contentWrap: {
-    backgroundColor: theme.palette.background.paper,
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 2, 3),
-    outline: 'none',
-  },
-  description: {
-    marginBottom: theme.spacing(4),
-  },
+export const ContentWrapStyled = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.background.paper,
+  boxShadow: theme.shadows[5],
+  padding: theme.spacing(2, 2, 3),
+  outline: 'none',
 }));
 
-export default useStyles;
+export const DescriptionStyled = styled(Typography)(({ theme }) => ({
+  marginBottom: theme.spacing(4),
+}));

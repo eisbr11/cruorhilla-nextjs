@@ -1,6 +1,6 @@
 import React from 'react';
 import { StoryData } from 'storyblok-js-client';
-import { motion, Variants } from 'framer-motion';
+import { Variants } from 'framer-motion';
 
 import Head from '@components/head';
 import Nav from '@components/Nav';
@@ -8,7 +8,7 @@ import Footer from '@components/Footer';
 import { Theme, useTheme } from '@context/theme.context';
 import SettingsComponent from '@components/Settings';
 import { AngstblitzSky, BaellebadBg, WartenAufDenKaterSky } from './components/CustomBackgrounds';
-import useStyles from './LayoutContent.styles';
+import { DivContainer, MotionMainStyled } from './LayoutContent.styles';
 
 const renderBackground = (theme: string): React.ReactNode | null => {
   switch (theme) {
@@ -39,26 +39,25 @@ const variants: Variants = {
 };
 
 const LayoutContent = ({ children, settings, content }: ILayoutContentProps) => {
-  const classes = useStyles();
   const { theme } = useTheme();
 
   return (
-    <div className={classes.container}>
+    <DivContainer>
       <Head title={content.title} description={content.description} />
       <Nav settings={settings} />
       {renderBackground(theme)}
-      <motion.main
+      <MotionMainStyled
         initial="hidden"
         animate="enter"
         exit="exit"
         variants={variants}
         transition={{ type: 'ease' }}
-        className={classes.content}>
+      >
           {children}
-      </motion.main>
+      </MotionMainStyled>
       <SettingsComponent />
       <Footer settings={settings} />
-    </div>
+    </DivContainer>
   );
 };
 

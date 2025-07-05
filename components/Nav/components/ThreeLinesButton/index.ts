@@ -1,3 +1,1 @@
-import ThreeLinesButton from './ThreeLinesButton.component';
-
-export default ThreeLinesButton;
+export { default } from './ThreeLinesButton.component';
