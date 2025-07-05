@@ -1,18 +1,18 @@
-import makeStyles from '@mui/styles/makeStyles';
+import { Backdrop, Modal } from '@mui/material';
+import { styled } from '@mui/material/styles';
 
-const useStyles = makeStyles(() => ({
-  modal: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  modalInner: {
-    outline: 0,
-  },
-  backdrop: {
-    backdropFilter: 'blur(5px)',
-    backgroundColor: 'rgba(0, 0, 0, 0.2)',
-  },
+export const ModalStyled = styled(Modal)(() => ({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 }));
 
-export default useStyles;
+export const ModalInnerStyled = styled('div')(() => ({
+  outline: 0,
+  zIndex: 1000,
+}));
+
+export const BackdropStyled = styled(Backdrop)(() => ({
+  backdropFilter: 'blur(5px)',
+  backgroundColor: 'rgba(0, 0, 0, 0.2)',
+}));
