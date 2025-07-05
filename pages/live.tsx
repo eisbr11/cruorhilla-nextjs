@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next';
-import { StoryblokResult } from 'storyblok-js-client';
+import { ISbResult } from 'storyblok-js-client';
 
 import { IStoryblokPageProps } from '@interfaces/blok.interface';
 import StoryblokService from '@utils/storyblok-service';
@@ -8,7 +8,7 @@ import Page from '@components/bloks/Page';
 import GigList from '@components/GigList';
 
 interface ILivePageProps extends IStoryblokPageProps{
-  gigs: StoryblokResult;
+  gigs: ISbResult;
 }
 
 export default function LivePage({

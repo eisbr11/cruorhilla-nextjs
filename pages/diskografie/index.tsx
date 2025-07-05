@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next';
-import { StoryblokResult } from 'storyblok-js-client';
+import { ISbResult } from 'storyblok-js-client';
 
 import StoryblokService from '@utils/storyblok-service';
 import Layout from '@components/Layout';
@@ -11,9 +11,9 @@ const Diskografie = ({
   settings,
   records,
 }: {
-  page: StoryblokResult,
-  settings: StoryblokResult,
-  records: StoryblokResult,
+  page: ISbResult,
+  settings: ISbResult,
+  records: ISbResult,
 }) => (
   <Layout settings={settings.data.story} content={page.data.story.content}>
     <Page body={page.data.story.content.body} />

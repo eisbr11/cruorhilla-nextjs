@@ -1,10 +1,9 @@
-import React from 'react';
-import { StoryData } from 'storyblok-js-client';
+import { ISbStoryData } from 'storyblok-js-client';
 
 import { AnchorLink, FooterContainer, LiListItem, UlList } from './Footer.styles';
 
 interface IFooterComponentProps {
-  settings?: StoryData;
+  settings?: ISbStoryData;
 }
 
 const FooterComponent = ({ settings }: IFooterComponentProps) => {

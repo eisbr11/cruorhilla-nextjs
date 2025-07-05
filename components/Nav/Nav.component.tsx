@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StoryData } from 'storyblok-js-client';
+import { ISbStoryData } from 'storyblok-js-client';
 
 import { LogoNoText } from '@components/Logo';
 import ThreeLinesButton from './components/ThreeLinesButton';
@@ -14,7 +14,7 @@ import {
   UlList,
 } from './Nav.styles';
 
-interface INavComponentProps { settings?: StoryData; }
+interface INavComponentProps { settings?: ISbStoryData; }
 
 const NavComponent = ({ settings }: INavComponentProps) => {
   const [active, setActive] = useState(false);

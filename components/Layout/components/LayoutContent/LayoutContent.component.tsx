@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { StoryData } from 'storyblok-js-client';
+import { FC, ReactNode } from 'react';
+import { ISbStoryData } from 'storyblok-js-client';
 import { Variants } from 'framer-motion';
 
 import Head from '@components/head';
@@ -10,7 +10,7 @@ import SettingsComponent from '@components/Settings';
 import { AngstblitzSky, BaellebadBg, WartenAufDenKaterSky } from './components/CustomBackgrounds';
 import { DivContainer, MotionMainStyled } from './LayoutContent.styles';
 
-const renderBackground = (theme: string): React.ReactNode | null => {
+const renderBackground = (theme: string): ReactNode | null => {
   switch (theme) {
     case Theme.angstblitz:
       return (<AngstblitzSky />);
@@ -24,8 +24,8 @@ const renderBackground = (theme: string): React.ReactNode | null => {
 };
 
 interface ILayoutContentProps {
-  children: React.ReactNode;
-  settings?: StoryData;
+  children: ReactNode;
+  settings?: ISbStoryData;
   content?: {
     title: string;
     description: string;

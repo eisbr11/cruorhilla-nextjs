@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { StoryData } from 'storyblok-js-client';
+import { ISbStoryData } from 'storyblok-js-client';
 
 import { useTheme } from '@context/theme.context';
 import getTheme from '@themes/index';
@@ -9,7 +9,7 @@ import LayoutContent from './components/LayoutContent';
 
 interface ILayoutComponentProps {
   children: React.ReactNode;
-  settings?: StoryData;
+  settings?: ISbStoryData;
   content?: {
     title: string;
     description: string;

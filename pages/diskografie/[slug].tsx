@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { StoryblokResult } from 'storyblok-js-client';
+import { ISbResult } from 'storyblok-js-client';
 
 import StoryblokService from '@utils/storyblok-service';
 import Layout from '@components/Layout';
@@ -9,8 +9,8 @@ export default function Diskografie({
   record,
   settings,
 }: {
-  record: StoryblokResult,
-  settings: StoryblokResult
+  record: ISbResult,
+  settings: ISbResult
 }) {
   return (
     <Layout settings={settings.data.story}>

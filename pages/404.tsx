@@ -1,12 +1,12 @@
 import { GetStaticProps } from 'next';
-import { StoryblokResult } from 'storyblok-js-client';
+import { ISbResult } from 'storyblok-js-client';
 
 import StoryblokService from '@utils/storyblok-service';
 import Layout from '@components/Layout';
 import CustomErrorContentComponent from '@components/CustomErrorContent';
 
 interface ICustom404Props {
-  settings: StoryblokResult;
+  settings: ISbResult;
 }
 
 const Custom404 = ({ settings }: ICustom404Props) => (
