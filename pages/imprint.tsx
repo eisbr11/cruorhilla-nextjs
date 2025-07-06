@@ -1,9 +1,9 @@
 import { GetStaticProps } from 'next';
 
-import { IStoryblokPageProps } from '@interfaces/blok.interface';
-import StoryblokService from '@utils/storyblok-service';
-import Layout from '@components/Layout';
-import Page from '@components/bloks/Page';
+import { IStoryblokPageProps } from 'interfaces/blok.interface';
+import StoryblokService from 'utils/storyblok-service';
+import Layout from 'components/Layout';
+import Page from 'components/bloks/Page';
 
 export default function ImprintPage({ page, settings }: IStoryblokPageProps) {
   return (

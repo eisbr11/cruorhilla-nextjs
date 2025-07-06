@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { WrapperStyled } from '@components/VideoGrid/VideoGrid.styles';
+import { WrapperStyled } from 'components/VideoGrid/VideoGrid.styles';
 
 interface IVideoGridProps {
   children: React.ReactNode;

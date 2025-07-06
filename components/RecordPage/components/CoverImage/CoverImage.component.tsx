@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import Image from 'next/image';
 
-import type { IImage } from '@interfaces/image.interface';
-import { shimmer, toBase64 } from '@utils/imagePlaceholder';
+import type { IImage } from 'interfaces/image.interface';
+import { shimmer, toBase64 } from 'utils/imagePlaceholder';
 import { ImageContainer } from './CoverImage.styles';
 
 interface ICoverImageProps {

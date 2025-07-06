@@ -4,9 +4,9 @@ import moment from 'moment';
 import 'moment/locale/de';
 import { Grid, Typography } from '@mui/material';
 
-import type { IImage } from '@interfaces/image.interface';
-import recordTypeString from '@utils/recordTypeString';
-import { shimmer, toBase64 } from '@utils/imagePlaceholder';
+import type { IImage } from 'interfaces/image.interface';
+import recordTypeString from 'utils/recordTypeString';
+import { shimmer, toBase64 } from 'utils/imagePlaceholder';
 import { ImageContainerStyled, InfoContainerStyled, LinkStyled } from './RecordGridItem.styles';
 
 moment.locale('de');

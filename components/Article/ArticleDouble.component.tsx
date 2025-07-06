@@ -1,6 +1,11 @@
 import React, { ReactNode } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { ArticleContainer, ArticleImageWrapper, ContentWrapper } from './Article.styles';
+
+import {
+  ArticleContainer,
+  ArticleImageWrapper,
+  ContentWrapper,
+} from './Article.styles';
 
 interface IArticleDoubleComponentProps {
   contentLeft: ReactNode;
@@ -23,9 +28,7 @@ const ArticleDoubleComponent = ({
       isImageRight={false} // This prop is not used in this component, but kept for consistency
       ref={ref}
     >
-      <ContentWrapper>
-        {contentLeft}
-      </ContentWrapper>
+      <ContentWrapper>{contentLeft}</ContentWrapper>
       <ArticleImageWrapper design='imageRight'>
         {contentRight}
       </ArticleImageWrapper>

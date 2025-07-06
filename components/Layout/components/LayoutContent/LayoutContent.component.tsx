@@ -2,11 +2,11 @@ import { FC, ReactNode } from 'react';
 import { ISbStoryData } from 'storyblok-js-client';
 import { Variants } from 'framer-motion';
 
-import Head from '@components/head';
-import Nav from '@components/Nav';
-import Footer from '@components/Footer';
-import { Theme, useTheme } from '@context/theme.context';
-import SettingsComponent from '@components/Settings';
+import Head from 'components/head';
+import Nav from 'components/Nav';
+import Footer from 'components/Footer';
+import { Theme, useTheme } from 'context/theme.context';
+import SettingsComponent from 'components/Settings';
 import { AngstblitzSky, BaellebadBg, WartenAufDenKaterSky } from './components/CustomBackgrounds';
 import { DivContainer, MotionMainStyled } from './LayoutContent.styles';
 

@@ -1,9 +1,13 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
-import type { IImage } from '@interfaces/image.interface';
+import type { IImage } from 'interfaces/image.interface';
 import ArticleImage from './components/ArticleImage';
-import { ArticleImageWrapper, ArticleContainer, ContentWrapper } from './Article.styles';
+import {
+  ArticleImageWrapper,
+  ArticleContainer,
+  ContentWrapper,
+} from './Article.styles';
 
 interface IArticleComponentProps {
   content: React.ReactNode;
@@ -31,9 +35,7 @@ const ArticleComponent = ({
       <ArticleImageWrapper design={design}>
         <ArticleImage image={image} />
       </ArticleImageWrapper>
-      <ContentWrapper>
-        {content}
-      </ContentWrapper>
+      <ContentWrapper>{content}</ContentWrapper>
     </ArticleContainer>
   );
 };

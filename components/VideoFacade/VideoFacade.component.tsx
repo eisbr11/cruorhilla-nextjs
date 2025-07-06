@@ -2,7 +2,7 @@ import React, { useState, FC } from 'react';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import Image from 'next/image';
 
-import type { IVideoFacadeProps } from '@components/VideoFacade/VideoFacade.type';
+import type { IVideoFacadeProps } from 'components/VideoFacade/VideoFacade.type';
 import {
   DivVideoWrapper,
   DivWrapper,

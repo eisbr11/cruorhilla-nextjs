@@ -1,5 +1,6 @@
 import { Button } from '@mui/material';
 import GetAppIcon from '@mui/icons-material/GetApp';
+
 import { DivWrapper } from './DownloadLink.styles';
 
 interface IDownloadLinkProps {
@@ -13,11 +14,11 @@ const DownloadLink = ({ title, source }: IDownloadLinkProps) => {
       <Button
         aria-label={title}
         endIcon={<GetAppIcon />}
-        size="large"
-        variant="contained"
-        color="secondary"
+        size='large'
+        variant='contained'
+        color='secondary'
         href={source}
-        target="_blank"
+        target='_blank'
         download
       >
         {title}

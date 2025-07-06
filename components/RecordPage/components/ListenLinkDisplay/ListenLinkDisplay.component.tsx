@@ -11,7 +11,7 @@ import {
   DeezerIcon,
   SpotifyIcon,
   TidalIcon,
-} from '@components/customIcons';
+} from 'components/customIcons';
 import { ContainerStyled, ExpandIconStyled } from './ListenLinkDisplay.styles';
 import ListItemContent from '../ListItemContent';
 

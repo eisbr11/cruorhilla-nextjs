@@ -1,8 +1,8 @@
 import React from 'react';
 import NextImage from 'next/image';
 
-import type { IImage } from '@interfaces/image.interface';
-import { shimmer, toBase64 } from '@utils/imagePlaceholder';
+import type { IImage } from 'interfaces/image.interface';
+import { shimmer, toBase64 } from 'utils/imagePlaceholder';
 import { DivContainer, DivImageWrapper } from './Image.styles';
 
 interface IImageProps {

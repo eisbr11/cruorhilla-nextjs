@@ -1,8 +1,8 @@
 import { Container as MaterialContainer } from '@mui/material';
 
-import { IBlokComponentProps } from '@interfaces/blok.interface';
+import { IBlokComponentProps } from 'interfaces/blok.interface';
 // eslint-disable-next-line import/no-cycle
-import Component from '@components/bloks/index';
+import Component from 'components/bloks/index';
 
 const Container = ({ blok }: IBlokComponentProps) => (
   <MaterialContainer maxWidth={blok.maxWidth}>

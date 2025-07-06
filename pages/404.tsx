@@ -1,9 +1,9 @@
 import { GetStaticProps } from 'next';
 import { ISbResult } from 'storyblok-js-client';
 
-import StoryblokService from '@utils/storyblok-service';
-import Layout from '@components/Layout';
-import CustomErrorContentComponent from '@components/CustomErrorContent';
+import StoryblokService from 'utils/storyblok-service';
+import Layout from 'components/Layout';
+import CustomErrorContentComponent from 'components/CustomErrorContent';
 
 interface ICustom404Props {
   settings: ISbResult;

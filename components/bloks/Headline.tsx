@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material';
 
-import { IBlokComponentProps } from '@interfaces/blok.interface';
-import { MarkdownViewer } from '@components/Markdown';
+import { IBlokComponentProps } from 'interfaces/blok.interface';
+import { MarkdownViewer } from 'components/Markdown';
 
 const Headline = ({
   blok,

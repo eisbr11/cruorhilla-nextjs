@@ -1,7 +1,7 @@
 import YouTube, { YouTubeProps } from 'react-youtube';
 
-import { getYoutubeThumbnailUrl } from '@utils/youtubeThumbnail';
-import VideoFacade from '@components/VideoFacade';
+import { getYoutubeThumbnailUrl } from 'utils/youtubeThumbnail';
+import VideoFacade from 'components/VideoFacade';
 import { DivWrapper } from './YoutubeEmbed.styles';
 
 interface IYoutubeEmbedProps {

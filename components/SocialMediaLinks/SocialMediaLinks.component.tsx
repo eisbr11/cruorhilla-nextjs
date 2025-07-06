@@ -3,8 +3,8 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
-import { BandcampIcon, SpotifyIcon } from '@components/customIcons';
-import Config from '@lib/Config';
+import { BandcampIcon, SpotifyIcon } from 'components/customIcons';
+import Config from 'lib/Config';
 import { ContainerStyled } from './SocialMediaLinks.styles';
 
 const SocialMediaLinks = () => {

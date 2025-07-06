@@ -1,8 +1,8 @@
 import { Grid, Typography } from '@mui/material';
 import Head from 'next/head';
 
-import { MarkdownViewer } from '@components/Markdown';
-import PhysicalLink from '@components/RecordPage/components/PhysicalLink';
+import { MarkdownViewer } from 'components/Markdown';
+import PhysicalLink from 'components/RecordPage/components/PhysicalLink';
 import CoverImage from './components/CoverImage';
 import Tracklist from './components/Tracklist';
 import ReleaseInfo from './components/ReleaseInfo';

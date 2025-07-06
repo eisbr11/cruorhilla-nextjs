@@ -2,7 +2,11 @@ import moment from 'moment';
 import 'moment/locale/de';
 import { Grid, Typography } from '@mui/material';
 
-import { GridItemWrapper, SpanPriceLabel, SpanPriceValue } from './GigItem.component.styles';
+import {
+  GridItemWrapper,
+  SpanPriceLabel,
+  SpanPriceValue,
+} from './GigItem.component.styles';
 
 moment.locale('de');
 
@@ -14,15 +18,15 @@ const GigItem = ({ gig }: IGigItemProps) => {
   return (
     <GridItemWrapper
       itemScope
-      itemType="http://schema.org/MusicEvent"
+      itemType='http://schema.org/MusicEvent'
       container
-      alignItems="center"
+      alignItems='center'
     >
-      <meta itemProp="performer" content="Cruor Hilla" />
+      <meta itemProp='performer' content='Cruor Hilla' />
       <Grid item xs={12} sm={3} md={2}>
-        <Grid container direction="column">
+        <Grid container direction='column'>
           <meta
-            itemProp="startDate"
+            itemProp='startDate'
             content={moment(gig.content.datum).toISOString(true)}
           />
           <Grid item>
@@ -31,44 +35,44 @@ const GigItem = ({ gig }: IGigItemProps) => {
             </Typography>
           </Grid>
           <Grid item>
-            <Typography variant="caption">
+            <Typography variant='caption'>
               {moment(gig.content.datum).format('dddd')}
             </Typography>
           </Grid>
           <Grid item>
-            <Typography variant="caption">
+            <Typography variant='caption'>
               {`${moment(gig.content.datum).locale('de').format('HH:mm')} Uhr`}
             </Typography>
           </Grid>
         </Grid>
       </Grid>
       <Grid item xs={12} sm={7} md={8}>
-        <Grid container direction="column">
+        <Grid container direction='column'>
           <Grid item>
             <Typography>
-              <meta itemProp="name" content={gig.content.name} />
+              <meta itemProp='name' content={gig.content.name} />
               {gig.content.name}
             </Typography>
           </Grid>
           <Grid
             item
-            itemProp="location"
+            itemProp='location'
             itemScope
-            itemType="https://schema.org/Place"
+            itemType='https://schema.org/Place'
           >
-            <Typography variant="caption" color="textSecondary">
-              <span itemProp="addressLocality">{gig.content.town}</span>
+            <Typography variant='caption' color='textSecondary'>
+              <span itemProp='addressLocality'>{gig.content.town}</span>
               {' @'}
-              <span itemProp="name">{gig.content.venue}</span>
+              <span itemProp='name'>{gig.content.venue}</span>
             </Typography>
           </Grid>
           <Grid item>
-            <Typography variant="caption">{gig.content.description}</Typography>
+            <Typography variant='caption'>{gig.content.description}</Typography>
           </Grid>
         </Grid>
       </Grid>
       <Grid item xs={12} sm={2}>
-        <Typography align="right">
+        <Typography align='right'>
           <SpanPriceLabel>Preis: </SpanPriceLabel>
           <SpanPriceValue>{gig.content.price}</SpanPriceValue>
         </Typography>

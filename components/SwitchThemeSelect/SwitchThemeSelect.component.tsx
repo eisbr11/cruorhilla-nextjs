@@ -7,8 +7,8 @@ import {
 } from '@mui/material';
 import { set as lsSet } from 'local-storage';
 
-import { Theme, useTheme, getThemeName } from '@context/theme.context';
-import Config from '@lib/Config';
+import { Theme, useTheme, getThemeName } from 'context/theme.context';
+import Config from 'lib/Config';
 import { FormControlStyled } from './SwitchThemeSelect.styles';
 
 const SwitchThemeSelect = () => {

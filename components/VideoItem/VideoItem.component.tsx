@@ -1,8 +1,8 @@
 import YouTube, { YouTubeProps } from 'react-youtube';
 import { Typography } from '@mui/material';
 
-import { getYoutubeThumbnailUrl } from '@utils/youtubeThumbnail';
-import VideoFacade from '@components/VideoFacade';
+import { getYoutubeThumbnailUrl } from 'utils/youtubeThumbnail';
+import VideoFacade from 'components/VideoFacade';
 import { DivEmbedWrapper, DivWrapper } from './VideoItem.styles';
 
 interface IVideoItemProps {

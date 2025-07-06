@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ISbStoryData } from 'storyblok-js-client';
 
-import { LogoNoText } from '@components/Logo';
+import { LogoNoText } from 'components/Logo';
 import ThreeLinesButton from './components/ThreeLinesButton';
 import NavItem from './components/NavItem';
 import SubNav from './components/SubNav';

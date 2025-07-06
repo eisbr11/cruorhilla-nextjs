@@ -1,10 +1,10 @@
 import { GetStaticProps } from 'next';
 import { ISbResult } from 'storyblok-js-client';
 
-import StoryblokService from '@utils/storyblok-service';
-import Layout from '@components/Layout';
-import RecordGridComponent from '@components/RecordGrid';
-import Page from '@components/bloks/Page';
+import StoryblokService from 'utils/storyblok-service';
+import Layout from 'components/Layout';
+import RecordGridComponent from 'components/RecordGrid';
+import Page from 'components/bloks/Page';
 
 const Diskografie = ({
   page,

@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 
-import type { IImage } from '@interfaces/image.interface';
-import { shimmer, toBase64 } from '@utils/imagePlaceholder';
-import { DivWrapper, TypographyHeadline } from '@components/ImageTeaser/ImageTeaser.styles';
+import type { IImage } from 'interfaces/image.interface';
+import { shimmer, toBase64 } from 'utils/imagePlaceholder';
+import { DivWrapper, TypographyHeadline } from 'components/ImageTeaser/ImageTeaser.styles';
 
 interface IImageTeaserProps {
   headline: string;

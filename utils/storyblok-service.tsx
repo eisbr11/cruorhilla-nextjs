@@ -1,7 +1,10 @@
-import StoryblokClient, { ISbStoriesParams, ISbStoryParams } from 'storyblok-js-client';
-
-import Config from '@lib/Config';
+import StoryblokClient, {
+  ISbStoriesParams,
+  ISbStoryParams,
+} from 'storyblok-js-client';
 import moment from 'moment';
+
+import Config from 'lib/Config';
 
 class StoryblokService {
   private readonly devMode: boolean;
@@ -10,7 +13,7 @@ class StoryblokService {
 
   private client: StoryblokClient;
 
-  private query: {};
+  private query: object;
 
   constructor() {
     if (Config.storyblok_dev_mode) {

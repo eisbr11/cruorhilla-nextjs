@@ -8,7 +8,7 @@ interface IGigListProps {
 
 const GigList = ({ gigs }: IGigListProps) => {
   return (
-    <StyledContainer maxWidth="lg">
+    <StyledContainer maxWidth='lg'>
       {gigs.length > 0 ? (
         gigs.map((gig) => <GigItem gig={gig} key={gig.id} />)
       ) : (

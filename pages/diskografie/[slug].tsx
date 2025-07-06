@@ -1,9 +1,9 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { ISbResult } from 'storyblok-js-client';
 
-import StoryblokService from '@utils/storyblok-service';
-import Layout from '@components/Layout';
-import RecordPage from '@components/RecordPage';
+import StoryblokService from 'utils/storyblok-service';
+import Layout from 'components/Layout';
+import RecordPage from 'components/RecordPage';
 
 export default function Diskografie({
   record,

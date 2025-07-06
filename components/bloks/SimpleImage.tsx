@@ -1,5 +1,5 @@
-import { IBlokComponentProps } from '@interfaces/blok.interface';
-import Image from '@components/Image';
+import { IBlokComponentProps } from 'interfaces/blok.interface';
+import Image from 'components/Image';
 
 const SimpleImage = ({
   blok,

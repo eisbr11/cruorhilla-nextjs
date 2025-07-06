@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography } from '@mui/material';
 
-import SwitchThemeSelect from '@components/SwitchThemeSelect';
+import SwitchThemeSelect from 'components/SwitchThemeSelect';
 import { ContentWrapStyled, DescriptionStyled } from './SettingsModalContent.styles';
 
 const SettingsModalContent = () => {

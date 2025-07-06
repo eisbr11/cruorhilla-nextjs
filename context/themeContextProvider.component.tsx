@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { get as lsGet, remove as lsRemove } from 'local-storage';
 
-import Config from '@lib/Config';
+import Config from 'lib/Config';
 import { ThemeContext, Theme } from './theme.context';
 
 const ThemeContextProvider = ({

@@ -1,7 +1,7 @@
-import { IBlokComponentProps } from '@interfaces/blok.interface';
-import StyledVideoGrid from '@components/VideoGrid';
+import { IBlokComponentProps } from 'interfaces/blok.interface';
+import StyledVideoGrid from 'components/VideoGrid';
 // eslint-disable-next-line import/no-cycle
-import Component from '@components/bloks/index';
+import Component from 'components/bloks/index';
 
 const VideoGrid = ({ blok }: IBlokComponentProps) => (
   <>

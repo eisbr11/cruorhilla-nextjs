@@ -1,7 +1,7 @@
-import type { IBlokComponentProps } from '@interfaces/blok.interface';
+import type { IBlokComponentProps } from 'interfaces/blok.interface';
 // eslint-disable-next-line import/no-cycle
-import Component from '@components/bloks';
-import { ArticleDoubleComponent } from '@components/Article';
+import Component from 'components/bloks';
+import { ArticleDoubleComponent } from 'components/Article';
 
 const ArticleDoubleContent = ({ blok }: IBlokComponentProps) => (
   <>

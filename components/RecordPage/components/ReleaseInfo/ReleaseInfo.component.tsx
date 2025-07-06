@@ -2,7 +2,7 @@ import { Grid, Typography } from '@mui/material';
 import moment from 'moment';
 import 'moment/locale/de';
 
-import recordTypeString from '@utils/recordTypeString';
+import recordTypeString from 'utils/recordTypeString';
 
 moment.locale('de');
 

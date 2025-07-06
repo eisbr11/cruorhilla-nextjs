@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ClickAwayListener, Grow } from '@mui/material';
 import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 
-import NavItem from '@components/Nav/components/NavItem';
+import NavItem from 'components/Nav/components/NavItem';
 import { ButtonBaseBackButton, LiListItem, StyledContainer, UlList } from './SubNav.style';
 
 const SubNav = ({
