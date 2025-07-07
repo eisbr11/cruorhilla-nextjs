@@ -1,6 +1,6 @@
 import moment from 'moment';
 import 'moment/locale/de';
-import { Grid, Typography } from '@mui/material';
+import { Grid2, Typography } from '@mui/material';
 import { SbEditableContent } from 'storyblok-react';
 
 import {
@@ -24,39 +24,38 @@ const GigItem = ({ gig }: IGigItemProps) => {
       alignItems='center'
     >
       <meta itemProp='performer' content='Cruor Hilla' />
-      <Grid item xs={12} sm={3} md={2}>
-        <Grid container direction='column'>
+      <Grid2 size={{ xs: 12, sm: 3, md: 2 }}>
+        <Grid2 container direction='column'>
           <meta
             itemProp='startDate'
             content={moment(gig.content.datum).toISOString(true)}
           />
-          <Grid item>
+          <Grid2>
             <Typography>
               {moment(gig.content.datum).format('DD.MM.YYYY')}
             </Typography>
-          </Grid>
-          <Grid item>
+          </Grid2>
+          <Grid2>
             <Typography variant='caption'>
               {moment(gig.content.datum).format('dddd')}
             </Typography>
-          </Grid>
-          <Grid item>
+          </Grid2>
+          <Grid2>
             <Typography variant='caption'>
               {`${moment(gig.content.datum).locale('de').format('HH:mm')} Uhr`}
             </Typography>
-          </Grid>
-        </Grid>
-      </Grid>
-      <Grid item xs={12} sm={7} md={8}>
-        <Grid container direction='column'>
-          <Grid item>
+          </Grid2>
+        </Grid2>
+      </Grid2>
+      <Grid2 size={{ xs: 12, sm: 7, md: 8 }}>
+        <Grid2 container direction='column'>
+          <Grid2>
             <Typography>
               <meta itemProp='name' content={gig.content.name} />
               {gig.content.name}
             </Typography>
-          </Grid>
-          <Grid
-            item
+          </Grid2>
+          <Grid2
             itemProp='location'
             itemScope
             itemType='https://schema.org/Place'
@@ -66,18 +65,18 @@ const GigItem = ({ gig }: IGigItemProps) => {
               {' @'}
               <span itemProp='name'>{gig.content.venue}</span>
             </Typography>
-          </Grid>
-          <Grid item>
+          </Grid2>
+          <Grid2>
             <Typography variant='caption'>{gig.content.description}</Typography>
-          </Grid>
-        </Grid>
-      </Grid>
-      <Grid item xs={12} sm={2}>
+          </Grid2>
+        </Grid2>
+      </Grid2>
+      <Grid2 size={{ xs: 12, sm: 2 }}>
         <Typography align='right'>
           <SpanPriceLabel>Preis: </SpanPriceLabel>
           <SpanPriceValue>{gig.content.price}</SpanPriceValue>
         </Typography>
-      </Grid>
+      </Grid2>
     </GridItemWrapper>
   );
 };

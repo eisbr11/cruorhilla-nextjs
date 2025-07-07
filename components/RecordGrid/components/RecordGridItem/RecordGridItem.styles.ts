@@ -1,9 +1,9 @@
-import { Grid } from '@mui/material';
-import { styled } from '@mui/material/styles';
 import Link from 'next/link';
+import { Grid2 } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import { motion } from 'framer-motion';
 
-export const InfoContainerStyled = styled(Grid)(({ theme }) => ({
+export const InfoContainerStyled = styled(Grid2)(({ theme }) => ({
   paddingTop: theme.spacing(2),
   paddingBottom: theme.spacing(2),
 }));

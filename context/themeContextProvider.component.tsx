@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
+import { useState, useEffect, useMemo, ReactNode } from 'react';
 import { get as lsGet, remove as lsRemove } from 'local-storage';
 
 import Config from 'lib/Config';
 import { ThemeContext, ETheme } from './theme.context';
 
-const ThemeContextProvider = ({ children }: { children: React.ReactNode }) => {
+const ThemeContextProvider = ({ children }: { children: ReactNode }) => {
   const defaultTheme = ETheme.kater;
-  const [theme, setTheme] = React.useState(defaultTheme);
+  const [theme, setTheme] = useState(defaultTheme);
 
   useEffect(() => {
     const persistedTheme = lsGet<string>(Config.theme_ls_key);
@@ -21,10 +21,15 @@ const ThemeContextProvider = ({ children }: { children: React.ReactNode }) => {
     }
   }, []);
 
+  const value = useMemo(() => {
+    return {
+      theme,
+      setTheme,
+    };
+  }, [theme, setTheme]);
+
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      {children}
-    </ThemeContext.Provider>
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
   );
 };
 

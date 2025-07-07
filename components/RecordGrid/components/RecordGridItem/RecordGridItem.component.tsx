@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 import Image from 'next/image';
 import moment from 'moment';
 import 'moment/locale/de';
-import { Grid, Typography } from '@mui/material';
+import { Grid2, Typography } from '@mui/material';
 
 import type { IImage } from 'interfaces/image.interface';
 import recordTypeString from 'utils/recordTypeString';
@@ -32,7 +32,7 @@ const RecordGridItem: FC<IRecordGridItemProps> = ({
 }) => {
   const [isHovered, setHovered] = useState(false);
   return (
-    <Grid item xs={12} sm={6} md={4} xl={3}>
+    <Grid2 size={{ xs: 12, sm: 6, md: 4, xl: 3 }}>
       <LinkStyled
         href={recordHref}
         aria-label={`Zur Detailseite von ${name}`}
@@ -60,19 +60,19 @@ const RecordGridItem: FC<IRecordGridItemProps> = ({
           />
         </ImageContainerStyled>
         <InfoContainerStyled container>
-          <Grid item xs={12}>
+          <Grid2 size={12}>
             <Typography variant='caption'>
               {moment(releaseDate).format('MM/YYYY')}
               {' - '}
               {recordTypeString(formatType)}
             </Typography>
-          </Grid>
-          <Grid item xs={12}>
+          </Grid2>
+          <Grid2 size={12}>
             <Typography className={'name'}>{name}</Typography>
-          </Grid>
+          </Grid2>
         </InfoContainerStyled>
       </LinkStyled>
-    </Grid>
+    </Grid2>
   );
 };
 

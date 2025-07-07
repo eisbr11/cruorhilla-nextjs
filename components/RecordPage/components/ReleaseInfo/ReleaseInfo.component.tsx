@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@mui/material';
+import { Grid2, Typography } from '@mui/material';
 import moment from 'moment';
 import 'moment/locale/de';
 
@@ -13,22 +13,22 @@ interface IReleaseInfoProps {
 
 const ReleaseInfo = ({ releaseDate, formatType }: IReleaseInfoProps) => (
   <>
-    <Grid item xs={12}>
+    <Grid2 size={12}>
       <Typography align='right' color='textPrimary'>
         Release
       </Typography>
       <Typography align='right' color='textSecondary'>
         {moment(releaseDate).format('DD.MM.YYYY')}
       </Typography>
-    </Grid>
-    <Grid>
+    </Grid2>
+    <Grid2>
       <Typography align='right' color='textPrimary'>
         {'Format '}
       </Typography>
       <Typography align='right' color='textSecondary'>
         {recordTypeString(formatType)}
       </Typography>
-    </Grid>
+    </Grid2>
   </>
 );
 

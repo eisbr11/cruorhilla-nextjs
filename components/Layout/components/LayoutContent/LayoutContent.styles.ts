@@ -9,7 +9,8 @@ export const DivContainer = styled('div')(({ theme }) => ({
   background: theme.palette.primary.dark,
 }));
 
-export const MotionMainStyled = styled(motion.main)(() => ({
+export const MotionMainStyled = styled(motion.main)(({ theme }) => ({
   flex: 1,
   zIndex: 2,
+  paddingBottom: theme.spacing(2),
 }));

@@ -1,12 +1,12 @@
-import { Grid } from '@mui/material';
+import { Grid2 } from '@mui/material';
 
-import VideoItem from 'components/VideoItem';
 import { IBlokComponentProps } from 'interfaces/blok.interface';
+import VideoItem from 'components/VideoItem';
 
 const VideoGrid = ({ blok }: IBlokComponentProps) => (
-  <Grid item md={blok.full_width ? 12 : 6} xs={12}>
+  <Grid2 size={{ md: blok.fullWidth ? 12 : 6, xs: 12 }}>
     <VideoItem title={blok.title} ytId={blok.youtube_id} />
-  </Grid>
+  </Grid2>
 );
 
 export default VideoGrid;

@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@mui/material';
+import { Grid2, Typography } from '@mui/material';
 import { SbEditableContent } from 'storyblok-react';
 import Head from 'next/head';
 
@@ -40,13 +40,13 @@ const RecordPage = ({ record }: IRecordPageProps) => {
           </>
         )}
       </Head>
-      <Grid
+      <Grid2
         container
         justifyContent='space-between'
         alignItems='flex-start'
         spacing={3}
       >
-        <Grid item xs={12}>
+        <Grid2 size={12}>
           <TitleStyled
             color='textPrimary'
             variant='h2'
@@ -54,13 +54,13 @@ const RecordPage = ({ record }: IRecordPageProps) => {
           >
             {record.name}
           </TitleStyled>
-        </Grid>
-        <Grid item xs={12} md={6} lg={5}>
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={6} md={12}>
+        </Grid2>
+        <Grid2 size={{ xs: 12, md: 6, lg: 5 }}>
+          <Grid2 container spacing={2}>
+            <Grid2 size={{ xs: 12, sm: 6, md: 12 }}>
               <CoverImage coverImage={record.coverImage} />
-            </Grid>
-            <Grid item xs={12} sm={6} md={12}>
+            </Grid2>
+            <Grid2 size={{ xs: 12, sm: 6, md: 12 }}>
               <ReleaseInfo
                 releaseDate={record.releaseDate}
                 formatType={record.formatType}
@@ -76,17 +76,17 @@ const RecordPage = ({ record }: IRecordPageProps) => {
                 href={record.physicalLink.cached_url}
                 text={record.physicalText}
               />
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item xs={12} md={6}>
+            </Grid2>
+          </Grid2>
+        </Grid2>
+        <Grid2 size={{ xs: 12, md: 6 }}>
           <Tracklist tracklist={record.tracklist} />
           <Typography component='div' variant='body1'>
             <MarkdownViewer content={record.description} />
             <MarkdownViewer content={record.credits} />
           </Typography>
-        </Grid>
-      </Grid>
+        </Grid2>
+      </Grid2>
     </ContainerStyled>
   );
 };
