@@ -1,7 +1,6 @@
-import { styled } from '@mui/material/styles';
-import { Grid2 } from '@mui/material';
+import { Grid, styled } from '@mui/material';
 
-export const GridContainer = styled(Grid2)(({ theme }) => ({
+export const GridContainer = styled(Grid)(({ theme }) => ({
   margin: theme.spacing(2, 0),
   border: `4px solid ${theme.palette.secondary.main}`,
   borderRadius: 8,

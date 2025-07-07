@@ -1,4 +1,4 @@
-import { Grid2, IconButton } from '@mui/material';
+import { Grid, IconButton } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -10,7 +10,7 @@ import { ContainerStyled } from './SocialMediaLinks.styles';
 const SocialMediaLinks = () => {
   return (
     <ContainerStyled container spacing={2} justifyContent='center'>
-      <Grid2>
+      <Grid>
         <IconButton
           rel='noreferrer'
           aria-label='Link zum Cruor Hilla Youtube Channel'
@@ -21,8 +21,8 @@ const SocialMediaLinks = () => {
         >
           <YouTubeIcon fontSize='large' />
         </IconButton>
-      </Grid2>
-      <Grid2>
+      </Grid>
+      <Grid>
         <IconButton
           rel='noreferrer'
           aria-label='Link zur Facebook Seite von Cruor Hilla'
@@ -33,8 +33,8 @@ const SocialMediaLinks = () => {
         >
           <FacebookIcon fontSize='large' />
         </IconButton>
-      </Grid2>
-      <Grid2>
+      </Grid>
+      <Grid>
         <IconButton
           rel='noreferrer'
           aria-label='Link zur Spotify Künstler-Seite von Cruor Hilla'
@@ -45,8 +45,8 @@ const SocialMediaLinks = () => {
         >
           <SpotifyIcon fontSize='large' />
         </IconButton>
-      </Grid2>
-      <Grid2>
+      </Grid>
+      <Grid>
         <IconButton
           rel='noreferrer'
           aria-label='Link zur Bandcamp Seite von Cruor Hilla'
@@ -57,8 +57,8 @@ const SocialMediaLinks = () => {
         >
           <BandcampIcon fontSize='large' />
         </IconButton>
-      </Grid2>
-      <Grid2>
+      </Grid>
+      <Grid>
         <IconButton
           rel='noreferrer'
           aria-label='Link zum Instagram-Channel von Cruor Hilla'
@@ -69,7 +69,7 @@ const SocialMediaLinks = () => {
         >
           <InstagramIcon fontSize='large' />
         </IconButton>
-      </Grid2>
+      </Grid>
     </ContainerStyled>
   );
 };

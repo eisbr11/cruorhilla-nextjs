@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react';
+import { createContext, use } from 'react';
 
 export enum ETheme {
   corona = 'corona',
@@ -31,4 +31,4 @@ export const ThemeContext = createContext<TThemeContextType>({
   setTheme: () => console.warn('no theme provider'),
 });
 
-export const useTheme = () => useContext(ThemeContext);
+export const useTheme = () => use(ThemeContext);

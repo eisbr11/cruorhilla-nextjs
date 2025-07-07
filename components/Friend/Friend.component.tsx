@@ -1,4 +1,4 @@
-import { Grid2, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -21,14 +21,14 @@ const FriendComponent = ({
   image,
 }: IFriendComponentProps) => (
   <GridContainer container>
-    <Grid2 size={12}>
+    <Grid size={12}>
       <Link href={link} target='_blank' aria-label={`Zur Seite von ${name}`}>
         <Typography mb={1} variant='h3'>
           {name}
         </Typography>
       </Link>
-    </Grid2>
-    <Grid2 size={12}>
+    </Grid>
+    <Grid size={12}>
       <DivImageWrapper>
         <Link
           href={link}
@@ -58,12 +58,12 @@ const FriendComponent = ({
           />
         </Link>
       </DivImageWrapper>
-    </Grid2>
-    <Grid2 size={12}>
+    </Grid>
+    <Grid size={12}>
       <Typography component='div' variant='body1'>
         <MarkdownViewer content={text} />
       </Typography>
-    </Grid2>
+    </Grid>
   </GridContainer>
 );
 
