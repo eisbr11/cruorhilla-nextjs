@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 import Image from 'next/image';
 import moment from 'moment';
 import 'moment/locale/de';
@@ -7,7 +7,11 @@ import { Grid, Typography } from '@mui/material';
 import type { IImage } from 'interfaces/image.interface';
 import recordTypeString from 'utils/recordTypeString';
 import { shimmer, toBase64 } from 'utils/imagePlaceholder';
-import { ImageContainerStyled, InfoContainerStyled, LinkStyled } from './RecordGridItem.styles';
+import {
+  ImageContainerStyled,
+  InfoContainerStyled,
+  LinkStyled,
+} from './RecordGridItem.styles';
 
 moment.locale('de');
 
@@ -46,26 +50,25 @@ const RecordGridItem: FC<IRecordGridItemProps> = ({
             alt={coverImage.alt}
             width={50}
             height={50}
-            placeholder="blur"
+            placeholder='blur'
             blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(400, 400))}`}
-            sizes="100vw"
+            sizes='100vw'
             style={{
               width: '100%',
               height: 'auto',
-            }} />
+            }}
+          />
         </ImageContainerStyled>
         <InfoContainerStyled container>
           <Grid item xs={12}>
-            <Typography variant="caption">
+            <Typography variant='caption'>
               {moment(releaseDate).format('MM/YYYY')}
               {' - '}
               {recordTypeString(formatType)}
             </Typography>
           </Grid>
           <Grid item xs={12}>
-            <Typography className={'name'}>
-              {name}
-            </Typography>
+            <Typography className={'name'}>{name}</Typography>
           </Grid>
         </InfoContainerStyled>
       </LinkStyled>

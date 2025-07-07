@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { GetStaticProps } from 'next';
 import { ISbResult } from 'storyblok-js-client';
 
@@ -6,14 +7,16 @@ import Layout from 'components/Layout';
 import RecordGridComponent from 'components/RecordGrid';
 import Page from 'components/bloks/Page';
 
-const Diskografie = ({
+interface IDiskografiePageProps {
+  page: ISbResult;
+  settings: ISbResult;
+  records: ISbResult;
+}
+
+const Diskografie: FC<IDiskografiePageProps> = ({
   page,
   settings,
   records,
-}: {
-  page: ISbResult,
-  settings: ISbResult,
-  records: ISbResult,
 }) => (
   <Layout settings={settings.data.story} content={page.data.story.content}>
     <Page body={page.data.story.content.body} />

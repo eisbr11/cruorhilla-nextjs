@@ -14,14 +14,9 @@ const Tracklist = ({ tracklist }: ITracklistProps) => {
     return (
       <UlList>
         {tracklist.map((item, index) => (
-          // eslint-disable-next-line no-underscore-dangle
           <LiListItem key={item._uid}>
-            <SpanNumber>
-              {`${index + 1}`}
-            </SpanNumber>
-            <SpanSong>
-              {item.name}
-            </SpanSong>
+            <SpanNumber>{`${index + 1}`}</SpanNumber>
+            <SpanSong>{item.name}</SpanSong>
           </LiListItem>
         ))}
       </UlList>

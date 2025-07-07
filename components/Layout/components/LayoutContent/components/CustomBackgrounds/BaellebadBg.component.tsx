@@ -2,7 +2,7 @@ import { BackgroundSvg, DivContainer } from './BaellebadBg.styles';
 
 const BaellebadBg = () => (
   <DivContainer>
-    <BackgroundSvg/>
+    <BackgroundSvg />
   </DivContainer>
 );
 

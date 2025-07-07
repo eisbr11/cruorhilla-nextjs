@@ -6,7 +6,8 @@ const Config = {
     fb: 'https://www.facebook.com/CruorHilla/',
     instagram: 'https://instagram.com/cruorhilla/',
     bandcamp: 'https://cruorhilla.bandcamp.com/',
-    spotify: 'https://open.spotify.com/artist/3GcjUVyLkmpbXwCPixo5kr?si=Gca0BYemSqG_GiSz-M_JYw',
+    spotify:
+      'https://open.spotify.com/artist/3GcjUVyLkmpbXwCPixo5kr?si=Gca0BYemSqG_GiSz-M_JYw',
   },
   theme_ls_key: 'cruorhilla-theme',
 };

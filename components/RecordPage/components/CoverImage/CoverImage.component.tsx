@@ -9,9 +9,7 @@ interface ICoverImageProps {
   coverImage: IImage;
 }
 
-const CoverImage: FC<ICoverImageProps> = ({
-  coverImage,
-}) => {
+const CoverImage: FC<ICoverImageProps> = ({ coverImage }) => {
   return (
     <ImageContainer>
       <Image
@@ -19,14 +17,15 @@ const CoverImage: FC<ICoverImageProps> = ({
         alt={coverImage.alt}
         width={600}
         height={600}
-        placeholder="blur"
+        placeholder='blur'
         blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(600, 600))}`}
-        sizes="100vw"
+        sizes='100vw'
         style={{
           width: '100%',
           height: 'auto',
           display: 'block',
-        }} />
+        }}
+      />
     </ImageContainer>
   );
 };

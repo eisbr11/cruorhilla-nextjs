@@ -57,8 +57,8 @@ export const NavMenuStyled = styled('div', {
     bottom: 0,
     padding: theme.spacing(12, 1, 0),
     backgroundColor: theme.palette.primary.main,
-    ...isActive && {
+    ...(isActive && {
       left: 0,
-    },
+    }),
   },
 }));

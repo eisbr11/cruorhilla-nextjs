@@ -15,7 +15,7 @@ export const ExpandIconStyled = styled(ExpandMore, {
 })<IExpandIconProps>(({ isExpanded }) => ({
   userSelect: 'none',
   pointerEvents: 'none',
-  ...isExpanded && {
+  ...(isExpanded && {
     transform: 'rotate(180deg)',
-  },
+  }),
 }));

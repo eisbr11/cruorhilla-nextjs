@@ -1,6 +1,7 @@
 import moment from 'moment';
 import 'moment/locale/de';
 import { Grid, Typography } from '@mui/material';
+import { SbEditableContent } from 'storyblok-react';
 
 import {
   GridItemWrapper,
@@ -11,7 +12,7 @@ import {
 moment.locale('de');
 
 interface IGigItemProps {
-  gig: any;
+  gig: SbEditableContent;
 }
 
 const GigItem = ({ gig }: IGigItemProps) => {

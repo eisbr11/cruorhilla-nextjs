@@ -1,4 +1,3 @@
-import React from 'react';
 import NextImage from 'next/image';
 
 import type { IImage } from 'interfaces/image.interface';
@@ -16,12 +15,12 @@ const Image = ({ image }: IImageProps) => {
         <NextImage
           src={image.filename}
           alt={image.alt}
-          placeholder="blur"
+          placeholder='blur'
           blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(600, 600))}`}
           fill
-          sizes="(max-width: 768px) 100vw,
+          sizes='(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
-              33vw"
+              33vw'
           style={{
             objectFit: 'contain',
           }}

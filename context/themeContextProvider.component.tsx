@@ -2,21 +2,20 @@ import React, { useEffect } from 'react';
 import { get as lsGet, remove as lsRemove } from 'local-storage';
 
 import Config from 'lib/Config';
-import { ThemeContext, Theme } from './theme.context';
+import { ThemeContext, ETheme } from './theme.context';
 
-const ThemeContextProvider = ({
-  children,
-}: {
-  children: React.ReactNode,
-}) => {
-  const defaultTheme = Theme.kater;
+const ThemeContextProvider = ({ children }: { children: React.ReactNode }) => {
+  const defaultTheme = ETheme.kater;
   const [theme, setTheme] = React.useState(defaultTheme);
 
   useEffect(() => {
     const persistedTheme = lsGet<string>(Config.theme_ls_key);
     // check if persisted string exists and is set in Theme enum
-    if (persistedTheme && Object.values(Theme).includes(persistedTheme as Theme)) {
-      setTheme(persistedTheme as Theme);
+    if (
+      persistedTheme &&
+      Object.values(ETheme).includes(persistedTheme as ETheme)
+    ) {
+      setTheme(persistedTheme as ETheme);
     } else {
       lsRemove(Config.theme_ls_key);
     }

@@ -11,7 +11,10 @@ interface ICustom404Props {
 
 const Custom404 = ({ settings }: ICustom404Props) => (
   <Layout settings={settings.data.story}>
-    <CustomErrorContentComponent errorCode="404" errorMessage="Gehen Sie weiter, hier gibt es nichts zu sehen!" />
+    <CustomErrorContentComponent
+      errorCode='404'
+      errorMessage='Gehen Sie weiter, hier gibt es nichts zu sehen!'
+    />
   </Layout>
 );
 

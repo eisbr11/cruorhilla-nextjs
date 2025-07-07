@@ -5,7 +5,7 @@ import VideoFacade from 'components/VideoFacade';
 import { DivWrapper } from './YoutubeEmbed.styles';
 
 interface IYoutubeEmbedProps {
-  ytId: string,
+  ytId: string;
 }
 
 const YoutubeEmbed = ({ ytId }: IYoutubeEmbedProps) => {
@@ -25,10 +25,7 @@ const YoutubeEmbed = ({ ytId }: IYoutubeEmbedProps) => {
         thumbnailImageUrl={getYoutubeThumbnailUrl(ytId, 'sddefault')}
         imageAlt='Youtube-Video Thumbnail'
       >
-        <YouTube
-          videoId={ytId}
-          opts={youtubeOptions}
-        />
+        <YouTube videoId={ytId} opts={youtubeOptions} />
       </VideoFacade>
     </DivWrapper>
   );

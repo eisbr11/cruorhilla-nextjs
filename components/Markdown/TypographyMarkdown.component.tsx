@@ -1,15 +1,15 @@
-import React, { useState, useEffect, FC } from 'react';
+import { useState, useEffect, FC } from 'react';
 import { marked, MarkedOptions } from 'marked';
 import { Typography, TypographyProps } from '@mui/material';
 
-export interface MarkedProps {
+export interface IMarkedProps {
   options?: MarkedOptions;
   overrides?: MarkedOptions;
   content: string;
   typographyProps: TypographyProps;
 }
 
-const TypographyMarkdownViewer: FC<MarkedProps> = ({
+const TypographyMarkdownViewer: FC<IMarkedProps> = ({
   options,
   overrides,
   content,
@@ -44,8 +44,12 @@ const TypographyMarkdownViewer: FC<MarkedProps> = ({
     }
   }, [options, overrides, content, setHtml]);
 
-  // eslint-disable-next-line react/no-danger,react/jsx-props-no-spreading
-  return <Typography {...typographyProps} dangerouslySetInnerHTML={{ __html: html }} />;
+  return (
+    <Typography
+      {...typographyProps}
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
+  );
 };
 
 export default TypographyMarkdownViewer;

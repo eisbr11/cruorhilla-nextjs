@@ -22,18 +22,17 @@ const SvgStyled = styled('svg')(() => ({
 }));
 
 export const BackgroundSvg = () => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  <SvgStyled xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <SvgStyled xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800'>
     <GStyled>
-      <circle fill="#331845" cx="400" cy="400" r="900" />
-      <circle fill="#421d5b" cx="400" cy="400" r="800" />
-      <circle fill="#331845" cx="400" cy="400" r="700" />
-      <circle fill="#421d5b" cx="400" cy="400" r="600" />
-      <circle fill="#331845" cx="400" cy="400" r="500" />
-      <circle fill="#421d5b" cx="400" cy="400" r="400" />
-      <circle fill="#331845" cx="400" cy="400" r="300" />
-      <circle fill="#421d5b" cx="400" cy="400" r="200" />
-      <circle fill="#331845" cx="400" cy="400" r="100" />
+      <circle fill='#331845' cx='400' cy='400' r='900' />
+      <circle fill='#421d5b' cx='400' cy='400' r='800' />
+      <circle fill='#331845' cx='400' cy='400' r='700' />
+      <circle fill='#421d5b' cx='400' cy='400' r='600' />
+      <circle fill='#331845' cx='400' cy='400' r='500' />
+      <circle fill='#421d5b' cx='400' cy='400' r='400' />
+      <circle fill='#331845' cx='400' cy='400' r='300' />
+      <circle fill='#421d5b' cx='400' cy='400' r='200' />
+      <circle fill='#331845' cx='400' cy='400' r='100' />
     </GStyled>
   </SvgStyled>
 );

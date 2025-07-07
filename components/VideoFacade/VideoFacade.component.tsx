@@ -1,4 +1,4 @@
-import React, { useState, FC } from 'react';
+import { useState, FC } from 'react';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import Image from 'next/image';
 
@@ -26,16 +26,16 @@ const VideoFacade: FC<IVideoFacadeProps> = ({
             alt={imageAlt}
             src={thumbnailImageUrl}
             fill
-            sizes="(max-width: 768px) 100vw,
+            sizes='(max-width: 768px) 100vw,
                 (max-width: 1200px) 50vw,
-                33vw"
+                33vw'
             style={{
               objectFit: 'cover',
             }}
           />
           <IconButtonPlayButton
-            size="large"
-            color="default"
+            size='large'
+            color='default'
             onClick={() => setShowVideo(true)}
           >
             <PlayCircleOutlineIcon sx={{ fontSize: 98 }} />

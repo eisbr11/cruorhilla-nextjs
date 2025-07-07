@@ -10,8 +10,13 @@ interface ISettingsButtonProps {
 
 const SettingsButton: FC<ISettingsButtonProps> = ({ onClick }) => {
   return (
-    <Tooltip placement="left" title="Einstellungen">
-      <FabStyled onClick={onClick} size="medium" color="primary" aria-label="settings">
+    <Tooltip placement='left' title='Einstellungen'>
+      <FabStyled
+        onClick={onClick}
+        size='medium'
+        color='primary'
+        aria-label='settings'
+      >
         <TuneIcon />
       </FabStyled>
     </Tooltip>

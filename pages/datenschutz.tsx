@@ -5,7 +5,10 @@ import StoryblokService from 'utils/storyblok-service';
 import Layout from 'components/Layout';
 import Page from 'components/bloks/Page';
 
-export default function DatenschutzPage({ page, settings }: IStoryblokPageProps) {
+export default function DatenschutzPage({
+  page,
+  settings,
+}: IStoryblokPageProps) {
   return (
     <Layout settings={settings.data.story} content={page.data.story.content}>
       {/* We will define these settings later on */}

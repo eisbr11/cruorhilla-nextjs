@@ -11,7 +11,25 @@ import js from '@eslint/js';
 const config = [
   {
     name: 'cruorhilla/ignore',
-    ignores: ['**/.history', '**/node_modules', '**/.next', '**/.github', '**/dist', '**/build', '**/coverage', '**/public', 'next.config.js', './next-env.d.ts', '**/.yarn', '**/.vscode', '**/.idea', '**/.git', '**/.github', '**/.cache'],
+    ignores: [
+      '**/.history',
+      '**/node_modules',
+      '**/.next',
+      '**/.github',
+      '**/dist',
+      '**/build',
+      '**/coverage',
+      '**/public',
+      'next.config.js',
+      './next-env.d.ts',
+      'next-env.d.ts',
+      '**/.yarn',
+      '**/.vscode',
+      '**/.idea',
+      '**/.git',
+      '**/.github',
+      '**/.cache',
+    ],
   },
   js.configs.recommended,
   {
@@ -19,7 +37,7 @@ const config = [
     languageOptions: {
       parserOptions: {
         ecmaFeatures: {
-          jsx: true
+          jsx: true,
         },
         ecmaVersion: 2022,
         sourceType: 'module',
@@ -36,7 +54,7 @@ const config = [
     files: ['**/*.{ts,tsx,js,jsx}'],
     rules: {
       'no-console': 'warn',
-    }
+    },
   },
   // react settings
   react.configs.recommended,
@@ -94,7 +112,7 @@ const config = [
       parser: tsParser,
       parserOptions: {
         sourceType: 'module',
-        projectService: true,
+        ecmaFeatures: { jsx: true },
         project: './tsconfig.json',
       },
     },
@@ -112,22 +130,28 @@ const config = [
     files: ['**/*.{ts,tsx}'],
     rules: {
       ...typescriptEslint.configs.recommended.rules,
-      '@typescript-eslint/naming-convention': ['error', {
-        selector: 'interface',
-        format: ['PascalCase'],
-        prefix: ['I'],
-      }, {
-        selector: 'typeAlias',
-        format: ['PascalCase'],
-        prefix: ['T'],
-      }, {
-        selector: 'enum',
-        format: ['PascalCase'],
-        prefix: ['E'],
-      }, {
-        selector: 'enumMember',
-        format: ['PascalCase', 'camelCase'],
-      }],
+      '@typescript-eslint/naming-convention': [
+        'error',
+        {
+          selector: 'interface',
+          format: ['PascalCase'],
+          prefix: ['I'],
+        },
+        {
+          selector: 'typeAlias',
+          format: ['PascalCase'],
+          prefix: ['T'],
+        },
+        {
+          selector: 'enum',
+          format: ['PascalCase'],
+          prefix: ['E'],
+        },
+        {
+          selector: 'enumMember',
+          format: ['PascalCase', 'camelCase'],
+        },
+      ],
       '@typescript-eslint/no-empty-object-type': [
         'error',
         { allowInterfaces: 'with-single-extends' },
@@ -139,14 +163,14 @@ const config = [
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
-          'args': 'all',
-          "argsIgnorePattern": "^_",
-          "caughtErrors": "all",
-          "caughtErrorsIgnorePattern": "^_",
-          "destructuredArrayIgnorePattern": "^_",
-          "varsIgnorePattern": "^_",
-          "ignoreRestSiblings": true
-        }
+          args: 'all',
+          argsIgnorePattern: '^_',
+          caughtErrors: 'all',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+        },
       ],
       // '@typescript-eslint/consistent-type-imports': [
       //   'warn',
@@ -155,13 +179,13 @@ const config = [
       'linebreak-style': 'off',
       'no-undef': 'off',
       'no-extra-boolean-cast': 'off',
-    }
+    },
   },
   {
     name: 'import-rules',
     files: ['**/*.{ts,tsx,js,jsx}'],
     plugins: {
-      'import': importPlugin,
+      import: importPlugin,
     },
     settings: {
       'import/resolver': {
@@ -172,27 +196,41 @@ const config = [
       },
     },
     rules: {
-      'import/order': ['error', {
-        groups: [
-          ['builtin', 'external'],
-          ['internal', 'parent', 'sibling', 'index', 'object', 'type', 'unknown'],
-        ],
+      'import/order': [
+        'error',
+        {
+          groups: [
+            ['builtin', 'external'],
+            [
+              'internal',
+              'parent',
+              'sibling',
+              'index',
+              'object',
+              'type',
+              'unknown',
+            ],
+          ],
 
-        'newlines-between': 'always',
-        warnOnUnassignedImports: true,
-      }],
+          'newlines-between': 'always',
+          warnOnUnassignedImports: true,
+        },
+      ],
 
       'import/named': 'off',
       'import/no-extraneous-dependencies': 'off',
       'import/no-duplicates': 'off',
 
-      'import/no-cycle': ['error', {
-        maxDepth: 10,
-      }],
+      'import/no-cycle': [
+        'error',
+        {
+          maxDepth: 10,
+        },
+      ],
 
       'import/no-named-as-default': 'off',
       'import/prefer-default-export': 'off',
-    }
+    },
   },
   jsxA11y.flatConfigs.recommended,
   {

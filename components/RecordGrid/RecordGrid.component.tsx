@@ -1,12 +1,14 @@
 import { Container, Grid } from '@mui/material';
+import { SbEditableContent } from 'storyblok-react';
+
 import RecordGridItem from './components/RecordGridItem';
 
 interface IRecordGridComponentProps {
-  records: any;
+  records: SbEditableContent[];
 }
 
 const RecordGridComponent = ({ records }: IRecordGridComponentProps) => (
-  <Container maxWidth="xl">
+  <Container maxWidth='xl'>
     <Grid container spacing={3}>
       {records.map((record) => (
         <RecordGridItem

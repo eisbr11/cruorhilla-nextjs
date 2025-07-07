@@ -26,9 +26,9 @@ export const LinkStyled = styled(Link, {
       bottom: -3,
       borderRadius: 4,
       left: 0,
-      backgroundColor: isSubNav ?
-        theme.palette.secondary.contrastText :
-        theme.palette.primary.contrastText,
+      backgroundColor: isSubNav
+        ? theme.palette.secondary.contrastText
+        : theme.palette.primary.contrastText,
       transition: 'all 400ms ease',
       transform: 'scaleX(0)',
     },

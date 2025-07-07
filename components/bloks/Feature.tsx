@@ -1,4 +1,4 @@
-import { IBlokComponentProps } from 'interfaces/blok.interface';
+import type { IBlokComponentProps } from 'interfaces/blok.interface';
 
 const Feature = ({ blok }: IBlokComponentProps) => (
   <div>

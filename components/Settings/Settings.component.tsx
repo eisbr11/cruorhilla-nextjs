@@ -4,7 +4,11 @@ import { Fade } from '@mui/material';
 import SettingsButton from './components/SettingsButton';
 import SupportButton from './components/SupportButton';
 import SettingsModalContent from './components/SettingsModalContent';
-import { BackdropStyled, ModalInnerStyled, ModalStyled } from './Settings.styles';
+import {
+  BackdropStyled,
+  ModalInnerStyled,
+  ModalStyled,
+} from './Settings.styles';
 
 const SettingsComponent = () => {
   const [open, setOpen] = React.useState(false);
@@ -22,8 +26,8 @@ const SettingsComponent = () => {
       <SupportButton />
       <SettingsButton onClick={handleOpen} />
       <ModalStyled
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
+        aria-labelledby='transition-modal-title'
+        aria-describedby='transition-modal-description'
         open={open}
         onClose={handleClose}
         closeAfterTransition

@@ -1,11 +1,9 @@
 interface IPlaceholderProps {
-  componentName: string
+  componentName: string;
 }
 
 const Placeholder = ({ componentName }: IPlaceholderProps) => (
-  <div>
-    {`The component ${componentName} has not been created yet.`}
-  </div>
+  <div>{`The component ${componentName} has not been created yet.`}</div>
 );
 
 export default Placeholder;

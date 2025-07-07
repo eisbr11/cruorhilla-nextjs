@@ -10,6 +10,6 @@ export interface IBlokPageProps {
 }
 
 export interface IStoryblokPageProps {
-  page: ISbResult,
-  settings: ISbResult,
+  page: ISbResult;
+  settings: ISbResult;
 }

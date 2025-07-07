@@ -1,23 +1,26 @@
-import React, { useState } from 'react';
+import { FC, useState } from 'react';
 import { ClickAwayListener, Grow } from '@mui/material';
 import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
+import { SbEditableContent } from 'storyblok-react';
 
 import NavItem from 'components/Nav/components/NavItem';
-import { ButtonBaseBackButton, LiListItem, StyledContainer, UlList } from './SubNav.style';
+import {
+  ButtonBaseBackButton,
+  LiListItem,
+  StyledContainer,
+  UlList,
+} from './SubNav.style';
 
-const SubNav = ({
-  label,
-  subNavi,
-}: {
-  label: string,
-  subNavi: any[]
-}) => {
+interface ISubNavProps {
+  label: string;
+  subNavi: SbEditableContent[];
+}
+
+const SubNav: FC<ISubNavProps> = ({ label, subNavi }) => {
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
-    setOpen(
-      (prev) => (!prev),
-    );
+    setOpen((prev) => !prev);
   };
 
   const handleClickAway = () => {
@@ -29,13 +32,12 @@ const SubNav = ({
       <NavItem name={label} hasSubnavi openEvent={handleClick} />
       <Grow in={open} timeout={300} mountOnEnter unmountOnExit>
         <StyledContainer maxWidth={false}>
-          <ButtonBaseBackButton aria-label="Go Back" onClick={handleClickAway}>
-            <ArrowBackRoundedIcon fontSize="large" />
+          <ButtonBaseBackButton aria-label='Go Back' onClick={handleClickAway}>
+            <ArrowBackRoundedIcon fontSize='large' />
           </ButtonBaseBackButton>
           <ClickAwayListener onClickAway={handleClickAway}>
             <UlList>
               {subNavi.map((subitem) => (
-                // eslint-disable-next-line no-underscore-dangle
                 <LiListItem key={subitem._uid}>
                   <NavItem
                     isSubNavItem

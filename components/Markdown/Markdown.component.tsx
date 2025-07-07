@@ -1,17 +1,13 @@
-import React, { useState, useEffect, FC } from 'react';
+import { useState, useEffect, FC } from 'react';
 import { marked, MarkedOptions } from 'marked';
 
-export interface MarkedProps {
+export interface IMarkedProps {
   options?: MarkedOptions;
   overrides?: MarkedOptions;
   content: string;
 }
 
-const MarkedViewer: FC<MarkedProps> = ({
-  options,
-  overrides,
-  content,
-}) => {
+const MarkedViewer: FC<IMarkedProps> = ({ options, overrides, content }) => {
   const [html, setHtml] = useState<string>();
 
   useEffect(() => {
@@ -41,7 +37,7 @@ const MarkedViewer: FC<MarkedProps> = ({
     }
   }, [options, overrides, content, setHtml]);
 
-  // eslint-disable-next-line react/no-danger
+  // eslint-disable-next-line @eslint-react/dom/no-dangerously-set-innerhtml
   return <div dangerouslySetInnerHTML={{ __html: html }} />;
 };
 

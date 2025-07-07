@@ -2,7 +2,7 @@ import { DivContainer, DivStars } from './AngstblitzSky.styles';
 
 const AngstblitzSky = () => (
   <DivContainer>
-    <DivStars/>
+    <DivStars />
   </DivContainer>
 );
 

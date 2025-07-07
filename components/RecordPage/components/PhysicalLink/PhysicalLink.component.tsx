@@ -8,18 +8,18 @@ interface IPhysicalLinkProps {
   text: string;
 }
 
-const PhysicalLink = ({ href, text }: IPhysicalLinkProps ) => {
+const PhysicalLink = ({ href, text }: IPhysicalLinkProps) => {
   if (href.length > 0 && text.length > 0) {
     return (
       <Container>
         <Button
-          color="inherit"
-          rel="noreferrer"
+          color='inherit'
+          rel='noreferrer'
           endIcon={<AlbumIcon />}
-          size="large"
-          variant="outlined"
+          size='large'
+          variant='outlined'
           href={href}
-          target="_blank"
+          target='_blank'
         >
           {text}
         </Button>

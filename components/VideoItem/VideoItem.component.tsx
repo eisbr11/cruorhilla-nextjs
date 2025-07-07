@@ -28,13 +28,10 @@ const VideoItem = ({ title, ytId }: IVideoItemProps) => {
           thumbnailImageUrl={getYoutubeThumbnailUrl(ytId, 'sddefault')}
           imageAlt={`${title} Youtube Thumbnail`}
         >
-          <YouTube
-            videoId={ytId}
-            opts={youtubeOptions}
-          />
+          <YouTube videoId={ytId} opts={youtubeOptions} />
         </VideoFacade>
       </DivEmbedWrapper>
-      <Typography color="textPrimary" variant="h5" align="center">
+      <Typography color='textPrimary' variant='h5' align='center'>
         {title}
       </Typography>
     </DivWrapper>

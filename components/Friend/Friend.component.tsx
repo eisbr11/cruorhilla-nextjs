@@ -1,4 +1,3 @@
-import React from 'react';
 import { Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -23,43 +22,40 @@ const FriendComponent = ({
 }: IFriendComponentProps) => (
   <GridContainer container>
     <Grid item xs={12}>
-      <Link href={link} passHref legacyBehavior>
-        <a target='_blank' aria-label={`Zur Seite von ${name}`}>
-          <Typography mb={1} variant='h3'>
-            {name}
-          </Typography>
-        </a>
+      <Link href={link} target='_blank' aria-label={`Zur Seite von ${name}`}>
+        <Typography mb={1} variant='h3'>
+          {name}
+        </Typography>
       </Link>
     </Grid>
     <Grid item xs={12}>
       <DivImageWrapper>
-        <Link href={link} passHref legacyBehavior>
-          <a
-            target='_blank'
-            aria-label={`Zur Seite von ${name}`}
+        <Link
+          href={link}
+          target='_blank'
+          aria-label={`Zur Seite von ${name}`}
+          style={{
+            display: 'block',
+            position: 'relative',
+            width: '100%',
+            height: '100%',
+          }}
+        >
+          <Image
+            src={image.filename}
+            alt={image.alt}
+            placeholder='blur'
+            blurDataURL={`data:image/svg+xml;base64,${toBase64(
+              shimmer(600, 600)
+            )}`}
+            fill
+            sizes='(max-width: 768px) 80vw,
+              (max-width: 1200px) 50vw,
+              33vw'
             style={{
-              display: 'block',
-              position: 'relative',
-              width: '100%',
-              height: '100%',
+              objectFit: 'contain',
             }}
-          >
-            <Image
-              src={image.filename}
-              alt={image.alt}
-              placeholder='blur'
-              blurDataURL={`data:image/svg+xml;base64,${toBase64(
-                shimmer(600, 600)
-              )}`}
-              fill
-              sizes='(max-width: 768px) 80vw,
-                (max-width: 1200px) 50vw,
-                33vw'
-              style={{
-                objectFit: 'contain',
-              }}
-            />
-          </a>
+          />
         </Link>
       </DivImageWrapper>
     </Grid>

@@ -1,6 +1,4 @@
-import {
-  DivContainer, DivStars,
-} from './WartenAufDenKaterSky.styles';
+import { DivContainer, DivStars } from './WartenAufDenKaterSky.styles';
 
 const WartenAufDenKaterSky = () => {
   return (

@@ -13,7 +13,7 @@ interface ILayoutComponentProps {
   content?: {
     title: string;
     description: string;
-  }
+  };
 }
 
 const LayoutComponent: FC<ILayoutComponentProps> = ({
