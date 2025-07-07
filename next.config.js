@@ -9,6 +9,9 @@ const withPWA = require("next-pwa")({
 
 module.exports = withPWA({
   images: {
-    domains: ['a.storyblok.com', 'img.youtube.com'],
+    remotePatterns: [
+      new URL('https://a.storyblok.com/**'),
+      new URL('https://img.youtube.com/**'),
+    ],
   },
 });
