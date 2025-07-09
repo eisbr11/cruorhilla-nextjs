@@ -1,19 +1,22 @@
+import { FC } from 'react';
 import { GetStaticProps } from 'next';
-import { StoryblokResult } from 'storyblok-js-client';
+import { ISbResult } from 'storyblok-js-client';
 
-import StoryblokService from '@utils/storyblok-service';
-import Layout from '@components/Layout';
-import RecordGridComponent from '@components/RecordGrid';
-import Page from '@components/bloks/Page';
+import StoryblokService from 'utils/storyblok-service';
+import Layout from 'components/Layout';
+import RecordGridComponent from 'components/RecordGrid';
+import Page from 'components/bloks/Page';
 
-const Diskografie = ({
+interface IDiskografiePageProps {
+  page: ISbResult;
+  settings: ISbResult;
+  records: ISbResult;
+}
+
+const Diskografie: FC<IDiskografiePageProps> = ({
   page,
   settings,
   records,
-}: {
-  page: StoryblokResult,
-  settings: StoryblokResult,
-  records: StoryblokResult,
 }) => (
   <Layout settings={settings.data.story} content={page.data.story.content}>
     <Page body={page.data.story.content.body} />

@@ -1,10 +1,6 @@
-import makeStyles from '@mui/styles/makeStyles';
+import { styled } from '@mui/material/styles';
 
-const useStyles = makeStyles((theme) => ({
-  wrapper: {
-    display: 'flex',
-    marginBottom: theme.spacing(2),
-  },
+export const DivWrapper = styled('div')(({ theme }) => ({
+  display: 'flex',
+  marginBottom: theme.spacing(2),
 }));
-
-export default useStyles;

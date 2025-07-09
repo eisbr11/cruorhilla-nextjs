@@ -3,9 +3,4 @@ import SpotifyIcon from './SpotifyIcon';
 import TidalIcon from './TidalIcon';
 import DeezerIcon from './DeezerIcon';
 
-export {
-  BandcampIcon,
-  SpotifyIcon,
-  TidalIcon,
-  DeezerIcon,
-};
+export { BandcampIcon, SpotifyIcon, TidalIcon, DeezerIcon };

@@ -1,10 +1,13 @@
-import React, { useState, FC } from 'react';
-import { IconButton } from '@mui/material';
+import { useState, FC } from 'react';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import Image from 'next/image';
 
-import useStyles from './VideoFacade.styles';
-import { IVideoFacadeProps } from '@components/VideoFacade/VideoFacade.type';
+import type { IVideoFacadeProps } from 'components/VideoFacade/VideoFacade.type';
+import {
+  DivVideoWrapper,
+  DivWrapper,
+  IconButtonPlayButton,
+} from './VideoFacade.styles';
 
 const VideoFacade: FC<IVideoFacadeProps> = ({
   children,
@@ -12,29 +15,35 @@ const VideoFacade: FC<IVideoFacadeProps> = ({
   imageAlt,
 }) => {
   const [showVideo, setShowVideo] = useState(false);
-  const classes = useStyles();
 
-  return <>
-    {showVideo ? (
-      <div className={classes.videoWrapper}>{children}</div>
-    ) : (
-      <div className={classes.wrapper}>
-        <Image
-          alt={imageAlt}
-          src={thumbnailImageUrl}
-          fill
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
-          style={{
-            objectFit: 'cover',
-          }} />
-        <IconButton size="large" color="default" className={classes.playButton} onClick={() => setShowVideo(true)}>
-          <PlayCircleOutlineIcon sx={{ fontSize: 98 }} />
-        </IconButton>
-      </div>
-    )}
-  </>;
+  return (
+    <>
+      {showVideo ? (
+        <DivVideoWrapper>{children}</DivVideoWrapper>
+      ) : (
+        <DivWrapper>
+          <Image
+            alt={imageAlt}
+            src={thumbnailImageUrl}
+            fill
+            sizes='(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw'
+            style={{
+              objectFit: 'cover',
+            }}
+          />
+          <IconButtonPlayButton
+            size='large'
+            color='default'
+            onClick={() => setShowVideo(true)}
+          >
+            <PlayCircleOutlineIcon sx={{ fontSize: 98 }} />
+          </IconButtonPlayButton>
+        </DivWrapper>
+      )}
+    </>
+  );
 };
 
 export default VideoFacade;

@@ -1,9 +1,9 @@
 import YouTube, { YouTubeProps } from 'react-youtube';
 import { Typography } from '@mui/material';
 
-import { getYoutubeThumbnailUrl } from '@utils/youtubeThumbnail';
-import VideoFacade from '@components/VideoFacade';
-import useStyles from './VideoItem.styles';
+import { getYoutubeThumbnailUrl } from 'utils/youtubeThumbnail';
+import VideoFacade from 'components/VideoFacade';
+import { DivEmbedWrapper, DivWrapper } from './VideoItem.styles';
 
 interface IVideoItemProps {
   title: string;
@@ -11,7 +11,6 @@ interface IVideoItemProps {
 }
 
 const VideoItem = ({ title, ytId }: IVideoItemProps) => {
-  const classes = useStyles();
   const youtubeOptions: YouTubeProps['opts'] = {
     height: '390',
     width: '640',
@@ -23,22 +22,19 @@ const VideoItem = ({ title, ytId }: IVideoItemProps) => {
   };
 
   return (
-    <div className={classes.wrapper}>
-      <div className={classes.embedWrapper}>
+    <DivWrapper>
+      <DivEmbedWrapper>
         <VideoFacade
           thumbnailImageUrl={getYoutubeThumbnailUrl(ytId, 'sddefault')}
           imageAlt={`${title} Youtube Thumbnail`}
         >
-          <YouTube
-            videoId={ytId}
-            opts={youtubeOptions}
-          />
+          <YouTube videoId={ytId} opts={youtubeOptions} />
         </VideoFacade>
-      </div>
-      <Typography color="textPrimary" variant="h5" align="center">
+      </DivEmbedWrapper>
+      <Typography color='textPrimary' variant='h5' align='center'>
         {title}
       </Typography>
-    </div>
+    </DivWrapper>
   );
 };
 

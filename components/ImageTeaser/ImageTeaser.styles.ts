@@ -1,27 +1,24 @@
-import makeStyles from '@mui/styles/makeStyles';
+import { styled, Typography } from '@mui/material';
 
-const useStyles = makeStyles((theme) => ({
-  wrapper: {
-    height: '50vh',
-    minHeight: 280,
-    maxHeight: 360,
-    position: 'relative',
-    overflow: 'hidden',
-    marginBottom: theme.spacing(2),
-  },
-  image: {
+export const DivWrapper = styled('div')(({ theme }) => ({
+  height: '50vh',
+  minHeight: 280,
+  maxHeight: 360,
+  position: 'relative',
+  overflow: 'hidden',
+  marginBottom: theme.spacing(2),
+  '& .image-teaser': {
     filter: 'grayscale(0.70)!important',
-  },
-  headline: {
-    position: 'absolute',
-    fontWeight: 700,
-    left: theme.spacing(1),
-    bottom: 0,
-    textTransform: 'uppercase',
-    transform: 'rotate(357deg)',
-    wordBreak: 'break-word',
-    textShadow: '4px 4px 1px black',
   },
 }));
 
-export default useStyles;
+export const TypographyHeadline = styled(Typography)(({ theme }) => ({
+  position: 'absolute',
+  fontWeight: 700,
+  left: theme.spacing(1),
+  bottom: 0,
+  textTransform: 'uppercase',
+  transform: 'rotate(357deg)',
+  wordBreak: 'break-word',
+  textShadow: '4px 4px 1px black',
+}));

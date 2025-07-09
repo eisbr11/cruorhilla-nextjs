@@ -1,25 +1,33 @@
-import useStyles from './ThreeLinesButton.styles';
+import { FC } from 'react';
 
-const ThreeLinesButton = ({
-  active,
-  clickHandler,
-}: {
-  active?: boolean,
-  clickHandler?,
+import {
+  DivContainer,
+  StyledButton,
+  ThreeLinesStyled,
+} from './ThreeLinesButton.styles';
+
+interface IThreeLinesButtonProps {
+  active?: boolean;
+  clickHandler?: () => void;
+}
+
+const noOp = () => {};
+
+const ThreeLinesButton: FC<IThreeLinesButtonProps> = ({
+  active = false,
+  clickHandler = noOp,
 }) => {
-  const classes = useStyles();
   return (
-    <div className={classes.container}>
-      <button aria-label="Navigation öffnen" onClick={clickHandler} className={classes.button} type="button">
-        <span className={`${classes.lines} ${active && classes.linesActive}`} />
-      </button>
-    </div>
+    <DivContainer>
+      <StyledButton
+        aria-label='Navigation öffnen'
+        onClick={clickHandler}
+        type='button'
+      >
+        <ThreeLinesStyled isActive={active} />
+      </StyledButton>
+    </DivContainer>
   );
 };
 
 export default ThreeLinesButton;
-
-ThreeLinesButton.defaultProps = {
-  active: false,
-  clickHandler: () => {},
-};

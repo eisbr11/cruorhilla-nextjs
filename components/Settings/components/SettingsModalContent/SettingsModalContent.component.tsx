@@ -1,17 +1,22 @@
-import React from 'react';
-import { Paper, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 
-import SwitchThemeSelect from '@components/SwitchThemeSelect';
-import useStyles from './SettingsModalContent.styles';
+import SwitchThemeSelect from 'components/SwitchThemeSelect';
+import {
+  ContentWrapStyled,
+  DescriptionStyled,
+} from './SettingsModalContent.styles';
 
 const SettingsModalContent = () => {
-  const classes = useStyles();
   return (
-    <Paper className={classes.contentWrap}>
-      <Typography variant="h5" gutterBottom id="transition-modal-title">Einstellungen</Typography>
-      <Typography variant="body1" className={classes.description} id="transition-modal-description">Ist dir das Design zu eintönig? Dann stell doch ein anderes ein.</Typography>
+    <ContentWrapStyled>
+      <Typography variant='h5' gutterBottom id='transition-modal-title'>
+        Einstellungen
+      </Typography>
+      <DescriptionStyled variant='body1' id='transition-modal-description'>
+        Ist dir das Design zu eintönig? Dann stell doch ein anderes ein.
+      </DescriptionStyled>
       <SwitchThemeSelect />
-    </Paper>
+    </ContentWrapStyled>
   );
 };
 

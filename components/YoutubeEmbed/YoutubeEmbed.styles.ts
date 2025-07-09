@@ -1,11 +1,7 @@
-import makeStyles from '@mui/styles/makeStyles';
+import { styled } from '@mui/material/styles';
 
-const useStyles = makeStyles((theme) => ({
-  wrapper: {
-    background: theme.palette.background.paper,
-    minHeight: 320,
-    position: 'relative',
-  },
+export const DivWrapper = styled('div')(({ theme }) => ({
+  background: theme.palette.background.paper,
+  minHeight: 320,
+  position: 'relative',
 }));
-
-export default useStyles;

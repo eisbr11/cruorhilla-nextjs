@@ -1,9 +1,6 @@
-import makeStyles from '@mui/styles/makeStyles';
+import { styled } from '@mui/material/styles';
+import { Container } from '@mui/material';
 
-const useStyles = makeStyles((theme) => ({
-  container: {
-    paddingTop: theme.spacing(2),
-  },
+export const StyledContainer = styled(Container)(({ theme }) => ({
+  paddingTop: theme.spacing(2),
 }));
-
-export default useStyles;

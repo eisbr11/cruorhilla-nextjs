@@ -1,12 +1,10 @@
-import useStyles from './WartenAufDenKaterSky.styles';
+import { DivContainer, DivStars } from './WartenAufDenKaterSky.styles';
 
 const WartenAufDenKaterSky = () => {
-  const classes = useStyles();
-
   return (
-    <div className={classes.container}>
-      <div className={classes.stars} />
-    </div>
+    <DivContainer>
+      <DivStars />
+    </DivContainer>
   );
 };
 

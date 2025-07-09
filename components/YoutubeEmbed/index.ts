@@ -1,3 +1,1 @@
-import YoutubeEmbed from './YoutubeEmbed.component';
-
-export default YoutubeEmbed;
+export { default } from './YoutubeEmbed.component';

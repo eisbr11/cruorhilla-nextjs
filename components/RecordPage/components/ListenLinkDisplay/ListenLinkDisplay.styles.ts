@@ -1,17 +1,21 @@
-import makeStyles from '@mui/styles/makeStyles';
+import { styled } from '@mui/material/styles';
+import { ExpandMore } from '@mui/icons-material';
 
-const useStyles = makeStyles((theme) => ({
-  container: {
-    padding: theme.spacing(2, 0),
-    textAlign: 'right',
-  },
-  expandIcon: {
-    userSelect: 'none',
-    pointerEvents: 'none',
-  },
-  expandIconUp: {
-    transform: 'rotate(180deg)',
-  },
+export const ContainerStyled = styled('div')(({ theme }) => ({
+  padding: theme.spacing(2, 0),
+  textAlign: 'right',
 }));
 
-export default useStyles;
+interface IExpandIconProps {
+  isExpanded: boolean;
+}
+
+export const ExpandIconStyled = styled(ExpandMore, {
+  shouldForwardProp: (prop) => prop !== 'isExpanded',
+})<IExpandIconProps>(({ isExpanded }) => ({
+  userSelect: 'none',
+  pointerEvents: 'none',
+  ...(isExpanded && {
+    transform: 'rotate(180deg)',
+  }),
+}));

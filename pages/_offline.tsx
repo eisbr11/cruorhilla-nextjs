@@ -1,5 +1,5 @@
-import Layout from '@components/Layout';
-import CustomOfflineComponent from '@components/CustomOfflineContent';
+import Layout from 'components/Layout';
+import CustomOfflineComponent from 'components/CustomOfflineContent';
 
 const CustomOffline = () => (
   <Layout>

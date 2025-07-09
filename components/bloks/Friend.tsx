@@ -1,5 +1,5 @@
-import FriendComponent from '@components/Friend';
-import { IBlokComponentProps } from '@interfaces/blok.interface';
+import type { IBlokComponentProps } from 'interfaces/blok.interface';
+import FriendComponent from 'components/Friend';
 
 const Friend = ({ blok }: IBlokComponentProps) => (
   <FriendComponent

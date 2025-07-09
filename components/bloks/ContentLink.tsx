@@ -1,12 +1,11 @@
-import React from 'react';
 import Link from 'next/link';
 import { Button, Typography } from '@mui/material';
 
-import { IBlokComponentProps } from '@interfaces/blok.interface';
+import type { IBlokComponentProps } from 'interfaces/blok.interface';
 
 const ContentLink = ({ blok }: IBlokComponentProps) => {
   return (
-    <Typography paragraph align={blok.align}>
+    <Typography component='p' align={blok.align}>
       {blok.target === 'external' ? (
         <Button
           href={blok.link.cached_url}
@@ -28,7 +27,6 @@ const ContentLink = ({ blok }: IBlokComponentProps) => {
           </Button>
         </Link>
       )}
-
     </Typography>
   );
 };

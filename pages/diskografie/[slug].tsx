@@ -1,16 +1,16 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { StoryblokResult } from 'storyblok-js-client';
+import { ISbResult } from 'storyblok-js-client';
 
-import StoryblokService from '@utils/storyblok-service';
-import Layout from '@components/Layout';
-import RecordPage from '@components/RecordPage';
+import StoryblokService from 'utils/storyblok-service';
+import Layout from 'components/Layout';
+import RecordPage from 'components/RecordPage';
 
 export default function Diskografie({
   record,
   settings,
 }: {
-  record: StoryblokResult,
-  settings: StoryblokResult
+  record: ISbResult;
+  settings: ISbResult;
 }) {
   return (
     <Layout settings={settings.data.story}>
@@ -22,7 +22,11 @@ export default function Diskografie({
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const [record, settings] = await Promise.all([
-    StoryblokService.getRecord('cdn/stories/records/', params.slug as string, {}),
+    StoryblokService.getRecord(
+      'cdn/stories/records/',
+      params.slug as string,
+      {}
+    ),
     StoryblokService.get('cdn/stories/settings', {}),
   ]);
 
@@ -38,7 +42,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const allRecords = await StoryblokService.getRecords('cdn/stories/', {});
 
   return {
-    paths: allRecords.data.stories?.map((record) => `/diskografie/${record.slug}`),
+    paths: allRecords.data.stories?.map(
+      (record) => `/diskografie/${record.slug}`
+    ),
     fallback: false,
   };
 };

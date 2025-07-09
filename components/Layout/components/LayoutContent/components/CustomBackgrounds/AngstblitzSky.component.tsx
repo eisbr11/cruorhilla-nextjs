@@ -1,13 +1,9 @@
-import useStyles from './AngstblitzSky.styles';
+import { DivContainer, DivStars } from './AngstblitzSky.styles';
 
-const AngstblitzSky = () => {
-  const classes = useStyles();
-
-  return (
-    <div className={classes.container}>
-      <div className={classes.stars} />
-    </div>
-  );
-};
+const AngstblitzSky = () => (
+  <DivContainer>
+    <DivStars />
+  </DivContainer>
+);
 
 export default AngstblitzSky;

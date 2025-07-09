@@ -1,3 +1,1 @@
-import ListenLinkDisplay from './ListenLinkDisplay.component';
-
-export default ListenLinkDisplay;
+export { default } from './ListenLinkDisplay.component';

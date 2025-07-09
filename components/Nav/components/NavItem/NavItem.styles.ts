@@ -1,13 +1,24 @@
-import makeStyles from '@mui/styles/makeStyles';
+import { styled } from '@mui/material/styles';
+import Link from 'next/link';
 
-const useStyles = makeStyles((theme) => ({
-  link: {
-    color: 'inherit',
-    padding: theme.spacing(2, 1),
-    fontWeight: theme.typography.fontWeightBold,
-    display: 'inline-block',
+export const LinkNameStyled = styled('span')(() => ({
+  position: 'relative',
+}));
 
-    '& $linkName::before': {
+interface ILinkStyledProps {
+  isSubNav: boolean;
+}
+
+export const LinkStyled = styled(Link, {
+  shouldForwardProp: (prop) => prop !== 'isSubNav',
+})<ILinkStyledProps>(({ theme, isSubNav }) => ({
+  color: 'inherit',
+  padding: theme.spacing(2, 1),
+  fontWeight: theme.typography.fontWeightBold,
+  display: 'inline-block',
+
+  '& .linkNameStyled': {
+    '&::before': {
       content: '""',
       position: 'absolute',
       width: '100%',
@@ -15,30 +26,24 @@ const useStyles = makeStyles((theme) => ({
       bottom: -3,
       borderRadius: 4,
       left: 0,
-      backgroundColor: theme.palette.primary.contrastText,
+      backgroundColor: isSubNav
+        ? theme.palette.secondary.contrastText
+        : theme.palette.primary.contrastText,
       transition: 'all 400ms ease',
       transform: 'scaleX(0)',
     },
+  },
 
-    '&:hover $linkName::before': {
+  '&:hover': {
+    '& .linkNameStyled::before': {
       transform: 'scaleX(0.8)',
       transition: 'all 400ms cubic-bezier(0.38, 0.35, 0.21, 1.52)',
     },
   },
-  linkName: {
-    position: 'relative',
-  },
-  subNavLink: {
-    position: 'relative',
+
+  ...(isSubNav && {
     color: theme.palette.secondary.contrastText,
     fontWeight: theme.typography.fontWeightRegular,
     padding: theme.spacing(1, 2),
-    display: 'inline-block',
-
-    '& $linkName::before': {
-      backgroundColor: theme.palette.secondary.contrastText,
-    },
-  },
+  }),
 }));
-
-export default useStyles;

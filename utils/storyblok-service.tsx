@@ -1,23 +1,26 @@
-import Storyblok, { StoriesParams, StoryParams } from 'storyblok-js-client';
-
-import Config from '@lib/Config';
+import StoryblokClient, {
+  ISbStoriesParams,
+  ISbStoryParams,
+} from 'storyblok-js-client';
 import moment from 'moment';
+
+import Config from 'lib/Config';
 
 class StoryblokService {
   private readonly devMode: boolean;
 
   private token: string;
 
-  private client: Storyblok;
+  private client: StoryblokClient;
 
-  private query: {};
+  private query: object;
 
   constructor() {
     if (Config.storyblok_dev_mode) {
       this.devMode = true; // Always loads draft
     }
     this.token = Config.storyblok_api_key;
-    this.client = new Storyblok({
+    this.client = new StoryblokClient({
       accessToken: this.token,
       cache: {
         clear: 'auto',
@@ -32,29 +35,21 @@ class StoryblokService {
     return this.client.cacheVersion;
   }
 
-  get(slug: string, _params: StoryParams) {
+  get(slug: string, _params: ISbStoryParams) {
     const params = _params || {};
 
-    if (this.getQuery('_storyblok') || this.devMode || (typeof window !== 'undefined' && window.storyblok)) {
+    if (this.devMode) {
       params.version = 'draft';
-    }
-
-    if (typeof window !== 'undefined' && typeof window.StoryblokCacheVersion !== 'undefined') {
-      params.cv = window.StoryblokCacheVersion;
     }
 
     return this.client.get(slug, params);
   }
 
-  getRecords(slug: string, _params: StoriesParams) {
+  getRecords(slug: string, _params: ISbStoriesParams) {
     const params = _params || {};
 
-    if (this.getQuery('_storyblok') || this.devMode || (typeof window !== 'undefined' && window.storyblok)) {
+    if (this.devMode) {
       params.version = 'draft';
-    }
-
-    if (typeof window !== 'undefined' && typeof window.StoryblokCacheVersion !== 'undefined') {
-      params.cv = window.StoryblokCacheVersion;
     }
 
     params.filter_query = {
@@ -68,29 +63,21 @@ class StoryblokService {
     return this.client.get(slug, params);
   }
 
-  getRecord(slug: string, recordSlug: string, _params: StoryParams) {
+  getRecord(slug: string, recordSlug: string, _params: ISbStoryParams) {
     const params = _params || {};
 
-    if (this.getQuery('_storyblok') || this.devMode || (typeof window !== 'undefined' && window.storyblok)) {
+    if (this.devMode) {
       params.version = 'draft';
-    }
-
-    if (typeof window !== 'undefined' && typeof window.StoryblokCacheVersion !== 'undefined') {
-      params.cv = window.StoryblokCacheVersion;
     }
 
     return this.client.get(slug + recordSlug, params);
   }
 
-  getGigs(slug: string, _params: StoriesParams) {
+  getGigs(slug: string, _params: ISbStoriesParams) {
     const params = _params || {};
 
-    if (this.getQuery('_storyblok') || this.devMode || (typeof window !== 'undefined' && window.storyblok)) {
+    if (this.devMode) {
       params.version = 'draft';
-    }
-
-    if (typeof window !== 'undefined' && typeof window.StoryblokCacheVersion !== 'undefined') {
-      params.cv = window.StoryblokCacheVersion;
     }
 
     params.filter_query = {

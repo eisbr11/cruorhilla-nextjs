@@ -1,6 +1,6 @@
-import { createContext, useContext } from 'react';
+import { createContext, use } from 'react';
 
-export enum Theme {
+export enum ETheme {
   corona = 'corona',
   kater = 'kater',
   angstblitz = 'angstblitz',
@@ -20,15 +20,15 @@ const keyToName = {
 
 export const getThemeName = (themeKey: string) => keyToName[themeKey];
 
-export type ThemeContextType = {
-  theme: Theme;
-  setTheme: (Theme: Theme) => void;
+export type TThemeContextType = {
+  theme: ETheme;
+  setTheme: (Theme: ETheme) => void;
 };
 
-export const ThemeContext = createContext<ThemeContextType>({
-  theme: Theme.corona,
+export const ThemeContext = createContext<TThemeContextType>({
+  theme: ETheme.corona,
   // eslint-disable-next-line no-console
   setTheme: () => console.warn('no theme provider'),
 });
 
-export const useTheme = () => useContext(ThemeContext);
+export const useTheme = () => use(ThemeContext);

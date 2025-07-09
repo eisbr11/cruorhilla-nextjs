@@ -1,10 +1,8 @@
-import React from 'react';
 import Image from 'next/image';
-import { Typography } from '@mui/material';
 
-import { IImage } from '@interfaces/image.interface';
-import { shimmer, toBase64 } from '@utils/imagePlaceholder';
-import useStyles from './ImageTeaser.styles';
+import type { IImage } from 'interfaces/image.interface';
+import { shimmer, toBase64 } from 'utils/imagePlaceholder';
+import { DivWrapper, TypographyHeadline } from './ImageTeaser.styles';
 
 interface IImageTeaserProps {
   headline: string;
@@ -12,26 +10,28 @@ interface IImageTeaserProps {
 }
 
 const ImageTeaser = ({ headline, image }: IImageTeaserProps) => {
-  const classes = useStyles();
   return (
-    <div className={classes.wrapper}>
+    <DivWrapper>
       <Image
         src={image.filename}
+        className='image-teaser'
         alt={image.alt}
-        className={classes.image}
         quality={60}
-        placeholder="blur"
+        placeholder='blur'
         blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(300, 300))}`}
         fill
-        sizes="(max-width: 768px) 100vw,
+        sizes='(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
-              33vw"
+              33vw'
         style={{
           objectFit: 'cover',
           objectPosition: 'center 20%',
-        }} />
-      <Typography variant="h1" color="secondary" className={classes.headline}>{headline}</Typography>
-    </div>
+        }}
+      />
+      <TypographyHeadline variant='h1' color='secondary'>
+        {headline}
+      </TypographyHeadline>
+    </DivWrapper>
   );
 };
 

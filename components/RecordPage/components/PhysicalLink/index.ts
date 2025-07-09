@@ -1,3 +1,1 @@
-import PhysicalLink from './PhysicalLink.component';
-
-export default PhysicalLink;
+export { default } from './PhysicalLink.component';

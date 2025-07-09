@@ -1,15 +1,14 @@
 import YouTube, { YouTubeProps } from 'react-youtube';
 
-import { getYoutubeThumbnailUrl } from '@utils/youtubeThumbnail';
-import VideoFacade from '@components/VideoFacade';
-import useStyles from './YoutubeEmbed.styles';
+import { getYoutubeThumbnailUrl } from 'utils/youtubeThumbnail';
+import VideoFacade from 'components/VideoFacade';
+import { DivWrapper } from './YoutubeEmbed.styles';
 
 interface IYoutubeEmbedProps {
-  ytId: string,
+  ytId: string;
 }
 
 const YoutubeEmbed = ({ ytId }: IYoutubeEmbedProps) => {
-  const classes = useStyles();
   const youtubeOptions: YouTubeProps['opts'] = {
     height: '390',
     width: '640',
@@ -21,17 +20,14 @@ const YoutubeEmbed = ({ ytId }: IYoutubeEmbedProps) => {
   };
 
   return (
-    <div className={classes.wrapper}>
+    <DivWrapper>
       <VideoFacade
         thumbnailImageUrl={getYoutubeThumbnailUrl(ytId, 'sddefault')}
         imageAlt='Youtube-Video Thumbnail'
       >
-        <YouTube
-          videoId={ytId}
-          opts={youtubeOptions}
-        />
+        <YouTube videoId={ytId} opts={youtubeOptions} />
       </VideoFacade>
-    </div>
+    </DivWrapper>
   );
 };
 

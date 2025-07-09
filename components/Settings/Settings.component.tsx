@@ -1,13 +1,16 @@
 import React from 'react';
-import { Fade, Modal } from '@mui/material';
+import { Fade } from '@mui/material';
 
 import SettingsButton from './components/SettingsButton';
 import SupportButton from './components/SupportButton';
 import SettingsModalContent from './components/SettingsModalContent';
-import useStyles from './Settings.styles';
+import {
+  BackdropStyled,
+  ModalInnerStyled,
+  ModalStyled,
+} from './Settings.styles';
 
 const SettingsComponent = () => {
-  const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
@@ -22,24 +25,27 @@ const SettingsComponent = () => {
     <>
       <SupportButton />
       <SettingsButton onClick={handleOpen} />
-      <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
+      <ModalStyled
+        aria-labelledby='transition-modal-title'
+        aria-describedby='transition-modal-description'
         open={open}
         onClose={handleClose}
         closeAfterTransition
-        BackdropProps={{
-          timeout: 500,
-          className: classes.backdrop,
+        slots={{
+          backdrop: BackdropStyled,
         }}
-        className={classes.modal}
+        slotProps={{
+          backdrop: {
+            timeout: 500,
+          },
+        }}
       >
         <Fade in={open}>
-          <div className={classes.modalInner}>
+          <ModalInnerStyled>
             <SettingsModalContent />
-          </div>
+          </ModalInnerStyled>
         </Fade>
-      </Modal>
+      </ModalStyled>
     </>
   );
 };

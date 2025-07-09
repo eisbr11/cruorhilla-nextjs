@@ -1,5 +1,6 @@
 import { createTheme, Theme } from '@mui/material/styles';
-import commonThemeSettings from '@themes/commonThemeSettings';
+
+import commonThemeSettings from 'themes/commonThemeSettings';
 
 const theme: Theme = createTheme({
   palette: {

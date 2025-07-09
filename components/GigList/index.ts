@@ -1,3 +1,1 @@
-import GigList from './GigList.component';
-
-export default GigList;
+export { default } from './GigList.component';

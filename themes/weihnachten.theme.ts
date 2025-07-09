@@ -1,7 +1,8 @@
 import { createTheme, Theme } from '@mui/material/styles';
+
 import commonThemeSettings from './commonThemeSettings';
 
-const theme:Theme = createTheme({
+const theme: Theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {

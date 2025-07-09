@@ -1,10 +1,9 @@
-import React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
+import { AnimatePresence } from 'motion/react';
 
-import { AnimatePresence } from 'framer-motion';
 import '../styles/globals.css';
-import ThemeContextProvider from '@context/themeContextProvider.component';
+import ThemeContextProvider from 'context/themeContextProvider.component';
 
 class MyApp extends App {
   componentDidMount() {
@@ -21,10 +20,7 @@ class MyApp extends App {
         <Head>
           <meta name='viewport' content='width=device-width, initial-scale=1' />
         </Head>
-        <AnimatePresence
-          exitBeforeEnter
-        >
-          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+        <AnimatePresence mode={'wait'}>
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
       </ThemeContextProvider>

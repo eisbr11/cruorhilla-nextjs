@@ -1,3 +1,1 @@
-import SettingsModalContent from './SettingsModalContent.component';
-
-export default SettingsModalContent;
+export { default } from './SettingsModalContent.component';

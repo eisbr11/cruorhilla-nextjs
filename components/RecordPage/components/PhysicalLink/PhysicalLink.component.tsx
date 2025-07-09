@@ -1,31 +1,29 @@
 import { Button } from '@mui/material';
 import AlbumIcon from '@mui/icons-material/Album';
 
-import useStyles from './PhysicalLink.styles';
+import { Container } from './PhysicalLink.styles';
 
 interface IPhysicalLinkProps {
   href: string;
   text: string;
 }
 
-const PhysicalLink = ({ href, text }: IPhysicalLinkProps ) => {
-  const classes = useStyles();
-
+const PhysicalLink = ({ href, text }: IPhysicalLinkProps) => {
   if (href.length > 0 && text.length > 0) {
     return (
-      <div className={classes.container}>
+      <Container>
         <Button
-          color="inherit"
-          rel="noreferrer"
+          color='inherit'
+          rel='noreferrer'
           endIcon={<AlbumIcon />}
-          size="large"
-          variant="outlined"
+          size='large'
+          variant='outlined'
           href={href}
-          target="_blank"
+          target='_blank'
         >
           {text}
         </Button>
-      </div>
+      </Container>
     );
   }
   return null;

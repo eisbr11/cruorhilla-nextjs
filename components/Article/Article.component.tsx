@@ -1,10 +1,13 @@
 import React from 'react';
-import clsx from 'clsx';
 import { useInView } from 'react-intersection-observer';
 
-import { IImage } from '@interfaces/image.interface';
+import type { IImage } from 'interfaces/image.interface';
 import ArticleImage from './components/ArticleImage';
-import useStyles from './Article.styles';
+import {
+  ArticleImageWrapper,
+  ArticleContainer,
+  ContentWrapper,
+} from './Article.styles';
 
 interface IArticleComponentProps {
   content: React.ReactNode;
@@ -23,27 +26,17 @@ const ArticleComponent = ({
     triggerOnce: true,
   });
 
-  const classes = useStyles();
   return (
-    <article
-      className={clsx(classes.container, {
-        [classes.containerVisible]: inView,
-        [classes.imageRight]: design === 'imageRight',
-      })}
+    <ArticleContainer
+      containerVisible={inView}
+      isImageRight={design === 'imageRight'}
       ref={ref}
     >
-      <div
-        className={clsx(classes.articleImageWrapper, {
-          [classes.articleImageWrapperLeft]: design === 'imageLeft',
-          [classes.articleImageWrapperRight]: design === 'imageRight',
-        })}
-      >
+      <ArticleImageWrapper design={design}>
         <ArticleImage image={image} />
-      </div>
-      <div className={classes.contentWrapper}>
-        {content}
-      </div>
-    </article>
+      </ArticleImageWrapper>
+      <ContentWrapper>{content}</ContentWrapper>
+    </ArticleContainer>
   );
 };
 

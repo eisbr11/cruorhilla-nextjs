@@ -1,17 +1,16 @@
-import makeStyles from '@mui/styles/makeStyles';
+import { styled } from '@mui/material/styles';
+import { motion } from 'motion/react';
 
-const useStyles = makeStyles((theme) => ({
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    height: '100vh',
-    overflow: 'auto',
-    background: theme.palette.primary.dark,
-  },
-  content: {
-    flex: 1,
-    zIndex: 2,
-  },
+export const DivContainer = styled('div')(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  height: '100vh',
+  overflow: 'auto',
+  background: theme.palette.primary.dark,
 }));
 
-export default useStyles;
+export const MotionMainStyled = styled(motion.main)(({ theme }) => ({
+  flex: 1,
+  zIndex: 2,
+  paddingBottom: theme.spacing(2),
+}));

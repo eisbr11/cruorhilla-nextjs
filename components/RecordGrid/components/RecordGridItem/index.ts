@@ -1,3 +1,1 @@
-import RecordGridItem from './RecordGridItem.component';
-
-export default RecordGridItem;
+export { default } from './RecordGridItem.component';

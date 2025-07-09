@@ -1,3 +1,1 @@
-import SubNav from './SubNav.component';
-
-export default SubNav;
+export { default } from './SubNav.component';

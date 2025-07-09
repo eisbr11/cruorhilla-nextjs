@@ -1,27 +1,21 @@
-import { Container } from '@mui/material';
+import { SbEditableContent } from 'storyblok-react';
 
 import GigItem from './components/GigItem';
 import NoConcertsInfo from './components/NoConcertsInfo';
-import useStyles from './GigList.styles';
+import { StyledContainer } from './GigList.styles';
 
 interface IGigListProps {
-  gigs: any;
+  gigs: SbEditableContent[];
 }
 
-const GigList = ({ gigs }: IGigListProps) => {
-  const classes = useStyles();
-
-  return (
-    <Container maxWidth="lg" className={classes.container}>
-      {(gigs.length > 0) ? (
-        gigs.map((gig) => (
-          <GigItem gig={gig} key={gig.id} />
-        ))
-      ) : (
-        <NoConcertsInfo />
-      )}
-    </Container>
-  );
-};
+const GigList = ({ gigs }: IGigListProps) => (
+  <StyledContainer maxWidth='lg'>
+    {gigs.length > 0 ? (
+      gigs.map((gig) => <GigItem gig={gig} key={gig.id} />)
+    ) : (
+      <NoConcertsInfo />
+    )}
+  </StyledContainer>
+);
 
 export default GigList;

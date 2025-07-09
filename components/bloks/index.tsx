@@ -1,3 +1,4 @@
+import { IBlokComponentProps } from 'interfaces/blok.interface';
 import ContentLink from './ContentLink';
 import Feature from './Feature';
 import Friend from './Friend';
@@ -6,19 +7,14 @@ import Teaser from './Teaser';
 import Social from './Social';
 import Richtext from './Richtext';
 import Headline from './Headline';
-// eslint-disable-next-line import/no-cycle
 import Container from './Container';
-// eslint-disable-next-line import/no-cycle
 import VideoGrid from './VideoGrid';
 import Video from './Video';
 import DownloadLink from './DownloadLink';
 import IFrameEmbed from './IFrameEmbed';
-// eslint-disable-next-line import/no-cycle
 import Article from './Article';
-// eslint-disable-next-line import/no-cycle
 import ArticleDoubleContent from './ArticleDoubleContent';
 import YoutubeEmbed from './YoutubeEmbed';
-import { IBlokComponentProps } from '@interfaces/blok.interface';
 import SimpleImage from './SimpleImage';
 
 const Components = {

@@ -1,5 +1,5 @@
 import { SbEditableContent } from 'storyblok-react';
-import { StoryblokResult } from 'storyblok-js-client';
+import { ISbResult } from 'storyblok-js-client';
 
 export interface IBlokComponentProps {
   blok: SbEditableContent;
@@ -10,6 +10,6 @@ export interface IBlokPageProps {
 }
 
 export interface IStoryblokPageProps {
-  page: StoryblokResult,
-  settings: StoryblokResult,
+  page: ISbResult;
+  settings: ISbResult;
 }

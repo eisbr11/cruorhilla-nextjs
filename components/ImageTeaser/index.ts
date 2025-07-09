@@ -1,3 +1,1 @@
-import ImageTeaser from './ImageTeaser.component';
-
-export default ImageTeaser;
+export { default } from './ImageTeaser.component';
