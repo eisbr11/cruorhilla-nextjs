@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Grid } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 export const InfoContainerStyled = styled(Grid)(({ theme }) => ({
   paddingTop: theme.spacing(2),

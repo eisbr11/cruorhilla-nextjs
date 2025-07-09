@@ -40,7 +40,7 @@ const RecordGridItem: FC<IRecordGridItemProps> = ({
         onMouseLeave={() => setHovered(false)}
       >
         <ImageContainerStyled
-          transition={{ type: 'ease' }}
+          transition={{ type: 'tween', ease: 'easeInOut' }}
           animate={{ scale: isHovered ? 1.05 : 1 }}
           className={'imageContainer'}
         >

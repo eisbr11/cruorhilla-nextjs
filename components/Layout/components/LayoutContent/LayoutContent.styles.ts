@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 export const DivContainer = styled('div')(({ theme }) => ({
   display: 'flex',

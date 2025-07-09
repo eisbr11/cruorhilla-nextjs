@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react';
 import { ISbStoryData } from 'storyblok-js-client';
-import { Variants } from 'framer-motion';
+import { Variants } from 'motion/react';
 
 import Head from 'components/head';
 import Nav from 'components/Nav';
@@ -59,7 +59,7 @@ const LayoutContent: FC<ILayoutContentProps> = ({
         animate='enter'
         exit='exit'
         variants={variants}
-        transition={{ type: 'ease' }}
+        transition={{ type: 'tween', ease: 'easeInOut' }}
       >
         {children}
       </MotionMainStyled>

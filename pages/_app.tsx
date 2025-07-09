@@ -1,6 +1,6 @@
 import App from 'next/app';
 import Head from 'next/head';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'motion/react';
 
 import '../styles/globals.css';
 import ThemeContextProvider from 'context/themeContextProvider.component';
@@ -20,7 +20,7 @@ class MyApp extends App {
         <Head>
           <meta name='viewport' content='width=device-width, initial-scale=1' />
         </Head>
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence mode={'wait'}>
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
       </ThemeContextProvider>
