@@ -1,48 +1,47 @@
 import { useState, useEffect, FC } from 'react';
-import { marked, MarkedOptions } from 'marked';
+import { marked } from 'marked';
 import { Typography, TypographyProps } from '@mui/material';
+import DOMPurify from 'dompurify';
 
-export interface IMarkedProps {
-  options?: MarkedOptions;
-  overrides?: MarkedOptions;
+interface ITypographyMarkdownViewerProps {
   content: string;
   typographyProps: TypographyProps;
 }
 
-const TypographyMarkdownViewer: FC<IMarkedProps> = ({
-  options,
-  overrides,
+const TypographyMarkdownViewer: FC<ITypographyMarkdownViewerProps> = ({
   content,
   typographyProps,
 }) => {
-  const [html, setHtml] = useState<string>();
+  const [html, setHtml] = useState<string>('');
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const printError = (error: any) => {
-      if (error instanceof Error) {
-        setHtml(`<p>${error.name}: ${error.message}</p><p>${error.stack}</p>`);
-      } else {
-        setHtml(`<p>${error}</p>`);
+    let cancelled = false;
+    const parseMarkdown = async () => {
+      try {
+        const rawHtml = await marked.parse(content); // await is important!
+        if (!cancelled) {
+          const cleanHtml = DOMPurify.sanitize(rawHtml, {
+            USE_PROFILES: { html: true },
+          });
+          setHtml(cleanHtml);
+        }
+      } catch (error) {
+        if (!cancelled) {
+          if (error instanceof Error) {
+            setHtml(
+              `<p>${error.name}: ${error.message}</p><pre>${error.stack}</pre>`
+            );
+          } else {
+            setHtml(`<p>${String(error)}</p>`);
+          }
+        }
       }
     };
-
-    try {
-      if (overrides) {
-        marked.use(overrides);
-      }
-
-      marked.parse(content, options, (error, parsedResult) => {
-        if (error) {
-          printError(error);
-        } else {
-          setHtml(parsedResult);
-        }
-      });
-    } catch (e) {
-      printError(e);
-    }
-  }, [options, overrides, content, setHtml]);
+    parseMarkdown();
+    return () => {
+      cancelled = true;
+    };
+  }, [content]);
 
   return (
     <Typography
