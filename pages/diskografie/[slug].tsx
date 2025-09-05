@@ -12,8 +12,9 @@ export default function Diskografie({
   record: ISbResult;
   settings: ISbResult;
 }) {
+  const themeOverride = record.data.story?.content?.theme_override;
   return (
-    <Layout settings={settings.data.story}>
+    <Layout settings={settings.data.story} theme_override={themeOverride}>
       {/* We will define these settings later on */}
       <RecordPage record={record.data.story.content} />
     </Layout>

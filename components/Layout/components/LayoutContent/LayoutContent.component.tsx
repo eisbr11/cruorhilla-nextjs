@@ -37,6 +37,7 @@ interface ILayoutContentProps {
     title: string;
     description: string;
   };
+  theme_override?: string;
 }
 
 const variants: Variants = {
@@ -49,6 +50,7 @@ const LayoutContent: FC<ILayoutContentProps> = ({
   children,
   settings,
   content,
+  theme_override,
 }) => {
   const { theme } = useTheme();
 
@@ -56,7 +58,7 @@ const LayoutContent: FC<ILayoutContentProps> = ({
     <DivContainer>
       <Head title={content?.title} description={content?.description} />
       <Nav settings={settings} />
-      {renderBackground(theme)}
+      {renderBackground(theme_override || theme)}
       <MotionMainStyled
         initial='hidden'
         animate='enter'

@@ -14,20 +14,26 @@ interface ILayoutComponentProps {
     title: string;
     description: string;
   };
+  theme_override?: string;
 }
 
 const LayoutComponent: FC<ILayoutComponentProps> = ({
   children,
   settings,
   content,
+  theme_override,
 }) => {
   const { theme } = useTheme();
 
   return (
     <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={getTheme(theme)}>
+      <ThemeProvider theme={getTheme(theme_override || theme)}>
         <CssBaseline />
-        <LayoutContent settings={settings} content={content}>
+        <LayoutContent
+          settings={settings}
+          content={content}
+          theme_override={theme_override}
+        >
           {children}
         </LayoutContent>
       </ThemeProvider>
