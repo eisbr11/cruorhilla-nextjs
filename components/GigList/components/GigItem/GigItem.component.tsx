@@ -1,6 +1,6 @@
 import moment from 'moment';
 import 'moment/locale/de';
-import { Grid, Typography } from '@mui/material';
+import { Button, Grid, Typography } from '@mui/material';
 import { SbEditableContent } from 'storyblok-react';
 
 import {
@@ -71,11 +71,24 @@ const GigItem = ({ gig }: IGigItemProps) => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid size={{ xs: 12, sm: 2 }}>
+      <Grid size={{ xs: 12, sm: 2 }} gap={1} container direction='column'>
         <Typography align='right'>
           <SpanPriceLabel>Preis: </SpanPriceLabel>
           <SpanPriceValue>{gig.content.price}</SpanPriceValue>
         </Typography>
+        {gig.content.ticket_link && (
+          <Button
+            variant='contained'
+            color='secondary'
+            fullWidth
+            href={gig.content.ticket_link.cached_url}
+            target='_blank'
+            rel='noopener noreferrer'
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            Tickets
+          </Button>
+        )}
       </Grid>
     </GridItemWrapper>
   );
