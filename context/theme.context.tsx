@@ -1,6 +1,7 @@
 import { createContext, use } from 'react';
 
 export enum ETheme {
+  hunde = 'hunde',
   corona = 'corona',
   kater = 'kater',
   angstblitz = 'angstblitz',
@@ -10,6 +11,7 @@ export enum ETheme {
 }
 
 const keyToName = {
+  hunde: 'Der Gang vor die Hunde',
   corona: 'Corona',
   kater: 'Warten auf den Kater',
   angstblitz: 'Angst Blitz',
@@ -26,7 +28,7 @@ export type TThemeContextType = {
 };
 
 export const ThemeContext = createContext<TThemeContextType>({
-  theme: ETheme.corona,
+  theme: ETheme.hunde,
   // eslint-disable-next-line no-console
   setTheme: () => console.warn('no theme provider'),
 });
