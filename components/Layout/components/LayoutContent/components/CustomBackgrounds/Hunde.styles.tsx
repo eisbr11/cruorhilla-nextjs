@@ -7,7 +7,6 @@ export const DivContainer = styled('div')(() => ({
   position: 'fixed',
   overflow: 'hidden',
   zIndex: 1,
-  opacity: 0.8,
 }));
 
 const SvgStyled = styled('svg')(() => ({
@@ -15,6 +14,7 @@ const SvgStyled = styled('svg')(() => ({
   width: '100%',
   height: '100%',
   verticalAlign: 'middle',
+  color: '#CCCCCC',
 }));
 
 export const BackgroundSvg = () => (
@@ -29,30 +29,47 @@ export const BackgroundSvg = () => (
         <animate
           href='#noise'
           attributeName='numOctaves'
-          values='1;10;1'
-          dur='21s'
+          values='1;100;1'
+          dur='10s'
           repeatCount='indefinite'
         />
         <animate
           href='#noise'
           attributeName='seed'
-          values='0;100;0'
+          values='0;50;100'
           dur='15s'
+          repeatCount='indefinite'
+        />
+        <animate
+          href='#saturation'
+          attributeName='values'
+          values='0.5;1;0.5'
+          dur='8s'
           repeatCount='indefinite'
         />
         <feTurbulence
           id='noise'
           type='fractalNoise'
-          baseFrequency='0.3'
+          baseFrequency='0.4'
           numOctaves='10'
           seed='100'
         />
-        <feColorMatrix in='n' type='saturate' values='0.5' result='mono' />
+        <feColorMatrix
+          id='saturation'
+          in='n'
+          type='saturate'
+          values='0.5'
+          result='mono'
+        />
         <feBlend in='SourceGraphic' in2='mono' mode='multiply' />
       </filter>
     </defs>
-
-    <rect width='100%' height='100%' fill='#c16b51' />
-    <rect width='100%' height='100%' fill='#c16b51' filter='url(#plasterTex)' />
+    <rect width='100%' height='100%' fill='currentColor' />
+    <rect
+      width='100%'
+      height='100%'
+      fill='currentColor'
+      filter='url(#plasterTex)'
+    />
   </SvgStyled>
 );

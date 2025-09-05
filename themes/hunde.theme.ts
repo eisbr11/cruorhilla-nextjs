@@ -4,12 +4,12 @@ import commonThemeSettings from './commonThemeSettings';
 
 const theme: Theme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
     primary: {
-      main: '#a86650',
+      main: '#222222',
     },
     secondary: {
-      main: '#c1c1c1',
+      main: '#DDDDDD',
     },
   },
   ...commonThemeSettings,
