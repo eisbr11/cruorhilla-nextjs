@@ -9,7 +9,7 @@ class MyApp extends App {
   componentDidMount() {
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles) {
-      jssStyles.parentElement.removeChild(jssStyles);
+      jssStyles.parentElement?.removeChild(jssStyles);
     }
   }
 
@@ -21,7 +21,7 @@ class MyApp extends App {
           <meta name='viewport' content='width=device-width, initial-scale=1' />
         </Head>
         <AnimatePresence mode={'wait'}>
-          <Component {...pageProps} key={router.route} />
+          <Component key={router.route} {...pageProps} />
         </AnimatePresence>
       </ThemeContextProvider>
     );

@@ -10,6 +10,7 @@ import SettingsComponent from 'components/Settings';
 import {
   AngstblitzSky,
   BaellebadBg,
+  HundeBackground,
   WartenAufDenKaterSky,
 } from './components/CustomBackgrounds';
 import { DivContainer, MotionMainStyled } from './LayoutContent.styles';
@@ -22,6 +23,8 @@ const renderBackground = (theme: string): ReactNode | null => {
       return <BaellebadBg />;
     case ETheme.kater:
       return <WartenAufDenKaterSky />;
+    case ETheme.hunde:
+      return <HundeBackground />; // Hunde theme does not have a custom background
     default:
       return null;
   }

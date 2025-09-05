@@ -5,7 +5,7 @@ import Config from 'lib/Config';
 import { ThemeContext, ETheme } from './theme.context';
 
 const ThemeContextProvider = ({ children }: { children: ReactNode }) => {
-  const defaultTheme = ETheme.kater;
+  const defaultTheme = ETheme.hunde;
   const [theme, setTheme] = useState(defaultTheme);
 
   useEffect(() => {

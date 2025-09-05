@@ -6,9 +6,12 @@ import angstBlitzTheme from './angstblitz.theme';
 import baelleBadTheme from './baellebad.theme';
 import weihnachtenTheme from './weihnachten.theme';
 import defaultTheme from './default.theme';
+import hundeTheme from './hunde.theme';
 
 const getTheme = (themeString: string) => {
   switch (themeString) {
+    case 'hunde':
+      return responsiveFontSizes(hundeTheme);
     case 'corona':
       return responsiveFontSizes(coronaTheme);
     case 'kater':
