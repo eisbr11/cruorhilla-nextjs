@@ -3,7 +3,7 @@ import { styled, Typography } from '@mui/material';
 export const DivWrapper = styled('div')(({ theme }) => ({
   height: '50vh',
   minHeight: 280,
-  maxHeight: 360,
+  maxHeight: 460,
   position: 'relative',
   overflow: 'hidden',
   marginBottom: theme.spacing(2),

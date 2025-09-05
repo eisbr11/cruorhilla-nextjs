@@ -79,7 +79,7 @@ const GigItem = ({ gig }: IGigItemProps) => {
         {gig.content.ticket_link && (
           <Button
             variant='contained'
-            color='secondary'
+            color='success'
             fullWidth
             href={gig.content.ticket_link.cached_url}
             target='_blank'

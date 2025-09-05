@@ -14,7 +14,7 @@ const SvgStyled = styled('svg')(() => ({
   width: '100%',
   height: '100%',
   verticalAlign: 'middle',
-  color: '#BBBBBB',
+  color: '#CCCCCC',
 }));
 
 export const BackgroundSvg = () => (
