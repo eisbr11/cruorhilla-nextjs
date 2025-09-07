@@ -9,6 +9,7 @@ import Tracklist from './components/Tracklist';
 import ReleaseInfo from './components/ReleaseInfo';
 import ListenLinkDisplay from './components/ListenLinkDisplay';
 import { ContainerStyled, TitleStyled } from './RecordPage.styles';
+import PresaveLink from './components/PresaveLink';
 
 interface IRecordPageProps {
   record: SbEditableContent;
@@ -73,8 +74,12 @@ const RecordPage = ({ record }: IRecordPageProps) => {
                 youtubeMusicLink={record.youtubeMusicLink.cached_url}
               />
               <PhysicalLink
-                href={record.physicalLink.cached_url}
+                href={record.physicalLink?.cached_url || ''}
                 text={record.physicalText}
+              />
+              <PresaveLink
+                href={record.presaveLink?.cached_url || ''}
+                text={record.presaveText}
               />
             </Grid>
           </Grid>
