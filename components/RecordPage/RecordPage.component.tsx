@@ -74,11 +74,11 @@ const RecordPage = ({ record }: IRecordPageProps) => {
                 youtubeMusicLink={record.youtubeMusicLink.cached_url}
               />
               <PhysicalLink
-                href={record.physicalLink.cached_url}
+                href={record.physicalLink?.cached_url || ''}
                 text={record.physicalText}
               />
               <PresaveLink
-                href={record.presaveLink.cached_url}
+                href={record.presaveLink?.cached_url || ''}
                 text={record.presaveText}
               />
             </Grid>
