@@ -211,11 +211,6 @@ export default class MyDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;800&display=swap'
             rel='stylesheet'
           />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `var StoryblokCacheVersion = '${StoryblokService.getCacheVersion()}';`,
-            }}
-          />
         </Head>
         <body>
           <Main />
