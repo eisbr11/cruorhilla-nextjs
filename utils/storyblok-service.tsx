@@ -31,7 +31,7 @@ class StoryblokService {
     this.query = {};
   }
 
-  getCacheVersion() {
+  getCacheVersion(): () => number {
     return this.client.cacheVersion;
   }
 

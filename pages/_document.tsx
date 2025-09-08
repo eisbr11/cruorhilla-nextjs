@@ -2,8 +2,6 @@ import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import ServerStyleSheets from '@mui/styles/ServerStyleSheets';
 
-import StoryblokService from 'utils/storyblok-service';
-
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const sheets = new ServerStyleSheets();
@@ -210,11 +208,6 @@ export default class MyDocument extends Document {
           <link
             href='https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;800&display=swap'
             rel='stylesheet'
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `var StoryblokCacheVersion = '${StoryblokService.getCacheVersion()}';`,
-            }}
           />
         </Head>
         <body>
