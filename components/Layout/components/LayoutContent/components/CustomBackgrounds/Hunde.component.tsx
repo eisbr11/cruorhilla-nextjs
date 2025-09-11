@@ -1,8 +1,8 @@
-import { BackgroundSvg, DivContainer } from './Hunde.styles';
+import { DivContainer, PlasterCanvas } from './Hunde.styles';
 
 const HundeBackground = () => (
   <DivContainer>
-    <BackgroundSvg />
+    <PlasterCanvas />
   </DivContainer>
 );
 
