@@ -76,7 +76,7 @@ const GigItem = ({ gig }: IGigItemProps) => {
           <SpanPriceLabel>Preis: </SpanPriceLabel>
           <SpanPriceValue>{gig.content.price}</SpanPriceValue>
         </Typography>
-        {gig.content.ticket_link && (
+        {gig.content.ticket_link && gig.content.ticket_link.cached_url && (
           <Button
             variant='contained'
             color='success'
